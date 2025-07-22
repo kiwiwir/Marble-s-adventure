@@ -3,129 +3,47 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 5f;
-
+    [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Animator animator;
-    private Vector2 movementDirection;
-    private Vector2 lastValidDirection;
-    public float footstepSpeed = 0.5f;
-
-    [SerializeField] private float sprintMultiplier = 1.75f;
-
-    private bool isSprinting = false;
-    private bool isMovementBlocked = false;
-
-    private void Awake()
-    {
-    }
-
+    Animator anim;
+    private Vector2 lastMoveDirection;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        /*if (PauseController.IsGamePaused)
-        {
-            rb.linearVelocity = Vector2.zero;
-            animator.SetBool("isWalking", false);
-            animator.speed = 1f;
-            return;
-        }*/
+        ProccessInputs();
+        Animate();
+    }
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = moveInput * moveSpeed; // poprawka!
+    }
 
-        if (isMovementBlocked)
+    void ProccessInputs()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        Vector2 currentInput = new Vector2(moveX, moveY);
+
+        if (currentInput.magnitude > 0.1f)
         {
-            // Stop movement but allow animations to play
-            rb.linearVelocity = Vector2.zero;
-            return;
+            lastMoveDirection = currentInput.normalized;
         }
 
-        float currentSpeed = isSprinting ? moveSpeed * sprintMultiplier : moveSpeed;
-
-        //rb.linearVelocity = moveInput * moveSpeed;
-        rb.linearVelocity = movementDirection * currentSpeed;
-
-        animator.SetBool("isWalking", rb.linearVelocity.magnitude > 0);
-        animator.speed = isSprinting ? 1.5f : 1f;
+        moveInput = currentInput.normalized;
     }
-
-    public void Move(InputAction.CallbackContext context)
+    void Animate()
     {
-        if (isMovementBlocked)
-        {
-            return;
-        }
-        //moveInput = context.ReadValue<Vector2>();
-        if (context.canceled)
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetFloat("LastInputX", lastValidDirection.x);
-            animator.SetFloat("LastInputY", lastValidDirection.y);
-            movementDirection = Vector2.zero;
-            return;
-        }
-
-        moveInput = context.ReadValue<Vector2>();
-        Vector2 newDirection = GetDirection(moveInput);
-
-        if (newDirection != Vector2.zero)
-        {
-            lastValidDirection = newDirection;
-        }
-
-        movementDirection = newDirection;
-        animator.SetBool("isWalking", movementDirection != Vector2.zero);
-        animator.SetFloat("InputX", movementDirection.x);
-        animator.SetFloat("InputY", movementDirection.y);
-    }
-
-    public void SetSprinting(bool value)
-    {
-        isSprinting = value;
-    }
-
-    public void Sprint(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            isSprinting = true;
-        else if (context.canceled)
-            isSprinting = false;
-    }
-
-    public void PlayFootsteps()
-    {
-        AudioManager.Play("Footsteps", true);
-    }
-
-    private Vector2 GetDirection(Vector2 input)
-    {
-        // if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
-        // {
-        //     return new Vector2(Mathf.Sign(input.x), 0); // Priorytet poziomy
-        // }
-        // else if (Mathf.Abs(input.y) > Mathf.Abs(input.x))
-        // {
-        //     return new Vector2(0, Mathf.Sign(input.y)); // Priorytet pionowy
-        // }
-        // return lastValidDirection; // Nie resetuj do zera, jeśli naciskane są dwa przyciski
-        return input.normalized;
-    }
-
-    // Methods to control the private isMovementBlocked flag
-    public void BlockMovement()
-    {
-        isMovementBlocked = true;
-        movementDirection = Vector2.zero; // Reset movement direction when blocking
-        rb.linearVelocity = Vector2.zero; // Ensure velocity is also reset
-    }
-
-    public void UnblockMovement()
-    {
-        isMovementBlocked = false;
+        anim.SetFloat("InputX", moveInput.x);
+        anim.SetFloat("InputY", moveInput.y);
+        anim.SetFloat("MoveMagnitude", moveInput.magnitude);
+        anim.SetFloat("LastInputX", lastMoveDirection.x);
+        anim.SetFloat("LastInputY", lastMoveDirection.y);
     }
 }

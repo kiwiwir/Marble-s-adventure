@@ -12,5 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BeachScene.unity
     guid: e52e6068240451849a5fa4ac9a9eba48
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 72aa3d3f097f53d4b8e7e52a4238e679, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 9c9e5dbf0e1490445b346b4ec909422a, type: 2}
   m_UseUCBPForAssetBundles: 0

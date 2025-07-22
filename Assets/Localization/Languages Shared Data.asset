@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Languages Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Languages
+  m_TableCollectionNameGuidString: 592d7741e14868d40aa1f492dc9bbda6
+  m_Entries:
+  - m_Id: 367933845504
+    m_Key: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1026968055808
+    m_Key: Load Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1201954418688
+    m_Key: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1357856698368
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2276505743360
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3306362564608
+    m_Key: Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3913978802176
+    m_Key: OPTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4362463145984
+    m_Key: OPTIONS_MenuText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5142662410240
+    m_Key: MOVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5330151993344
+    m_Key: INTERACTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5491016134656
+    m_Key: INVENTORY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5661107744768
+    m_Key: ATTACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5777797476352
+    m_Key: MAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5900732526592
+    m_Key: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5989681131520
+    m_Key: BACKPACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6095323066368
+    m_Key: SPRINT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6486278336512
+    m_Key: CREDITS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6637193588736
+    m_Key: Links are in readme file.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6756769001472
+    m_Key: ART
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7200153071616
+    m_Key: MUSIC & SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7292704583680
+    m_Key: SPECIAL THANKS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24050056359936
+    m_Key: First Scene
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7833469976335352087
+  references:
+    version: 2
+    RefIds:
+    - rid: 7833469976335352087
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1753091742108

@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Languages_pl
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: 592d7741e14868d40aa1f492dc9bbda6, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 367933845504
+    m_Localized: Nowa Gra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1026968055808
+    m_Localized: Kontynuuj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1201954418688
+    m_Localized: Opcje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1357856698368
+    m_Localized: Autorzy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2276505743360
+    m_Localized: Zamknij
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3913978802176
+    m_Localized: OPCJE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4362463145984
+    m_Localized: "<b>Ustawienia g\u0142o\u015Bno\u015Bci:</b>\n\tMuzyka\n\n\tSFX\n\n\tG\u0142os\n\n<b>Ustawienia
+      j\u0119zyka:\n\n\nSterowanie gracza:</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5142662410240
+    m_Localized: RUCH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5330151993344
+    m_Localized: INTERAKCJA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5491016134656
+    m_Localized: EKWIPUNEK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5661107744768
+    m_Localized: ATAK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5777797476352
+    m_Localized: MAPA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5900732526592
+    m_Localized: PAUZA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5989681131520
+    m_Localized: PLECAK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6095323066368
+    m_Localized: SPRINT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6486278336512
+    m_Localized: AUTORZY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6637193588736
+    m_Localized: "Linki znajduj\u0105 si\u0119 w pliku readme."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6756769001472
+    m_Localized: RYSUNEK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7200153071616
+    m_Localized: MUZYKA & SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7292704583680
+    m_Localized: "SPECJALNE PODZI\u0118KOWANIA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24050056359936
+    m_Localized: Scena Pierwsza
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
