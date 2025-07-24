@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d33b8e77b52811c4c9d517469362a058
+guid: 697864cc354e83f47b6eca3bf571a355
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8627628040148071655
-    second: Icon_heart_0
+      213: 6148132010127999476
+    second: Dialogue_box_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 4, y: 4, z: 4, w: 4}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon_heart_0
+      name: Dialogue_box_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 13
+        width: 90
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e4b93bcdfd7bb770800000000000000
-      internalID: 8627628040148071655
+      spriteID: 4f143ef2d7d825550800000000000000
+      internalID: 6148132010127999476
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon_heart_0: 8627628040148071655
+      Dialogue_box_0: 6148132010127999476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
