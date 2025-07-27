@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactAnim: {fileID: 390388580}
+  dialogueSO: {fileID: 11400000, guid: 090c1da29fb380c4a885198ea1f1f80f, type: 2}
 --- !u!114 &375999460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,8 +1897,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 827fab7180aeb434d824ed8e4133e477, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2173,6 +2174,7 @@ GameObject:
   - component: {fileID: 1498731691}
   - component: {fileID: 1498731690}
   - component: {fileID: 1498731689}
+  - component: {fileID: 1498731694}
   m_Layer: 5
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -2188,7 +2190,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498731688}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2278,6 +2280,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1498731694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498731688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482d0fddbdccbfa4292ec8d83d981340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1498731689}
+  portrait: {fileID: 1334257153}
+  actorName: {fileID: 824097202}
+  dialogueText: {fileID: 1939733486}
+  isDialogueActive: 0
 --- !u!1 &1599986018
 GameObject:
   m_ObjectHideFlags: 0
