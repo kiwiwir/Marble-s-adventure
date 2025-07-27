@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cutscene Dialog
   m_EditorClassIdentifier: 
   lines:
-  - speaker: {fileID: 11400000, guid: 8f4d709c1df7fa34ebef6d6332af9d5e, type: 2}
+  - speaker: {fileID: 11400000, guid: 7b38d5571a0e68540b31f5ed85c2f7ef, type: 2}
     text: ...What just happened? Did the train stop?
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
     text: Attention passengers. Due to unforeseen technical issues, this train will
@@ -22,5 +22,5 @@ MonoBehaviour:
     text: We kindly ask all passengers to disembark at the next stop.
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
     text: We apologize for the inconvenience, and thank you for your understanding.
-  - speaker: {fileID: 11400000, guid: 8f4d709c1df7fa34ebef6d6332af9d5e, type: 2}
+  - speaker: {fileID: 11400000, guid: 1a36c5939eae5f845af3f203a6eb567b, type: 2}
     text: Alright... I guess I better get off this train.
