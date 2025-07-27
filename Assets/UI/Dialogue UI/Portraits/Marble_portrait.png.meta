@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dd62876ed69b6b94cbe2bc3a7ecc6fb2
+guid: 9b630fd71f4b1b241a2ffed4b08a309b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5120376561566832634
-    second: Choice_box_0
+      213: 5584243275414691316
+    second: Marble_icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 3, y: 3, z: 3, w: 3}
+  spriteBorder: {x: 1, y: 1, z: 1, w: 1}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Choice_box_0
+      name: Marble_icon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 90
-        height: 45
+        width: 46
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 608a29b65a4c0f8b0800000000000000
-      internalID: -5120376561566832634
+      spriteID: 4fdd4722ca73f7d40800000000000000
+      internalID: 5584243275414691316
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Choice_box_0: -5120376561566832634
+      Marble_icon_0: 5584243275414691316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

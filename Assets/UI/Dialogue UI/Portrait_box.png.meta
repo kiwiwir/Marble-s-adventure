@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 354ccfd63859b714a9bd7aa89f728373
+guid: 98469a06115eae14d9025555bb063d00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1294211329391626743
-    second: Example_portrait_0
+      213: 475336555432342624
+    second: PortraitBox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 1, y: 1, z: 1, w: 1}
+  spriteBorder: {x: 7, y: 8, z: 7, w: 7}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Example_portrait_0
+      name: PortraitBox_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 46
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 906735727a90a0ee0800000000000000
-      internalID: -1294211329391626743
+      spriteID: 0647d47241cb89600800000000000000
+      internalID: 475336555432342624
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Example_portrait_0: -1294211329391626743
+      PortraitBox_0: 475336555432342624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
