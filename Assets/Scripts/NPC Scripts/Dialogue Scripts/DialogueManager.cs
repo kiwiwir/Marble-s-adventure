@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text actorName;
     public TMP_Text dialogueText;
 
+    private bool isTyping;
     public bool isDialogueActive;
 
     private DialogueSO currentDialogue;
     private int dialogueIndex;
+
+    private Coroutine typingCoroutine;
 
     private void Awake()
     {
@@ -39,6 +43,17 @@ public class DialogueManager : MonoBehaviour
 
     public void AdvanceDialogue()
     {
+        if (isTyping)
+        {
+            // Skip typing and show full line immediately
+            StopCoroutine(typingCoroutine);
+            dialogueText.text = currentDialogue.lines[dialogueIndex].text;
+            isTyping = false;
+            return;
+        }
+
+        dialogueIndex++;
+
         if (dialogueIndex < currentDialogue.lines.Length)
             ShowDialogue();
         else
@@ -49,15 +64,45 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLine line = currentDialogue.lines[dialogueIndex];
 
-        portrait.sprite = line.speaker.portrait;
+        //portrait.sprite = line.speaker.portrait;
+        Sprite chosenPortrait = line.speaker.GetExpressionPortrait(line.expressionName);
+        portrait.sprite = chosenPortrait;
+
         actorName.text = line.speaker.actorName;
 
-        dialogueText.text = line.text;
+        //dialogueText.text = line.text;
 
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-        dialogueIndex++;
+        //dialogueIndex++;
+
+        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
+        typingCoroutine = StartCoroutine(TypeText(line));
+    }
+
+    IEnumerator TypeText(DialogueLine line)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        foreach (char letter in line.text)
+        {
+            dialogueText.text += letter;
+
+            if (line.speaker.voiceSound)
+            {
+                float basePitch = line.speaker.basePitch;
+                float pitchVariation = line.speaker.pitchVariation;
+                float finalPitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
+                
+                AudioManager.PlayVoice(line.speaker.voiceSound, finalPitch);
+            }
+
+            yield return new WaitForSeconds(line.speaker.typingSpeed);
+        }
+
+        isTyping = false;
     }
 
     private void EndDialogue()

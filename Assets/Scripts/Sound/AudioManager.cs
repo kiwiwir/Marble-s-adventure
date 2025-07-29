@@ -195,7 +195,7 @@ public class AudioManager : MonoBehaviour
 
     public static void PlayVoice(AudioClip clip, float pitch)
     {
-        voiceSource.pitch = pitch * Random.Range(0.95f, 1.15f);
+        voiceSource.pitch = pitch; //* Random.Range(0.95f, 1.15f);
         voiceSource.PlayOneShot(clip);
     }
 

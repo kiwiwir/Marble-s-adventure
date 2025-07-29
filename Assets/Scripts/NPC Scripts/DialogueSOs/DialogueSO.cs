@@ -11,4 +11,5 @@ public class DialogueLine
 {
     public ActorSO speaker;
     [TextArea(3, 5)] public string text;
+    public string expressionName; // nazwa ekspresji do wyświetlenia (może być pusta)
 }
