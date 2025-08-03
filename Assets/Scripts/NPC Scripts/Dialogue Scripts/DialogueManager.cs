@@ -47,7 +47,8 @@ public class DialogueManager : MonoBehaviour
         {
             // Skip typing and show full line immediately
             StopCoroutine(typingCoroutine);
-            dialogueText.text = currentDialogue.lines[dialogueIndex].text;
+            dialogueText.text = currentDialogue.lines[dialogueIndex].GetLocalizedText();
+
             isTyping = false;
             return;
         }
@@ -64,18 +65,14 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLine line = currentDialogue.lines[dialogueIndex];
 
-        //portrait.sprite = line.speaker.portrait;
         Sprite chosenPortrait = line.speaker.GetExpressionPortrait(line.expressionName);
         portrait.sprite = chosenPortrait;
 
         actorName.text = line.speaker.actorName;
 
-        //dialogueText.text = line.text;
-
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-        //dialogueIndex++;
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(line));
@@ -86,7 +83,8 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
-        foreach (char letter in line.text)
+        string localizedText = line.GetLocalizedText();
+        foreach (char letter in localizedText)
         {
             dialogueText.text += letter;
 

@@ -16,6 +16,6 @@ MonoBehaviour:
   portrait: {fileID: 21300000, guid: a7d6508f97ff5844b94ad38789e39b84, type: 3}
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 7455774f647cd4343865fb9ddba5418c, type: 3}
-  basePitch: 1.5
+  basePitch: 0.4
   pitchVariation: 0.005
   expressions: []

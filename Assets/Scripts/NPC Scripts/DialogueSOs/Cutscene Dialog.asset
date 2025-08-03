@@ -14,18 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
-    text: ...What just happened? Did the train stop?
+    textENG: ...What just happened? Did the train stop?
+    textPL: "...Co si\u0119 w\u0142a\u015Bnie sta\u0142o? Czy poci\u0105g si\u0119
+      zatrzyma\u0142?"
     expressionName: surprised
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
-    text: Attention passengers. Due to unforeseen technical issues, this train will
-      not continue its journey.
+    textENG: Attention passengers. Due to unforeseen technical issues, this train
+      will not continue its journey.
+    textPL: "Uwaga pasa\u017Cerowie. Z powodu nieprzewidzianych problem\xF3w technicznych,
+      poci\u0105g nie b\u0119dzie kontynuowa\u0142 swojej podr\xF3\u017Cy."
     expressionName: 
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
-    text: We kindly ask all passengers to disembark at the next stop.
+    textENG: We kindly ask all passengers to disembark at the next stop.
+    textPL: "Prosimy wszystkich pasa\u017Cer\xF3w o opuszczenie sk\u0142adu na najbli\u017Cszej
+      stacji."
     expressionName: 
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
-    text: We apologize for the inconvenience, and thank you for your understanding.
+    textENG: We apologize for the inconvenience, and thank you for your understanding.
+    textPL: "Przepraszamy za niedogodno\u015Bci i dzi\u0119kujemy za wyrozumia\u0142o\u015B\u0107."
     expressionName: 
   - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
-    text: Alright... I guess I better get off this train.
-    expressionName: 
+    textENG: Alright... I guess I better get off this train.
+    textPL: "No dobrze... Chyba lepiej b\u0119dzie opu\u015Bci\u0107 ten poci\u0105g."
+    expressionName: sad

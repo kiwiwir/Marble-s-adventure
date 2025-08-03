@@ -15,9 +15,29 @@ MonoBehaviour:
   actorName: Marble
   portrait: {fileID: -1878701438, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
   typingSpeed: 0.05
-  voiceSound: {fileID: 0}
-  basePitch: 1
-  pitchVariation: 0.1
+  voiceSound: {fileID: 8300000, guid: 7455774f647cd4343865fb9ddba5418c, type: 3}
+  basePitch: 0.8
+  pitchVariation: 0.005
   expressions:
+  - expressionName: talking
+    portrait: {fileID: 443024501, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: sad
+    portrait: {fileID: 1644489812, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: crying
+    portrait: {fileID: 705463891, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: awkward
+    portrait: {fileID: -1389924749, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: charmed
+    portrait: {fileID: -215401303, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: smiling
+    portrait: {fileID: -224376360, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: annoyed
+    portrait: {fileID: 769143204, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: angry
+    portrait: {fileID: 1444824257, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: furious
+    portrait: {fileID: 447650199, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
   - expressionName: surprised
     portrait: {fileID: 1601900997, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
+  - expressionName: scared
+    portrait: {fileID: -1492913924, guid: 9b630fd71f4b1b241a2ffed4b08a309b, type: 3}
