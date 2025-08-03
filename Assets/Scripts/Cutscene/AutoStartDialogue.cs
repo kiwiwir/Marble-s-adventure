@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AutoStartDialogue : MonoBehaviour
 {
@@ -38,7 +39,14 @@ public class AutoStartDialogue : MonoBehaviour
         if (dialogueStarted && !DialogueManager.Instance.isDialogueActive && !sceneRequested)
         {
             sceneRequested = true;
-            sceneChanger.ChangeSceneWithFade(sceneToLoad);
+            StartCoroutine(WaitAndChangeScene());
         }
+    }
+    private IEnumerator WaitAndChangeScene()
+    {
+        AudioManager.Play("TrainDoorOpen");
+        
+        yield return new WaitForSeconds(1f);
+        sceneChanger.ChangeSceneWithFade(sceneToLoad);
     }
 }

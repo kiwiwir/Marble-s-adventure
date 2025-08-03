@@ -68,6 +68,9 @@ MonoBehaviour:
   - name: TrainHorn
     audioClips:
     - {fileID: 8300000, guid: eb2df88ad6b45ac46843f6c12706c867, type: 3}
+  - name: TrainDoorOpen
+    audioClips:
+    - {fileID: 8300000, guid: 13a74dd3c1b55fd409c511b929f1a115, type: 3}
   - name: BeachBackgroundMusic
     audioClips:
     - {fileID: 8300000, guid: a4b0ea403254b544198f81536186ff14, type: 3}
