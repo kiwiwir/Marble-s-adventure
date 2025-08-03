@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
+    public static AudioSource MusicSource { get; private set; }
 
     private static AudioSource sfxSource;
     private static AudioSource randomPitchAudioSource;
     private static AudioSource voiceSource;
     private static AudioLibrary audioLibrary;
     private static AudioSource musicSource;
-    public static AudioSource MusicSource => musicSource;
-
 
     private Slider MusicSlider;
     private Slider SFXSlider;
@@ -26,13 +25,14 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
 
             AudioSource[] sfxSources = GetComponents<AudioSource>();
             sfxSource = sfxSources[0];
             randomPitchAudioSource = sfxSources[1];
             voiceSource = sfxSources[2];
             musicSource = sfxSources[3];
+            MusicSource = musicSource;
             audioLibrary = GetComponent<AudioLibrary>();
         }
         else
@@ -120,19 +120,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         LoadVolumeSettings();
-
-        string currentScene = SceneManager.GetActiveScene().name;
-
-        if (currentScene == "MainMenuScene")
-        {
-            StartCoroutine(LoopMusic("MainMenuBackgroundMusic"));
-        }
-        else if (currentScene == "BeachScene")
-        {
-            StopMusic(); // zatrzymaj poprzednią muzykę
-            StartCoroutine(LoopMusic("BeachBackgroundMusic"));
-        }
-
 
         if (MusicSlider != null)
             MusicSlider.onValueChanged.AddListener(delegate { SetMusicVolume(MusicSlider.value); });

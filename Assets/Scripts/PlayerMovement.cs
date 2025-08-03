@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 lastMoveDirection;
     private bool isSprinting = false;
 
+    [SerializeField] private float walkingFootstepSpeed = 0.4f;
+    [SerializeField] private float sprintingFootstepSpeed = 0.3f;
+    [SerializeField] private float footstepTimer = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ProccessInputs();
         Animate();
+        HandleFootsteps();
     }
     private void FixedUpdate()
     {
@@ -54,5 +59,28 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("LastInputY", lastMoveDirection.y);
         anim.SetBool("isSprinting", isSprinting);
         anim.SetBool("isWalking", isWalking);
+    }
+
+    void HandleFootsteps()
+    {
+        if (moveInput.magnitude > 0.1f)
+        {
+            footstepTimer -= Time.deltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                PlayFootsteps();
+                footstepTimer = isSprinting ? sprintingFootstepSpeed : walkingFootstepSpeed;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f; // reset timeru, jeśli nie chodzimy
+        }
+    }
+
+    public void PlayFootsteps()
+    {
+        AudioManager.Play("Footsteps", true);
     }
 }

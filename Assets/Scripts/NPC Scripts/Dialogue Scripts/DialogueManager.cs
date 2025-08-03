@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
     public Image portrait;
     public TMP_Text actorName;
     public TMP_Text dialogueText;
+    public Image dialogueArrow;
+
 
     private bool isTyping;
     public bool isDialogueActive;
@@ -50,6 +52,10 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = currentDialogue.lines[dialogueIndex].GetLocalizedText();
 
             isTyping = false;
+
+            if (dialogueArrow != null)
+                dialogueArrow.enabled = true;
+
             return;
         }
 
@@ -74,6 +80,10 @@ public class DialogueManager : MonoBehaviour
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
 
+        if (dialogueArrow != null)
+            dialogueArrow.enabled = false;
+
+
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(line));
     }
@@ -93,7 +103,7 @@ public class DialogueManager : MonoBehaviour
                 float basePitch = line.speaker.basePitch;
                 float pitchVariation = line.speaker.pitchVariation;
                 float finalPitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
-                
+
                 AudioManager.PlayVoice(line.speaker.voiceSound, finalPitch);
             }
 
@@ -101,6 +111,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+        if (dialogueArrow != null)
+            dialogueArrow.enabled = true;
     }
 
     private void EndDialogue()

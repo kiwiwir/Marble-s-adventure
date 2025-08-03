@@ -69,7 +69,7 @@ public class NPC_Wander : MonoBehaviour
     {
         float halfWidth = wanderWidth / 2;
         float halfHeight = wanderHeight / 2;
-        int edge = Random.Range(0, 3);
+        int edge = Random.Range(0, 4);
 
         return edge switch
         {
