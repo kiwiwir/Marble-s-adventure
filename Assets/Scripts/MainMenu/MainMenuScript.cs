@@ -7,6 +7,8 @@ public class MainMenuScript : MonoBehaviour
     public GameObject loadPanel;
     public GameObject optionsPanel;
     public GameObject creditsPanel;
+    public SceneChanger sceneChanger;
+
 
     /*[Header("Save System")]
     public MainMenuSaveController saveController;*/
@@ -19,7 +21,8 @@ public class MainMenuScript : MonoBehaviour
         }
 
         AudioManager.Play("LoadGame");*/
-        SceneManager.LoadScene("Cutscene01");
+        //SceneManager.LoadScene("Cutscene01");
+        sceneChanger.ChangeSceneWithFade("Cutscene01");
     }
 
     public void OnLoadClick()

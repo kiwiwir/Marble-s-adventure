@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     private static AudioSource voiceSource;
     private static AudioLibrary audioLibrary;
     private static AudioSource musicSource;
+    public static AudioSource MusicSource => musicSource;
+
 
     private Slider MusicSlider;
     private Slider SFXSlider;
@@ -52,6 +54,7 @@ public class AudioManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StopAllCoroutines(); // zatrzymaj poprzednią muzykę
+        LoadVolumeSettings();
 
         if (scene.name == "MainMenuScene")
         {
@@ -245,5 +248,10 @@ public class AudioManager : MonoBehaviour
     public static AudioClip[] GetAudioClipsFromLibrary(string groupName)
     {
         return audioLibrary.GetClips(groupName);
+    }
+
+    public float GetMusicVolume()
+    {
+        return musicSource.volume;
     }
 }
