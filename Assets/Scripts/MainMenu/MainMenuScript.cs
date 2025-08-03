@@ -19,7 +19,7 @@ public class MainMenuScript : MonoBehaviour
         }
 
         AudioManager.Play("LoadGame");*/
-        SceneManager.LoadScene("BeachScene");
+        SceneManager.LoadScene("Cutscene01");
     }
 
     public void OnLoadClick()
