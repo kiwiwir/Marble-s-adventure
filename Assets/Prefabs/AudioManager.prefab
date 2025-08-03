@@ -52,7 +52,7 @@ MonoBehaviour:
   audioGroups:
   - name: Footsteps
     audioClips:
-    - {fileID: 8300000, guid: 01b8d80eab96b83439216e987bf7c97c, type: 3}
+    - {fileID: 8300000, guid: ed8669b605de9e440a142415a2d91719, type: 3}
   - name: MainMenuBackgroundMusic
     audioClips:
     - {fileID: 8300000, guid: 8447fe161d01c3d4895b9e8edbb69957, type: 3}

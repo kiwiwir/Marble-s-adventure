@@ -3523,7 +3523,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: -8652004018472992527, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
+    m_SelectedSprite: {fileID: 2339719855517297910, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3568,7 +3568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2339719855517297910, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
+  m_Sprite: {fileID: -8652004018472992527, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4029,7 +4029,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: -4260353768779153709, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
+    m_SelectedSprite: {fileID: 5555569596170776299, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4074,7 +4074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5555569596170776299, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
+  m_Sprite: {fileID: -4260353768779153709, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5236,10 +5236,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plButton: {fileID: 1009623980}
   engButton: {fileID: 816747700}
-  plNormal: {fileID: 5555569596170776299, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
-  plSelected: {fileID: -4260353768779153709, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
-  engNormal: {fileID: 2339719855517297910, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
-  engSelected: {fileID: -8652004018472992527, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
+  plNormal: {fileID: -4260353768779153709, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
+  plSelected: {fileID: 5555569596170776299, guid: 9118e542e4bcc0f498f34ed1ac27cf51, type: 3}
+  engNormal: {fileID: -8652004018472992527, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
+  engSelected: {fileID: 2339719855517297910, guid: f4aa4e43e2851834c9030e0764a970c4, type: 3}
 --- !u!1 &1410316022
 GameObject:
   m_ObjectHideFlags: 0
@@ -8492,10 +8492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

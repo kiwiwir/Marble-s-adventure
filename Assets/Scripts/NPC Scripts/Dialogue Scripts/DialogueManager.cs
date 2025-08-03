@@ -74,7 +74,9 @@ public class DialogueManager : MonoBehaviour
         Sprite chosenPortrait = line.speaker.GetExpressionPortrait(line.expressionName);
         portrait.sprite = chosenPortrait;
 
-        actorName.text = line.speaker.actorName;
+        //actorName.text = line.speaker.actorName;
+        actorName.text = line.speaker.GetLocalizedName();
+
 
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;

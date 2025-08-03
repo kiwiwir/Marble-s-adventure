@@ -1,10 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Localization.Settings;
 
 [CreateAssetMenu(fileName = "ActorSO", menuName = "Dialogue/NPC")]
 public class ActorSO : ScriptableObject
 {
-    public string actorName;
+    //public string actorName;
+    [Header("Localized Names")]
+    public string nameENG;
+    public string namePL;
+
     public Sprite portrait;
 
     public float typingSpeed = 0.05f; // Speed at which text is displayed
@@ -26,6 +31,27 @@ public class ActorSO : ScriptableObject
         }
 
         return portrait; // jeśli brak, zwróć domyślny
+    }
+
+    public string GetLocalizedName()
+    {
+        var locale = LocalizationSettings.SelectedLocale;
+        if (locale == null)
+        {
+            Debug.LogWarning("No locale selected, falling back to English.");
+            return nameENG;
+        }
+
+        var code = locale.Identifier.Code.ToLower();
+
+        switch (code)
+        {
+            case "pl":
+                return namePL;
+            case "en":
+            default:
+                return nameENG;
+        }
     }
 }
 
