@@ -624,8 +624,8 @@ TextureImporter:
       name: Stairs_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -646,8 +646,8 @@ TextureImporter:
       name: Stairs_24
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 80
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -668,8 +668,8 @@ TextureImporter:
       name: Stairs_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 96
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -690,8 +690,8 @@ TextureImporter:
       name: Stairs_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 112
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -712,7 +712,7 @@ TextureImporter:
       name: Stairs_27
       rect:
         serializedVersion: 2
-        x: 80
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -734,7 +734,7 @@ TextureImporter:
       name: Stairs_28
       rect:
         serializedVersion: 2
-        x: 96
+        x: 16
         y: 0
         width: 16
         height: 16
@@ -756,7 +756,7 @@ TextureImporter:
       name: Stairs_29
       rect:
         serializedVersion: 2
-        x: 112
+        x: 32
         y: 0
         width: 16
         height: 16

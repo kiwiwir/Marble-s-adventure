@@ -77,7 +77,6 @@ public class DialogueManager : MonoBehaviour
         //actorName.text = line.speaker.actorName;
         actorName.text = line.speaker.GetLocalizedName();
 
-
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
