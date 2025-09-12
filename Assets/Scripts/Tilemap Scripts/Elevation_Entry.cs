@@ -21,7 +21,7 @@ public class Elevation_Entry : MonoBehaviour
                 boundary.enabled = true;
             }
 
-            collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
+            collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 6;
         }
 
     }
