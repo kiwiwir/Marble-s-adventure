@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
   m_Name: Green Berry
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  icon: {fileID: 0}
+  itemNamePL: Zielona Jagoda
+  itemNameENG: Green Berry
+  itemDescriptionPL: "Ma\u0142a, l\u015Bni\u0105ca jagoda o intensywnie zielonej
+    sk\xF3rce. Ro\u015Bnie w skupiskach w cieniu drzew, przyci\u0105gaj\u0105c uwag\u0119
+    swoim niezwyk\u0142ym kolorem."
+  itemDescriptionENG: A small, glossy berry with a vibrant green skin. It grows in
+    clusters in the shade of trees, catching the eye with its unusual color.
+  icon: {fileID: -488721925442295091, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
+  isGold: 0
+  currentHealth: 0
+  maxHealth: 0
+  speed: 0
+  damage: 0
+  duration: 0
