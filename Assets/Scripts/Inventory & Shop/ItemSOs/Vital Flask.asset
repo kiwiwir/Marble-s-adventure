@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
+  m_Name: Vital Flask
+  m_EditorClassIdentifier: 
+  itemNamePL: "Fiolka \u017Bycia"
+  itemNameENG: Vital Flask
+  itemDescriptionPL: "Fiolka z g\u0119stym, rubinowym p\u0142ynem, mieni\u0105cym
+    si\u0119 przy ka\u017Cdym poruszeniu. Wygl\u0105da, jakby wewn\u0105trz pulsowa\u0142o
+    male\u0144kie serce."
+  itemDescriptionENG: A vial filled with thick, ruby-colored liquid that shimmers
+    with every movement. It looks as if a tiny heart is pulsing inside.
+  icon: {fileID: 4337684191699249041, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
+  isGold: 0
+  currentHealth: 0
+  maxHealth: 0
+  speed: 0
+  damage: 0
+  duration: 0

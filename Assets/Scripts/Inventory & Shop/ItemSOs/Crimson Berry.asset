@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
-  m_Name: Green Berry
+  m_Name: Crimson Berry
   m_EditorClassIdentifier: 
-  itemNamePL: Zielona Jagoda
-  itemNameENG: Green Berry
-  itemDescriptionPL: "Ma\u0142a, l\u015Bni\u0105ca jagoda o intensywnie zielonej
-    sk\xF3rce. Ro\u015Bnie w skupiskach w cieniu drzew, przyci\u0105gaj\u0105c uwag\u0119
-    swoim niezwyk\u0142ym kolorem."
-  itemDescriptionENG: A small, glossy berry with a vibrant green skin. It grows in
-    clusters in the shade of trees, catching the eye with its unusual color.
+  itemNamePL: "Karmazynowa Jag\xF3dka"
+  itemNameENG: Crimson Berry
+  itemDescriptionPL: "Drobna jagoda o intensywnym kolorze. Jej sok \u0142atwo barwi
+    d\u0142onie na g\u0142\u0119boki czerwony odcie\u0144."
+  itemDescriptionENG: A tiny berry of intense color. Its juice easily stains your
+    fingers a deep red hue.
   icon: {fileID: -488721925442295091, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
   isGold: 0
   currentHealth: 0

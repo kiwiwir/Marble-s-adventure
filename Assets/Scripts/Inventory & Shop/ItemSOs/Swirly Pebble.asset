@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
+  m_Name: Swirly Pebble
+  m_EditorClassIdentifier: 
+  itemNamePL: Kamyk Spiralny
+  itemNameENG: Swirly Pebble
+  itemDescriptionPL: "Niepozorny kamyczek o g\u0142adkiej powierzchni, pokryty wij\u0105cymi
+    si\u0119, niezwyk\u0142ymi wzorami."
+  itemDescriptionENG: An unassuming pebble with a smooth surface, covered in winding,
+    extraordinary patterns.
+  icon: {fileID: 490608896, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
+  isGold: 0
+  currentHealth: 0
+  maxHealth: 0
+  speed: 0
+  damage: 0
+  duration: 0

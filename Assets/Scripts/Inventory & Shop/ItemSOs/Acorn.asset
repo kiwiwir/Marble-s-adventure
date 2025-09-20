@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
+  m_Name: Acorn
+  m_EditorClassIdentifier: 
+  itemNamePL: "\u017Bo\u0142\u0105d\u017A"
+  itemNameENG: Acorn
+  itemDescriptionPL: "Ma\u0142y, zwyczajny \u017Co\u0142\u0105d\u017A, kt\xF3ry pe\u0142ni
+    rol\u0119 waluty. Skrywa w sobie warto\u015B\u0107 wi\u0119ksz\u0105, ni\u017C
+    mog\u0142oby si\u0119 wydawa\u0107."
+  itemDescriptionENG: A small, ordinary acorn that serves as currency. It holds more
+    value than it might seem at first glance.
+  icon: {fileID: 8033092973025764044, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
+  isGold: 1
+  currentHealth: 0
+  maxHealth: 0
+  speed: 0
+  damage: 0
+  duration: 0
