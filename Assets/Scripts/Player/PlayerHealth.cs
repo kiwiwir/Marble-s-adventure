@@ -1,13 +1,11 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth;
-
-    public SpriteRenderer playerSr;
-    public PlayerMovement playerMovement;
 
     public void ChangeHealth(int amount)
     {
@@ -15,9 +13,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            playerSr.enabled = false;
-            playerMovement.enabled = false;
-            //gameObject.SetActive(false);
+            StartCoroutine(DeathSequence());
         }
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        // Poczekaj jedną klatkę aby zaktualizować HealthUI
+        yield return null;
+        gameObject.SetActive(false);
     }
 }

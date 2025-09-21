@@ -12,11 +12,6 @@ public class HealthDisplay : MonoBehaviour
 
     public PlayerHealth playerHealth;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         health = playerHealth.currentHealth;
