@@ -503,10 +503,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5154fa3d8982f0e0800000000000000
-      internalID: -2237574825177231009
+      spriteID: fc0396410b59d694aab8f84bfd8e4366
+      internalID: -891637690
       vertices: []
       indices: 
       edges: []
@@ -525,10 +525,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eab89f79de7910f70800000000000000
-      internalID: 9151762964506315694
+      spriteID: ddac14a883334ac4f9033a42d1a53f9a
+      internalID: 226436983
       vertices: []
       indices: 
       edges: []
@@ -547,10 +547,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d326ef29bf47a7de0800000000000000
-      internalID: -1334625715710172611
+      spriteID: 2f1c597fe4da7ac44ad7e0fb5b65d04c
+      internalID: -214361115
       vertices: []
       indices: 
       edges: []
@@ -569,10 +569,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f97f91215db3a4550800000000000000
-      internalID: 6145790427818227615
+      spriteID: 802a1e684e004a44d80b0c95f884e2f3
+      internalID: -1427307694
       vertices: []
       indices: 
       edges: []
@@ -591,10 +591,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8654b7a02ce0e4ca0800000000000000
-      internalID: -6030866624440220312
+      spriteID: 448231eca8aec19409147d3f7efcc7f8
+      internalID: -1470168039
       vertices: []
       indices: 
       edges: []
@@ -620,11 +620,11 @@ TextureImporter:
       Slime_Hit_12: 1570507245229107071
       Slime_Hit_13: 6018674135677932767
       Slime_Hit_14: -1817835937666384609
-      Slime_Hit_15: -2237574825177231009
-      Slime_Hit_16: 9151762964506315694
-      Slime_Hit_17: -1334625715710172611
-      Slime_Hit_18: 6145790427818227615
-      Slime_Hit_19: -6030866624440220312
+      Slime_Hit_15: -891637690
+      Slime_Hit_16: 226436983
+      Slime_Hit_17: -214361115
+      Slime_Hit_18: -1427307694
+      Slime_Hit_19: -1470168039
       Slime_Hit_2: -6289861002435149230
       Slime_Hit_3: -6097039585498993438
       Slime_Hit_4: 1720013537952291028

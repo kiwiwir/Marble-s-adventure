@@ -422,10 +422,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b2e5163bc2848c410800000000000000
-      internalID: 1497526232925953579
+      spriteID: 5c7553b4a200af04f94ec2edbe3ec23a
+      internalID: 1387793947
       vertices: []
       indices: 
       edges: []
@@ -444,10 +444,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 493de5564fb93ed30800000000000000
-      internalID: 4459579530001961876
+      spriteID: 91a57bf51f476ca4388ffe7ff22e08fe
+      internalID: 931750484
       vertices: []
       indices: 
       edges: []
@@ -466,10 +466,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ea4a046c27df57250800000000000000
-      internalID: 5941933952779461806
+      spriteID: 2a590e07b6ad63c4fa1a766c939e507e
+      internalID: -1026484557
       vertices: []
       indices: 
       edges: []
@@ -488,10 +488,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1606fb217a6f15b10800000000000000
-      internalID: 1968625709572120673
+      spriteID: 7ab1c878bdc3b9444b226f31f60b27f8
+      internalID: -316016789
       vertices: []
       indices: 
       edges: []
@@ -514,10 +514,10 @@ TextureImporter:
       Slime_Idle_1: -5053397183770984521
       Slime_Idle_10: 1449690153092079604
       Slime_Idle_11: -5514045702363259393
-      Slime_Idle_12: 1497526232925953579
-      Slime_Idle_13: 4459579530001961876
-      Slime_Idle_14: 5941933952779461806
-      Slime_Idle_15: 1968625709572120673
+      Slime_Idle_12: 1387793947
+      Slime_Idle_13: 931750484
+      Slime_Idle_14: -1026484557
+      Slime_Idle_15: -316016789
       Slime_Idle_2: 2562226924957090973
       Slime_Idle_3: -5823576197350583881
       Slime_Idle_4: 1838681140112674480
