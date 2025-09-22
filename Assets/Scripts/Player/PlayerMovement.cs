@@ -14,6 +14,14 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isKnockedBack;
 
+
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Material knockbackMaterial; // przypisz SolidGreenMaterial w Inspectorze
+    private Material defaultMaterial;
+
+
+
     [SerializeField] private float walkingFootstepSpeed = 0.4f;
     [SerializeField] private float sprintingFootstepSpeed = 0.3f;
     [SerializeField] private float footstepTimer = 0f;
@@ -22,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        defaultMaterial = spriteRenderer.material;
     }
 
     void Update()
@@ -96,6 +107,9 @@ public class PlayerMovement : MonoBehaviour
         Vector2 direction = (transform.position - enemy.position).normalized;
         rb.linearVelocity = direction * force;
         StartCoroutine(KnockbackCounter(stunTime));
+
+        // podmień materiał na jednolity kolor
+        spriteRenderer.material = knockbackMaterial;
     }
 
     IEnumerator KnockbackCounter(float stunTime)
@@ -103,5 +117,8 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(stunTime);
         rb.linearVelocity = Vector2.zero;
         isKnockedBack = false;
+
+        // przywróć oryginalny materiał
+        spriteRenderer.material = defaultMaterial;
     }
 }

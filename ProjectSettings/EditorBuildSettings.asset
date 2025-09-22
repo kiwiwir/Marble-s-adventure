@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene01.unity
     guid: d9c0f06ff26ce5147891edbac2f0d969
   - enabled: 1
-    path: Assets/Scenes/BeachScene.unity
+    path: Assets/Scenes/TrainStationScene.unity
     guid: 101c2b703e49856469ad62610c9a438a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 72aa3d3f097f53d4b8e7e52a4238e679, type: 2}
