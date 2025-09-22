@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     private Vector2 lastMoveDirection;
     private bool isSprinting = false;
+
+    private bool isKnockedBack;
 
     [SerializeField] private float walkingFootstepSpeed = 0.4f;
     [SerializeField] private float sprintingFootstepSpeed = 0.3f;
@@ -29,8 +32,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float speed = isSprinting ? sprintSpeed : moveSpeed;
-        rb.linearVelocity = moveInput * speed;
+        if (isKnockedBack == false)
+        {
+            float speed = isSprinting ? sprintSpeed : moveSpeed;
+            rb.linearVelocity = moveInput * speed;
+        }
     }
 
     void ProccessInputs()
@@ -82,5 +88,20 @@ public class PlayerMovement : MonoBehaviour
     public void PlayFootsteps()
     {
         AudioManager.Play("Footsteps", true);
+    }
+
+    public void Knockback(Transform enemy, float force, float stunTime)
+    {
+        isKnockedBack = true;
+        Vector2 direction = (transform.position - enemy.position).normalized;
+        rb.linearVelocity = direction * force;
+        StartCoroutine(KnockbackCounter(stunTime));
+    }
+
+    IEnumerator KnockbackCounter(float stunTime)
+    {
+        yield return new WaitForSeconds(stunTime);
+        rb.linearVelocity = Vector2.zero;
+        isKnockedBack = false;
     }
 }
