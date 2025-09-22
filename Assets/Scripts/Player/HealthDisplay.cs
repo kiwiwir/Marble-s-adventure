@@ -14,8 +14,8 @@ public class HealthDisplay : MonoBehaviour
 
     void Update()
     {
-        health = playerHealth.currentHealth;
-        maxHealth = playerHealth.maxHealth;
+        health = StatsManager.Instance.currentHealth;
+        maxHealth = StatsManager.Instance.maxHealth;
         
         for (int i = 0; i < hearts.Length; i++)
         {

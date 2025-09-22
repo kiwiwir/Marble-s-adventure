@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class InventoryMenager : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
     public InventorySlot[] itemSlots;
     public int gold;
@@ -9,7 +9,7 @@ public class InventoryMenager : MonoBehaviour
 
     private void Start()
     {
-        foreach(var slot in itemSlots)
+        foreach (var slot in itemSlots)
         {
             slot.UpdateUI();
         }
@@ -35,7 +35,7 @@ public class InventoryMenager : MonoBehaviour
         }
         else
         {
-            foreach(var slot in itemSlots)
+            foreach (var slot in itemSlots)
             {
                 if (slot.itemSO == null)
                 {
@@ -45,6 +45,14 @@ public class InventoryMenager : MonoBehaviour
                     return;
                 }
             }
+        }
+    }
+    
+    public void UseItem(InventorySlot slot)
+    {
+        if (slot.itemSO != null && slot.quantity >= 0)
+        {
+            Debug.Log("Using item: " + slot.itemSO.itemNameENG);
         }
     }
 }

@@ -4,27 +4,17 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private float sprintSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    Animator anim;
     private Vector2 lastMoveDirection;
-    private bool isSprinting = false;
 
+    private bool isSprinting = false;
     private bool isKnockedBack;
 
-
+    Animator anim;
     private SpriteRenderer spriteRenderer;
-
     [SerializeField] private Material knockbackMaterial; // przypisz SolidGreenMaterial w Inspectorze
     private Material defaultMaterial;
-
-
-
-    [SerializeField] private float walkingFootstepSpeed = 0.4f;
-    [SerializeField] private float sprintingFootstepSpeed = 0.3f;
-    [SerializeField] private float footstepTimer = 0f;
 
     void Start()
     {
@@ -45,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isKnockedBack == false)
         {
-            float speed = isSprinting ? sprintSpeed : moveSpeed;
+            float speed = isSprinting ? StatsManager.Instance.sprintSpeed : StatsManager.Instance.moveSpeed;
             rb.linearVelocity = moveInput * speed;
         }
     }
@@ -82,17 +72,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveInput.magnitude > 0.1f)
         {
-            footstepTimer -= Time.deltaTime;
+            StatsManager.Instance.footstepTimer -= Time.deltaTime;
 
-            if (footstepTimer <= 0f)
+            if (StatsManager.Instance.footstepTimer <= 0f)
             {
                 PlayFootsteps();
-                footstepTimer = isSprinting ? sprintingFootstepSpeed : walkingFootstepSpeed;
+                StatsManager.Instance.footstepTimer = isSprinting ? StatsManager.Instance.sprintingFootstepSpeed : StatsManager.Instance.walkingFootstepSpeed;
             }
         }
         else
         {
-            footstepTimer = 0f; // reset timeru, jeśli nie chodzimy
+            StatsManager.Instance.footstepTimer = 0f; // reset timeru, jeśli nie chodzimy
         }
     }
 
