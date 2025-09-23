@@ -11,11 +11,12 @@ public class ItemSO : ScriptableObject
     public Sprite icon;
 
     public bool isGold;
+    public bool isUsable;
 
     [Header("Stats")]
     public int currentHealth;
     public int maxHealth;
-    public int speed;
+    public int moveSpeed;
     public int damage;
 
     [Header("For Temporary Items")]

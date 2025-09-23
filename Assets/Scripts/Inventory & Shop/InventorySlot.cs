@@ -1,5 +1,6 @@
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization.SmartFormat.Utilities;
@@ -28,6 +29,9 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         {
             if (eventData.button == PointerEventData.InputButton.Left)
             {
+                if (itemSO.currentHealth > 0 && StatsManager.Instance.currentHealth >= StatsManager.Instance.maxHealth)
+                    return;
+                
                 inventoryManager.UseItem(this);
             }
         }

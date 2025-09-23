@@ -60,9 +60,9 @@ public class AudioManager : MonoBehaviour
         {
             StartMusicLoop("MainMenuBackgroundMusic");
         }
-        else if (scene.name == "BeachScene")
+        else if (scene.name == "TrainStationScene")
         {
-            StartMusicLoop("BeachBackgroundMusic");
+            StartMusicLoop("TrainBackgroundMusic");
         }
 
         // Spróbuj przypisać suwaki, jeśli są obecne w scenie

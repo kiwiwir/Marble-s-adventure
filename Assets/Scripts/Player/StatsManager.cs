@@ -3,6 +3,7 @@ using UnityEngine;
 public class StatsManager : MonoBehaviour
 {
     public static StatsManager Instance;
+    public StatsUI statsUI;
 
     [Header("Combat Stats")]
     public int damage;
@@ -33,5 +34,25 @@ public class StatsManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void UpdateMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        statsUI.UpdateAllStats();
+    }
+
+    public void UpdateCurrentHealth(int amount)
+    {
+        currentHealth += amount;
+        if (currentHealth >= maxHealth)
+            currentHealth = maxHealth;
+        statsUI.UpdateAllStats();
+    }
+
+    public void UpdateSpeed(float amount)
+    {
+        moveSpeed += amount;
+        statsUI.UpdateAllStats();
     }
 }
