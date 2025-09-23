@@ -13,6 +13,8 @@ public class ItemSO : ScriptableObject
     public bool isGold;
     public bool isUsable;
 
+    public int stackSize = 99;
+
     [Header("Stats")]
     public int currentHealth;
     public int maxHealth;

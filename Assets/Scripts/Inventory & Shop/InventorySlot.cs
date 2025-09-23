@@ -31,8 +31,12 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
             {
                 if (itemSO.currentHealth > 0 && StatsManager.Instance.currentHealth >= StatsManager.Instance.maxHealth)
                     return;
-                
+
                 inventoryManager.UseItem(this);
+            }
+            else if (eventData.button == PointerEventData.InputButton.Right)
+            {
+                inventoryManager.DropItem(this);
             }
         }
     }

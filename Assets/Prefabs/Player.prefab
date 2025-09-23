@@ -288,11 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297e271eb19de95449673d2916b2b48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  sprintSpeed: 7
-  walkingFootstepSpeed: 0.4
-  sprintingFootstepSpeed: 0.3
-  footstepTimer: 0
+  knockbackMaterial: {fileID: 2100000, guid: de6ad45997e032c4b888072d3acaeada, type: 2}
 --- !u!95 &8604338328261265745
 Animator:
   serializedVersion: 7
@@ -327,8 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9b160b5b44eff4099050883f13e9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
 --- !u!114 &7567732927619323471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +340,9 @@ MonoBehaviour:
   emptyHeart: {fileID: -2951776672946510299, guid: 15837579a670a24419607795a277b816, type: 3}
   fullHeart: {fileID: 8276049584313735588, guid: 15837579a670a24419607795a277b816, type: 3}
   hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
