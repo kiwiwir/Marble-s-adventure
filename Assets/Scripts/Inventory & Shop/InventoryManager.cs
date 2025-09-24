@@ -4,6 +4,8 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public InventorySlot[] itemSlots;
+    public RectTransform inventoryPanel; // główny panel ekwipunku
+
     public UseItem useItem;
     public int gold;
     public TMP_Text goldText;
@@ -74,9 +76,14 @@ public class InventoryManager : MonoBehaviour
 
     private void DropLoot(ItemSO itemSO, int quantity)
     {
-        Loot loot = Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>();
+        // losowy kierunek w 2D (okrąg wokół gracza)
+        Vector2 randomCircle = Random.insideUnitCircle * 1.5f; // promień 1.5 jednostki
+        Vector3 dropPosition = player.position + new Vector3(randomCircle.x, randomCircle.y, 0f);
+
+        Loot loot = Instantiate(lootPrefab, dropPosition, Quaternion.identity).GetComponent<Loot>();
         loot.Initialize(itemSO, quantity);
     }
+
     public void DropItem(InventorySlot slot)
     {
         DropLoot(slot.itemSO, 1);
