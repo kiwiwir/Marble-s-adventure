@@ -46,7 +46,9 @@ public class StatsManager : MonoBehaviour
     {
         currentHealth += amount;
         if (currentHealth >= maxHealth)
+        {
             currentHealth = maxHealth;
+        }
         statsUI.UpdateAllStats();
     }
 

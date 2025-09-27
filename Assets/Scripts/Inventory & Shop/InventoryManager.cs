@@ -4,7 +4,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public InventorySlot[] itemSlots;
-    public RectTransform inventoryPanel; // główny panel ekwipunku
+    public RectTransform inventoryPanel;
 
     public UseItem useItem;
     public int gold;
@@ -103,10 +103,10 @@ public class InventoryManager : MonoBehaviour
         // Dźwięk wyrzucenia przedmiotu
         AudioManager.Play("DropItem");
     }
-    
+
     public void UseItem(InventorySlot slot)
     {
-        if (slot.itemSO != null && slot.quantity >= 0 && slot.itemSO.isUsable == true)
+        if (slot.itemSO != null && slot.quantity > 0 && slot.itemSO.isUsable)
         {
             useItem.ApplyItemEffects(slot.itemSO);
 
@@ -119,6 +119,10 @@ public class InventoryManager : MonoBehaviour
 
             // Dźwięk użycia przedmiotu
             AudioManager.Play("UseItem");
+        }
+        else
+        {
+            AudioManager.Play("Error");
         }
     }
 }

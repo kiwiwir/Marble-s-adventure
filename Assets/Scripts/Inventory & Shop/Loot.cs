@@ -1,5 +1,7 @@
 using System;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Loot : MonoBehaviour
 {
@@ -37,6 +39,7 @@ public class Loot : MonoBehaviour
         if (collision.CompareTag("Player") && canBePickedUp == true)
         {
             anim.Play("LootPickUp");
+            PickUp();
             OnItemLooted?.Invoke(itemSO, quantity);
             Destroy(gameObject, 0.5f);
         }
@@ -47,6 +50,16 @@ public class Loot : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             canBePickedUp = true;
+        }
+    }
+
+    public virtual void PickUp()
+    {
+        Sprite itemIcon = itemSO.icon;
+        string localizedName = itemSO.GetLocalizedName();
+        if(ItemPickupUIController.Instance != null)
+        {
+            ItemPickupUIController.Instance.ShowItemPickup(localizedName, itemIcon);
         }
     }
 }
