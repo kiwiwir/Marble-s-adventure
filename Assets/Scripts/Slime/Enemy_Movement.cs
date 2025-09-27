@@ -21,6 +21,9 @@ public class Enemy_Movement : MonoBehaviour
     private Transform player;
     private Animator anim;
 
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.4f; // co ile sekund dźwięk kroku
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,6 +47,20 @@ public class Enemy_Movement : MonoBehaviour
         else if (enemyState == EnemyState.Attacking)
         {
             rb.linearVelocity = Vector2.zero;
+        }
+
+        if (enemyState == EnemyState.Chasing && rb.linearVelocity.magnitude > 0.1f)
+        {
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0f)
+            {
+                AudioManager.Play("SlimeFootsteps", true); // true jeśli chcesz losowy pitch
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f; // reset timeru, gdy nie chodzi
         }
     }
 

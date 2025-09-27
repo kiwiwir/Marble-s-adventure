@@ -8,7 +8,12 @@ public class InventoryToggle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+            bool willBeActive = !inventoryPanel.activeSelf;
+            if (willBeActive)
+                AudioManager.Play("Menu_In");
+            else
+                AudioManager.Play("Menu_Out");
+            inventoryPanel.SetActive(willBeActive);
         }
     }
 }

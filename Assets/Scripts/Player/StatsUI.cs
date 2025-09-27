@@ -20,6 +20,9 @@ public class StatsUI : MonoBehaviour
         {
             if (statsOpen)
             {
+                // Dźwięk zamykania
+                AudioManager.Play("Menu_Out");
+
                 Time.timeScale = 1;
                 UpdateAllStats();
                 statsCanvas.alpha = 0;
@@ -28,6 +31,9 @@ public class StatsUI : MonoBehaviour
             }
             else
             {
+                // Dźwięk otwierania
+                AudioManager.Play("Menu_In");
+
                 Time.timeScale = 0;
                 UpdateAllStats();
                 statsCanvas.alpha = 1;

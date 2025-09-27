@@ -16,6 +16,8 @@ public class Enemy_Combat : MonoBehaviour
         {
             hits[0].GetComponent<PlayerHealth>().ChangeHealth(-damage);
             hits[0].GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
+
+            AudioManager.Play("EnemyHitsDamage");
         }
     }
 }

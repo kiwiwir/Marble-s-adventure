@@ -36,8 +36,14 @@ public class InventoryManager : MonoBehaviour
         {
             gold += quantity;
             goldText.text = gold.ToString();
+
+            // Dźwięk dla złota
+            AudioManager.Play("Coin");
             return;
         }
+
+        // Dźwięk dla zwykłego przedmiotu
+        AudioManager.Play("Collect");
 
         foreach (var slot in itemSlots)
         {
@@ -93,6 +99,9 @@ public class InventoryManager : MonoBehaviour
             slot.itemSO = null;
         }
         slot.UpdateUI();
+        
+        // Dźwięk wyrzucenia przedmiotu
+        AudioManager.Play("DropItem");
     }
     
     public void UseItem(InventorySlot slot)
@@ -107,6 +116,9 @@ public class InventoryManager : MonoBehaviour
                 slot.itemSO = null;
             }
             slot.UpdateUI();
+
+            // Dźwięk użycia przedmiotu
+            AudioManager.Play("UseItem");
         }
     }
 }

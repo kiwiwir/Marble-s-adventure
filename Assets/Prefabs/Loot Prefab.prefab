@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 4337684191699249041, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
+  m_SortingOrder: 50
+  m_Sprite: {fileID: -488721925442295091, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2500271283428805405}
   - component: {fileID: 6805597127708337594}
   m_Layer: 0
-  m_Name: "Fiolka \u017Bycia"
+  m_Name: Crimson Berry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,8 +156,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.33441195}
-  m_Radius: 0.8344119
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!95 &2500271283428805405
 Animator:
   serializedVersion: 7
@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d740267177682a4d85f7346b729d637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSO: {fileID: 11400000, guid: 733dd557d4fff424b97464b1d95b9411, type: 2}
+  itemSO: {fileID: 11400000, guid: 670e3c18b146b63499beb7ada54571d4, type: 2}
   sr: {fileID: 2676898336254987034}
   anim: {fileID: 2500271283428805405}
   canBePickedUp: 1
-  quantity: 2
+  quantity: 1

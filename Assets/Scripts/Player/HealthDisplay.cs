@@ -12,6 +12,9 @@ public class HealthDisplay : MonoBehaviour
 
     public PlayerHealth playerHealth;
 
+    private float lowHealthTimer = 0f;
+    private float lowHealthInterval = 1.2f; // co ile sekund dźwięk
+
     void Update()
     {
         health = StatsManager.Instance.currentHealth;
@@ -36,6 +39,21 @@ public class HealthDisplay : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+
+        // LowHealth SFX w pętli gdy zdrowie = 1
+        if (health == 1)
+        {
+            lowHealthTimer -= Time.unscaledDeltaTime;
+            if (lowHealthTimer <= 0f)
+            {
+                AudioManager.Play("LowHealth");
+                lowHealthTimer = lowHealthInterval;
+            }
+        }
+        else
+        {
+            lowHealthTimer = 0f;
         }
     }
 }

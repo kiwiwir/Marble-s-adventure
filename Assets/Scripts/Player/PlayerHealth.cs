@@ -18,6 +18,9 @@ public class PlayerHealth : MonoBehaviour
     {
         // Poczekaj jedną klatkę aby zaktualizować HealthUI
         yield return null;
+
+        AudioManager.Play("GameOver");
+
         gameObject.SetActive(false);
     }
 }
