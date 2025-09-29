@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
   m_Name: Vital Flask
   m_EditorClassIdentifier: 
-  itemNamePL: "Fiolka \u017Bycia"
-  itemNameENG: Vital Flask
+  itemNamePL: Mikstura
+  itemNameENG: Potion
   itemDescriptionPL: "Fiolka z g\u0119stym, rubinowym p\u0142ynem, mieni\u0105cym
     si\u0119 przy ka\u017Cdym poruszeniu. Wygl\u0105da, jakby wewn\u0105trz pulsowa\u0142o
     male\u0144kie serce."

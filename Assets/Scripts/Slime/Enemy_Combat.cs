@@ -8,7 +8,7 @@ public class Enemy_Combat : MonoBehaviour
     public float knockbackForce;
     public float stunTime;
     public LayerMask playerLayer;
-    public void Attack()
+    /*public void Attack()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, playerLayer);
 
@@ -18,6 +18,24 @@ public class Enemy_Combat : MonoBehaviour
             hits[0].GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
 
             AudioManager.Play("EnemyHitsDamage");
+        }
+    }*/
+    public void Attack()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, playerLayer);
+
+        foreach (var hit in hits)
+        {
+            PlayerHealth ph = hit.GetComponentInParent<PlayerHealth>();
+            PlayerMovement pm = hit.GetComponentInParent<PlayerMovement>();
+
+            if (ph != null && pm != null)
+            {
+                ph.ChangeHealth(-damage);
+                pm.Knockback(transform, knockbackForce, stunTime);
+                AudioManager.Play("EnemyHitsDamage");
+                break;
+            }
         }
     }
 }

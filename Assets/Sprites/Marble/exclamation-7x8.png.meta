@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d3d423ab6f8cd4045a070efb8b037402
+guid: c420bcec9ad76a841b75c12712cf1503
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5281422124547630143
-    second: Chest_0
+      213: 2640029514226195042
+    second: exclamation-7x8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chest_0
+      name: exclamation-7x8_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cb13755f8e94b6b0800000000000000
-      internalID: -5281422124547630143
+      spriteID: 26adfff0bd443a420800000000000000
+      internalID: 2640029514226195042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_1
+      name: exclamation-7x8_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 7
         y: 0
-        width: 32
-        height: 32
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af5231c9f08df4e4d85ac4701c37ef6a
-      internalID: -508552635
+      spriteID: c44cffa80e09737488db147a273b4a5c
+      internalID: 621627516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_2
+      name: exclamation-7x8_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 14
         y: 0
-        width: 32
-        height: 32
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a725d5c5945ebe74b9a8bef2a7fac36c
-      internalID: -2011115858
+      spriteID: 67cbba93b907357479e3d4b31b9b2203
+      internalID: 766880509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_3
+      name: exclamation-7x8_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 21
         y: 0
-        width: 32
-        height: 32
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e09dc7c54cff13440bb25138a0628372
-      internalID: 346868024
+      spriteID: 6c250dc08f2f41b4d9ea27a496eb1c83
+      internalID: -1879919062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_4
+      name: exclamation-7x8_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 28
         y: 0
-        width: 32
-        height: 32
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db9909d0025030e42962ff72b1feb955
-      internalID: 261642000
+      spriteID: 0516c9b43ba5d7348b58fe68820c8335
+      internalID: -1799806423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_5
+      name: exclamation-7x8_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 35
         y: 0
-        width: 32
-        height: 32
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,8 +225,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04d9c5bfe624dcf499d7cfe636c1c8b2
-      internalID: 1289661792
+      spriteID: 1fcb19965106e1f43b78b6eb8ad5d2eb
+      internalID: 1793623255
       vertices: []
       indices: 
       edges: []
@@ -235,7 +235,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a77299749aefde54c8d9d27494812f77
+    spriteID: c0d6baa005da05f488ac5f57f23e5ba4
     internalID: 0
     vertices: []
     indices: 
@@ -245,12 +245,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chest_0: -5281422124547630143
-      Chest_1: -508552635
-      Chest_2: -2011115858
-      Chest_3: 346868024
-      Chest_4: 261642000
-      Chest_5: 1289661792
+      exclamation-7x8_0: 2640029514226195042
+      exclamation-7x8_1: 621627516
+      exclamation-7x8_2: 766880509
+      exclamation-7x8_3: -1879919062
+      exclamation-7x8_4: -1799806423
+      exclamation-7x8_5: 1793623255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

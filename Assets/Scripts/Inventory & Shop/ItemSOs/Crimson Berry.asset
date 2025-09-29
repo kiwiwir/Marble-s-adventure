@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
   m_Name: Crimson Berry
   m_EditorClassIdentifier: 
-  itemNamePL: "Karmazynowa Jag\xF3dka"
-  itemNameENG: Crimson Berry
+  itemNamePL: "Jag\xF3dka"
+  itemNameENG: Berry
   itemDescriptionPL: "Drobna jagoda o intensywnym kolorze. Jej sok \u0142atwo barwi
     d\u0142onie na g\u0142\u0119boki czerwony odcie\u0144."
   itemDescriptionENG: A tiny berry of intense color. Its juice easily stains your

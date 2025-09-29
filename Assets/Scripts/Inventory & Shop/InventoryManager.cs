@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -83,14 +84,25 @@ public class InventoryManager : MonoBehaviour
     private void DropLoot(ItemSO itemSO, int quantity)
     {
         // losowy kierunek w 2D (okrąg wokół gracza)
-        Vector2 randomCircle = Random.insideUnitCircle * 1.5f; // promień 1.5 jednostki
+        // losujemy punkt w pierścieniu [1, 1.5]
+        float radius = Random.Range(1.5f, 1.75f);
+        Vector2 randomCircle = Random.insideUnitCircle.normalized * radius;
+
         Vector3 dropPosition = player.position + new Vector3(randomCircle.x, randomCircle.y, 0f);
 
-        Loot loot = Instantiate(lootPrefab, dropPosition, Quaternion.identity).GetComponent<Loot>();
+        GameObject lootObj = Instantiate(lootPrefab, dropPosition, Quaternion.identity);
+        Loot loot = lootObj.GetComponent<Loot>();
         loot.Initialize(itemSO, quantity);
+
+        // Bounce effect
+        BounceEffect bounce = lootObj.GetComponent<BounceEffect>();
+        if (bounce != null)
+        {
+            bounce.StartBounce();
+        }
     }
 
-    public void DropItem(InventorySlot slot)
+    /*public void DropItem(InventorySlot slot)
     {
         DropLoot(slot.itemSO, 1);
         slot.quantity--;
@@ -102,7 +114,36 @@ public class InventoryManager : MonoBehaviour
         
         // Dźwięk wyrzucenia przedmiotu
         AudioManager.Play("DropItem");
+    }*/
+    public void DropItem(InventorySlot slot)
+    {
+        StartCoroutine(DropItemRoutine(slot));
     }
+
+    private IEnumerator DropItemRoutine(InventorySlot slot)
+    {
+        // najpierw zrób kopię danych slotu
+        ItemSO itemToDrop = slot.itemSO;
+        int quantityToDrop = 1;
+
+        // zmniejsz slot w inventory od razu
+        slot.quantity--;
+        if (slot.quantity <= 0)
+            slot.itemSO = null;
+        slot.UpdateUI();
+
+        yield return null; // czekaj do końca klatki, żeby loot nie został od razu podniesiony
+
+        // losowy kierunek w 2D (okrąg wokół gracza)
+        Vector2 randomCircle = Random.insideUnitCircle * 1.5f;
+        Vector3 dropPosition = player.position + new Vector3(randomCircle.x, randomCircle.y, 0f);
+
+        Loot loot = Instantiate(lootPrefab, dropPosition, Quaternion.identity).GetComponent<Loot>();
+        loot.Initialize(itemToDrop, quantityToDrop);
+
+        AudioManager.Play("DropItem");
+    }
+
 
     public void UseItem(InventorySlot slot)
     {

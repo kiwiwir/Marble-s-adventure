@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
   m_Name: Swirly Pebble
   m_EditorClassIdentifier: 
-  itemNamePL: Kamyk Spiralny
-  itemNameENG: Swirly Pebble
+  itemNamePL: Kamyk
+  itemNameENG: Pebble
   itemDescriptionPL: "Niepozorny kamyczek o g\u0142adkiej powierzchni, pokryty wij\u0105cymi
     si\u0119, niezwyk\u0142ymi wzorami."
   itemDescriptionENG: An unassuming pebble with a smooth surface, covered in winding,
