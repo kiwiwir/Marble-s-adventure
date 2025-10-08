@@ -17,8 +17,8 @@ public class ItemSO : ScriptableObject
 
     [Header("Stats")]
     public int currentHealth;
-    public int maxHealth;
     public int moveSpeed;
+    public int sprintSpeed;
     public int damage;
 
     [Header("For Temporary Items")]

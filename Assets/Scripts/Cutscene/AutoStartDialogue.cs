@@ -6,7 +6,7 @@ public class AutoStartDialogue : MonoBehaviour
     public DialogueSO dialogueToStart;
     public float delay = 23f;
     public SceneChanger sceneChanger;          // Dodaj SceneChanger
-    public string sceneToLoad = "BeachScene";  // Nazwa sceny po dialogu
+    public string sceneToLoad = "TrainStationScene";  // Nazwa sceny po dialogu
 
     private bool dialogueStarted = false;
     private bool sceneRequested = false;

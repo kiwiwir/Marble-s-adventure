@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour, IPointerClickHandler,
+public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler,
     IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
 
@@ -15,6 +15,8 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler,
     public TMP_Text quantityText;
 
     private InventoryManager inventoryManager;
+
+    [SerializeField] private ItemInfo itemInfo;
 
     // --- DRAG ---
     private static GameObject dragIcon;  // ikona przedmiotu w trakcie przeciągania
@@ -127,5 +129,23 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler,
         itemImage.gameObject.SetActive(itemSO != null);
         backgroundImage.gameObject.SetActive(itemSO != null);
         quantityText.text = (itemSO != null) ? quantity.ToString() : "";
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (itemSO != null)
+            itemInfo.ShowItemInfo(itemSO);
+
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        itemInfo.HideItemInfo();
+    }
+
+    public void OnPointerMove(PointerEventData eventData)
+    {
+        if (itemSO != null)
+            itemInfo.FollowMouse();
     }
 }

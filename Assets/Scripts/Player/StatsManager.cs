@@ -41,7 +41,6 @@ public class StatsManager : MonoBehaviour
         maxHealth += amount;
         statsUI.UpdateAllStats();
     }
-
     public void UpdateCurrentHealth(int amount)
     {
         currentHealth += amount;
@@ -51,10 +50,19 @@ public class StatsManager : MonoBehaviour
         }
         statsUI.UpdateAllStats();
     }
-
     public void UpdateSpeed(float amount)
     {
         moveSpeed += amount;
+        statsUI.UpdateAllStats();
+    }
+    public void UpdateSprintSpeed(float amount)
+    {
+        sprintSpeed += amount;
+        statsUI.UpdateAllStats();
+    }
+    public void UpdateDamage(int amount)
+    {
+        damage += amount;
         statsUI.UpdateAllStats();
     }
 }
