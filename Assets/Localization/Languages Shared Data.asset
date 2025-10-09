@@ -103,6 +103,14 @@ MonoBehaviour:
     m_Key: cutscene
     m_Metadata:
       m_Items: []
+  - m_Id: 28953253455654912
+    m_Key: Marble's Diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28956264181592064
+    m_Key: Stats
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

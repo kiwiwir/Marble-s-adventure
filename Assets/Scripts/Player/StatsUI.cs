@@ -1,63 +1,67 @@
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class StatsUI : MonoBehaviour
 {
     public GameObject[] statsSlots;
-    public CanvasGroup statsCanvas;
 
-    private bool statsOpen = false;
+    private void OnEnable()
+    {
+        // Podpinamy się pod zdarzenie zmiany języka
+        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
 
-    private void Start()
+        // Na wypadek gdyby język zmienił się zanim UI się włączyło
+        UpdateAllStats();
+    }
+
+    private void OnDisable()
+    {
+        // Odpinamy event, żeby uniknąć wycieków pamięci
+        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+    }
+
+    // Event wywoływany automatycznie przy każdej zmianie języka
+    private void OnLocaleChanged(UnityEngine.Localization.Locale newLocale)
     {
         UpdateAllStats();
     }
 
-    private void Update()
+    private string Localize(string key)
     {
-        if (Input.GetButtonDown("ToggleStats"))
+        string lang = LocalizationSettings.SelectedLocale.Identifier.Code;
+        return key switch
         {
-            if (statsOpen)
-            {
-                // Dźwięk zamykania
-                AudioManager.Play("Menu_Out");
+            "max_health" => lang == "pl" ? "Maksymalne zdrowie" : "Max Health",
+            "current_health" => lang == "pl" ? "Aktualne zdrowie" : "Current Health",
+            "speed" => lang == "pl" ? "Szybkość" : "Speed",
+            "damage" => lang == "pl" ? "Obrażenia" : "Damage",
+            _ => key
+        };
+    }
 
-                Time.timeScale = 1;
-                UpdateAllStats();
-                statsCanvas.alpha = 0;
-                statsCanvas.blocksRaycasts = false;
-                statsOpen = false;
-            }
-            else
-            {
-                // Dźwięk otwierania
-                AudioManager.Play("Menu_In");
+    public void UpdateMaxHealth()
+    {
+        statsSlots[0].GetComponentInChildren<TMP_Text>().text =
+            $"{Localize("max_health")}: {StatsManager.Instance.maxHealth}";
+    }
 
-                Time.timeScale = 0;
-                UpdateAllStats();
-                statsCanvas.alpha = 1;
-                statsCanvas.blocksRaycasts = true;
-                statsOpen = true;
-            }
-        }
+    public void UpdateCurrentHealth()
+    {
+        statsSlots[1].GetComponentInChildren<TMP_Text>().text =
+            $"{Localize("current_health")}: {StatsManager.Instance.currentHealth}";
+    }
+
+    public void UpdateSpeed()
+    {
+        statsSlots[2].GetComponentInChildren<TMP_Text>().text =
+            $"{Localize("speed")}: {StatsManager.Instance.moveSpeed}";
     }
 
     public void UpdateDamage()
     {
-        statsSlots[0].GetComponentInChildren<TMP_Text>().text = "Damage: " + StatsManager.Instance.damage;
-    }
-    public void UpdateSpeed()
-    {
-        statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Speed: " + StatsManager.Instance.moveSpeed;
-    }
-    public void UpdateMaxHealth()
-    {
-        statsSlots[2].GetComponentInChildren<TMP_Text>().text = "Max Health: " + StatsManager.Instance.maxHealth;
-    }
-    public void UpdateCurrentHealth()
-    {
-        statsSlots[3].GetComponentInChildren<TMP_Text>().text = "Current Health: " + StatsManager.Instance.currentHealth;
+        statsSlots[3].GetComponentInChildren<TMP_Text>().text =
+            $"{Localize("damage")}: {StatsManager.Instance.damage}";
     }
 
     public void UpdateAllStats()

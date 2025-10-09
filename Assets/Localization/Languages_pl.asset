@@ -103,6 +103,16 @@ MonoBehaviour:
     m_Localized: Scena Pierwsza
     m_Metadata:
       m_Items: []
+  - m_Id: 28953253455654912
+    m_Localized: "Pami\u0119tnik Marble"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28956264181592064
+    m_Localized: 'Statystyki
+
+'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

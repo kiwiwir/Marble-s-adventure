@@ -103,6 +103,14 @@ MonoBehaviour:
     m_Localized: First Scene
     m_Metadata:
       m_Items: []
+  - m_Id: 28953253455654912
+    m_Localized: Marble's Diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28956264181592064
+    m_Localized: Stats
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

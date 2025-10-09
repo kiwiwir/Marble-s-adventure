@@ -1,9 +1,11 @@
-using UnityEditor;
 using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
     public GameObject menuCanvas;
+    public TabController tabController;
+    private bool isMenuOpen = false;
+
     void Start()
     {
         menuCanvas.SetActive(false);
@@ -13,7 +15,24 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetButtonDown("ToggleMenu"))
         {
-            menuCanvas.SetActive(!menuCanvas.activeSelf);
+            if (!isMenuOpen)
+            {
+                // Otwieranie menu
+                //AudioManager.Play("Menu_In");
+                menuCanvas.SetActive(true);
+                isMenuOpen = true;
+
+                // Aktywuj pierwszą zakładkę (player page)
+                tabController.ActiveTab(0);
+            }
+            else
+            {
+                // Zamykanie menu
+                AudioManager.Play("Menu_Out");
+                menuCanvas.SetActive(false);
+                isMenuOpen = false;
+            }
         }
     }
 }
+
