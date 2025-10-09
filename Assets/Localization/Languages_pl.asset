@@ -126,6 +126,18 @@ MonoBehaviour:
     m_Localized: Mapa
     m_Metadata:
       m_Items: []
+  - m_Id: 28991642754150400
+    m_Localized: "Zapisz Gr\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28993114707390464
+    m_Localized: "Menu G\u0142\xF3wne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29001052725506048
+    m_Localized: Ustawienia
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

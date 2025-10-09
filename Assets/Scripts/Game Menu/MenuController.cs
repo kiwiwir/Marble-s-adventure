@@ -4,6 +4,7 @@ public class MenuController : MonoBehaviour
 {
     public CanvasGroup menuCanvasGroup;
     public TabController tabController;
+    public PauseController pauseController;
     private bool isMenuOpen = false;
     public float fadeSpeed = 3f; // prędkość animacji
     private bool isFading = false;
@@ -21,7 +22,12 @@ public class MenuController : MonoBehaviour
         {
             if (!isMenuOpen)
             {
-                //AudioManager.Play("Menu_In");
+                // Jeśli pauza jest otwarta, zamknij ją
+                if (pauseController != null && pauseController.IsPaused)
+                {
+                    pauseController.ClosePauseInstant();
+                }
+
                 StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 0f, 1f));
                 isMenuOpen = true;
                 tabController.ActiveTab(0);
@@ -37,6 +43,15 @@ public class MenuController : MonoBehaviour
                 Time.timeScale = 1f;
             }
         }
+    }
+    public void CloseMenuInstant()
+    {
+        StopAllCoroutines();
+        menuCanvasGroup.alpha = 0f;
+        menuCanvasGroup.interactable = false;
+        menuCanvasGroup.blocksRaycasts = false;
+        isMenuOpen = false;
+        Time.timeScale = 1f;
     }
 
     private System.Collections.IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end)
@@ -60,5 +75,6 @@ public class MenuController : MonoBehaviour
 
         isFading = false;
     }
+    public bool IsMenuOpen => isMenuOpen;
 }
 

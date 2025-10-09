@@ -124,6 +124,18 @@ MonoBehaviour:
     m_Localized: Map
     m_Metadata:
       m_Items: []
+  - m_Id: 28991642754150400
+    m_Localized: Save Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28993114707390464
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29001052725506048
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
