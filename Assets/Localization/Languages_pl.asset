@@ -104,13 +104,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28953253455654912
-    m_Localized: "Pami\u0119tnik Marble"
+    m_Localized: Przedmioty w grze
     m_Metadata:
       m_Items: []
   - m_Id: 28956264181592064
     m_Localized: 'Statystyki
 
 '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28968677303971840
+    m_Localized: "<b>Ustawienia g\u0142o\u015Bno\u015Bci:</b>\n\tMuzyka\n\n\tSFX\n\n\tG\u0142os\n\n<b>Ustawienia
+      j\u0119zyka:</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28970457454669824
+    m_Localized: "Pami\u0119tnik Marble"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28970595992530944
+    m_Localized: Mapa
     m_Metadata:
       m_Items: []
   references:

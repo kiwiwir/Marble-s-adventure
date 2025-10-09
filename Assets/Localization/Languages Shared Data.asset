@@ -104,11 +104,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28953253455654912
-    m_Key: Marble's Diary
+    m_Key: Items in game
     m_Metadata:
       m_Items: []
   - m_Id: 28956264181592064
     m_Key: Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28968677303971840
+    m_Key: OPTIONS_MenuText_v2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28970457454669824
+    m_Key: Marble's Diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28970595992530944
+    m_Key: Map
     m_Metadata:
       m_Items: []
   m_Metadata:

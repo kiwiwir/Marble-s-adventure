@@ -104,11 +104,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28953253455654912
-    m_Localized: Marble's Diary
+    m_Localized: Items in game
     m_Metadata:
       m_Items: []
   - m_Id: 28956264181592064
     m_Localized: Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28968677303971840
+    m_Localized: "<b>Volume settings:</b>\n\tMusic\n\n\tSFX\n\n\tVoice\n\n<b>Language
+      settings:</b>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28970457454669824
+    m_Localized: Marble's Diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28970595992530944
+    m_Localized: Map
     m_Metadata:
       m_Items: []
   references:
