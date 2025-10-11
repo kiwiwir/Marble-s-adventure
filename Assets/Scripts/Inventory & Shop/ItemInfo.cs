@@ -8,16 +8,18 @@ public class ItemInfo : MonoBehaviour
     [Header("Panels")]
     public CanvasGroup infoPanelWithStats;
     public CanvasGroup infoPanelSimple;
+    public CanvasGroup infoPanelDescription;
 
     [Header("Texts - With Stats")]
     public TMP_Text itemNameTextWithStats;
-    public TMP_Text itemDescriptionTextWithStats;
     public TMP_Text[] statTexts;
 
     [Header("Texts - Simple")]
     public TMP_Text itemNameTextSimple;
-    public TMP_Text itemDescriptionTextSimple;
 
+    [Header("Texts - Description")]
+    public TMP_Text descriptionText;
+    
     private RectTransform currentPanelRect;
 
     private void Awake()
@@ -42,7 +44,6 @@ public class ItemInfo : MonoBehaviour
             currentPanelRect = infoPanelWithStats.GetComponent<RectTransform>();
 
             itemNameTextWithStats.text = itemSO.GetLocalizedName();
-            itemDescriptionTextWithStats.text = itemSO.GetLocalizedDescription();
 
             List<string> stats = new List<string>();
             string langCode = LocalizationSettings.SelectedLocale.Identifier.Code; // np. "en" albo "pl"
@@ -96,16 +97,29 @@ public class ItemInfo : MonoBehaviour
             currentPanelRect = infoPanelSimple.GetComponent<RectTransform>();
 
             itemNameTextSimple.text = itemSO.GetLocalizedName();
-            itemDescriptionTextSimple.text = itemSO.GetLocalizedDescription();
         }
     }
+    public void ShowDescription(string description)
+    {
+        HideItemInfo(); // ukryj inne panele
 
+        if (descriptionText != null && infoPanelDescription != null)
+        {
+            descriptionText.text = description;
+            infoPanelDescription.alpha = 1;
+            infoPanelDescription.blocksRaycasts = true;
+            currentPanelRect = infoPanelDescription.GetComponent<RectTransform>();
+        }
+    }
     public void HideItemInfo()
     {
         infoPanelWithStats.alpha = 0;
         infoPanelSimple.alpha = 0;
+        infoPanelDescription.alpha = 0;
+
         infoPanelWithStats.blocksRaycasts = false;
         infoPanelSimple.blocksRaycasts = false;
+        infoPanelDescription.blocksRaycasts = false;
     }
 
     public void FollowMouse()

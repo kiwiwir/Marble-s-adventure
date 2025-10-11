@@ -138,6 +138,22 @@ MonoBehaviour:
     m_Localized: Ustawienia
     m_Metadata:
       m_Items: []
+  - m_Id: 29744482208509952
+    m_Localized: Pomoc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29744821175382016
+    m_Localized: 'Sterowanie Gracza:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29746930042073088
+    m_Localized: "PAMI\u0118TNIK\nMARBLE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29750765322039296
+    m_Localized: Przedmiot kolekcjonerski.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

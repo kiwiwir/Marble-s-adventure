@@ -139,6 +139,24 @@ MonoBehaviour:
     m_Key: Settings
     m_Metadata:
       m_Items: []
+  - m_Id: 29744482208509952
+    m_Key: Help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29744821175382016
+    m_Key: 'Player Controls:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29746930042073088
+    m_Key: 'MARBLE''S
+
+      DIARY'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29750765322039296
+    m_Key: Collectible item.
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

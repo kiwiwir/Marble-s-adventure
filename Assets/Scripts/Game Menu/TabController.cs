@@ -19,7 +19,7 @@ public class TabController : MonoBehaviour
         for (int i = 0; i < pages.Length; i++)
         {
             pages[i].SetActive(i == tabNo);
-            tabImages[i].color = (i == tabNo) ? Color.white : Color.grey;
+            //tabImages[i].color = (i == tabNo) ? Color.white : Color.grey;
         }
 
         // Jeśli to pierwsza zakładka (player page) — aktualizuj statystyki

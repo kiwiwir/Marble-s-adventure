@@ -18,32 +18,56 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
+        // --- Otwieranie / zamykanie menu ---
         if (Input.GetButtonDown("ToggleMenu") && !isFading)
         {
             if (!isMenuOpen)
             {
-                // Jeśli pauza jest otwarta, zamknij ją
-                if (pauseController != null && pauseController.IsPaused)
-                {
-                    pauseController.ClosePauseInstant();
-                }
-
-                StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 0f, 1f));
-                isMenuOpen = true;
-                tabController.ActiveTab(0);
-
-                Time.timeScale = 0f;
+                OpenMenu(0); // domyślnie strona 0 (np. statystyki)
             }
             else
             {
-                AudioManager.Play("Menu_Out");
-                StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 1f, 0f));
-                isMenuOpen = false;
+                CloseMenu();
+            }
+        }
 
-                Time.timeScale = 1f;
+        // --- Otwieranie menu od razu z mapą ---
+        if (Input.GetButtonDown("ToggleMap") && !isFading)
+        {
+            if (!isMenuOpen)
+            {
+                OpenMenu(2); // jeśli menu jest zamknięte → otwórz z mapą
+            }
+            else
+            {
+                tabController.ActiveTab(2); // jeśli otwarte → przełącz tylko stronę
             }
         }
     }
+
+    private void OpenMenu(int tabIndex)
+    {
+        // Zamknij pauzę, jeśli aktywna
+        if (pauseController != null && pauseController.IsPaused)
+        {
+            pauseController.ClosePauseInstant();
+        }
+
+        StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 0f, 1f));
+        isMenuOpen = true;
+        tabController.ActiveTab(tabIndex);
+
+        Time.timeScale = 0f;
+    }
+
+    private void CloseMenu()
+    {
+        AudioManager.Play("Menu_Out");
+        StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 1f, 0f));
+        isMenuOpen = false;
+        Time.timeScale = 1f;
+    }
+
     public void CloseMenuInstant()
     {
         StopAllCoroutines();
@@ -75,6 +99,6 @@ public class MenuController : MonoBehaviour
 
         isFading = false;
     }
+
     public bool IsMenuOpen => isMenuOpen;
 }
-

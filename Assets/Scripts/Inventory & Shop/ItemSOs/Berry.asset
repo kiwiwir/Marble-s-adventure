@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
-  m_Name: Crimson Berry
+  m_Name: Berry
   m_EditorClassIdentifier: 
   itemNamePL: "Jag\xF3dka"
   itemNameENG: Berry
