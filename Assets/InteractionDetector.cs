@@ -19,7 +19,6 @@ public class InteractionDetector : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            Debug.Log("Interact pressed");
             interactableInRange?.Interact();
             HideIconWithAnimation();
         }

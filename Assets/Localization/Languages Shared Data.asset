@@ -157,6 +157,10 @@ MonoBehaviour:
     m_Key: Collectible item.
     m_Metadata:
       m_Items: []
+  - m_Id: 30056069758775296
+    m_Key: FONTS
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

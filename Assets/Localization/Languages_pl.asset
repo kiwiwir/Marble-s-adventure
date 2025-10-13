@@ -31,7 +31,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1357856698368
-    m_Localized: Autorzy
+    m_Localized: 'Credits
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 2276505743360
@@ -80,7 +82,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6486278336512
-    m_Localized: AUTORZY
+    m_Localized: CREDITS
     m_Metadata:
       m_Items: []
   - m_Id: 6637193588736
@@ -152,6 +154,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 29750765322039296
     m_Localized: Przedmiot kolekcjonerski.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30056069758775296
+    m_Localized: CZCIONKI
     m_Metadata:
       m_Items: []
   references:
