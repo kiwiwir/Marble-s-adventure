@@ -33979,6 +33979,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662805741}
   m_CullTransparentMesh: 1
+--- !u!1 &676388151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7627359705309837928, guid: 8b2aa44de82b0b44d8b83ff990597602, type: 3}
+  m_PrefabInstance: {fileID: 678738031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &676388152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676388151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1f12d8591fd314cb38c3a4e9d53fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
+  anim: {fileID: 676388153}
+  cooldown: 0.6
+--- !u!95 &676388153 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8604338328261265745, guid: 8b2aa44de82b0b44d8b83ff990597602, type: 3}
+  m_PrefabInstance: {fileID: 678738031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &678738031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33991,6 +34015,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1018662966397363912, guid: 8b2aa44de82b0b44d8b83ff990597602, type: 3}
+      propertyPath: player_Combat
+      value: 
+      objectReference: {fileID: 676388152}
     - target: {fileID: 2278814058031950356, guid: 8b2aa44de82b0b44d8b83ff990597602, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -34078,7 +34106,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7627359705309837928, guid: 8b2aa44de82b0b44d8b83ff990597602, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 676388152}
   m_SourcePrefab: {fileID: 100100000, guid: 8b2aa44de82b0b44d8b83ff990597602, type: 3}
 --- !u!1 &684717931
 GameObject:
@@ -47111,7 +47142,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -5249637840615531020, guid: af248809fe8a7d44a99cfb9aec504939, type: 3}
       - {fileID: -1338405803, guid: af248809fe8a7d44a99cfb9aec504939, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -10, y: 14, z: 0}

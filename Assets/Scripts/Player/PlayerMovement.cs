@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Material knockbackMaterial; // przypisz SolidGreenMaterial w Inspectorze
     private Material defaultMaterial;
 
+    public Player_Combat player_Combat;
+
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
         ProccessInputs();
         Animate();
         HandleFootsteps();
+
+        if (Input.GetButtonDown("Attack"))
+        {
+            player_Combat.Attack();
+        }
     }
     private void FixedUpdate()
     {
