@@ -27,12 +27,10 @@ public class Player_Combat : MonoBehaviour
 
     public void Attack()
     {
+        AudioManager.Play("PlayerAttack");
         if (timer <= 0)
         {
             anim.SetBool("isAttacking", true);
-
-
-
             timer = cooldown;
         }
     }
@@ -47,14 +45,14 @@ public class Player_Combat : MonoBehaviour
             Enemy_Health enemyHealth = enemy.GetComponent<Enemy_Health>();
             Enemy_Knockback enemyKnockback = enemy.GetComponent<Enemy_Knockback>();
 
-            if (enemyHealth != null)
+            if (enemyHealth != null && !enemyHealth.isDead)
             {
                 enemyHealth.ChangeHealth(-damage);
-            }
-
-            if (enemyKnockback != null)
-            {
-                enemyKnockback.Knockback(transform, knockbackForce, knockbackTime, stunTime);
+                
+                if (enemyKnockback != null)
+                {
+                    enemyKnockback.Knockback(transform, knockbackForce, knockbackTime, stunTime);
+                }
             }
         }
     }

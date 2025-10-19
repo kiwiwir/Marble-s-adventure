@@ -13,7 +13,7 @@ public class Enemy_Health : MonoBehaviour
     public ItemSO lootItem;
     public int lootQuantity = 1;
 
-    private bool isDead = false;
+    public bool isDead = false;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     private Enemy_Movement enemyMovement;
@@ -31,6 +31,7 @@ public class Enemy_Health : MonoBehaviour
         if (isDead) return; // nie reaguj po śmierci
 
         currentHealth += amount;
+        AudioManager.Play("EnemyGetsHit");
 
         if (currentHealth > maxHealth)
         {
@@ -38,6 +39,7 @@ public class Enemy_Health : MonoBehaviour
         }
         else if (currentHealth <= 0)
         {
+            AudioManager.Play("EnemyDeath");
             StartCoroutine(Die());
         }
     }
