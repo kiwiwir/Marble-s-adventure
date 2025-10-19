@@ -8,7 +8,6 @@ public class ItemInfo : MonoBehaviour
     [Header("Panels")]
     public CanvasGroup infoPanelWithStats;
     public CanvasGroup infoPanelSimple;
-    public CanvasGroup infoPanelDescription;
 
     [Header("Texts - With Stats")]
     public TMP_Text itemNameTextWithStats;
@@ -99,27 +98,14 @@ public class ItemInfo : MonoBehaviour
             itemNameTextSimple.text = itemSO.GetLocalizedName();
         }
     }
-    public void ShowDescription(string description)
-    {
-        HideItemInfo(); // ukryj inne panele
-
-        if (descriptionText != null && infoPanelDescription != null)
-        {
-            descriptionText.text = description;
-            infoPanelDescription.alpha = 1;
-            infoPanelDescription.blocksRaycasts = true;
-            currentPanelRect = infoPanelDescription.GetComponent<RectTransform>();
-        }
-    }
+    
     public void HideItemInfo()
     {
         infoPanelWithStats.alpha = 0;
         infoPanelSimple.alpha = 0;
-        infoPanelDescription.alpha = 0;
 
         infoPanelWithStats.blocksRaycasts = false;
         infoPanelSimple.blocksRaycasts = false;
-        infoPanelDescription.blocksRaycasts = false;
     }
 
     public void FollowMouse()

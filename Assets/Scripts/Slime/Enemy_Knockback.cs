@@ -16,7 +16,6 @@ public class Enemy_Knockback : MonoBehaviour
         StartCoroutine(StunTimer(knockbackTime, stunTime));
         Vector2 direction = (transform.position - playerTransform.position).normalized;
         rb.linearVelocity = direction * knockbackForce;
-        Debug.Log("Knockback applied.");
     }
 
     IEnumerator StunTimer(float knockbackTime, float stunTime)

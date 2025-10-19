@@ -1500,7 +1500,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -6120562187213381168, guid: a9b8b49c52969d54b8b405af2781ae04, type: 3}
       - {fileID: -1838215038, guid: a9b8b49c52969d54b8b405af2781ae04, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -2833,7 +2833,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125682799}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3020,6 +3020,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
   currentHealth: 5
   maxHealth: 5
+  fadeOutDuration: 3
+  lootPrefab: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
+  lootItem: {fileID: 11400000, guid: 4de6c25e502301c498ea7693005359b8, type: 2}
+  lootQuantity: 1
 --- !u!114 &125682809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36086,7 +36090,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanelWithStats: {fileID: 1381425919}
   infoPanelSimple: {fileID: 834108118}
-  infoPanelDescription: {fileID: 0}
   itemNameTextWithStats: {fileID: 976794113}
   statTexts: []
   itemNameTextSimple: {fileID: 1068912746}
@@ -47123,7 +47126,7 @@ Tilemap:
       - {fileID: 1431666530790354471, guid: bda943473b77a9142874100173fb1aa5, type: 3}
       - {fileID: -515028818987709250, guid: bda943473b77a9142874100173fb1aa5, type: 3}
       - {fileID: -1167625623972749798, guid: bda943473b77a9142874100173fb1aa5, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 32, y: 7, z: 0}
@@ -64391,7 +64394,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanelWithStats: {fileID: 1381425919}
   infoPanelSimple: {fileID: 834108118}
-  infoPanelDescription: {fileID: 0}
   itemNameTextWithStats: {fileID: 976794113}
   statTexts:
   - {fileID: 337380320}
