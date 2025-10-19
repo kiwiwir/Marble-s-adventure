@@ -6,6 +6,9 @@ public class Player_Combat : MonoBehaviour
 {
     public Transform attackPoint;
     public float weaponRange = 1f;
+    public float knockbackForce = 5f;
+    public float knockbackTime = 0.15f;
+    public float stunTime = 0.3f;
     public LayerMask enemyLayer;
     public int damage = 1;
 
@@ -33,7 +36,7 @@ public class Player_Combat : MonoBehaviour
             timer = cooldown;
         }
     }
-    
+
     public void DealDamage()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, enemyLayer);
@@ -42,15 +45,18 @@ public class Player_Combat : MonoBehaviour
             if (enemy.isTrigger) continue;
 
             Enemy_Health enemyHealth = enemy.GetComponent<Enemy_Health>();
+            Enemy_Knockback enemyKnockback = enemy.GetComponent<Enemy_Knockback>();
+
             if (enemyHealth != null)
             {
                 enemyHealth.ChangeHealth(-damage);
             }
+
+            if (enemyKnockback != null)
+            {
+                enemyKnockback.Knockback(transform, knockbackForce, knockbackTime, stunTime);
+            }
         }
-        /*if (enemies.Length > 0)
-        {
-            enemies[0].GetComponent<Enemy_Health>().ChangeHealth(-damage);
-        }*/
     }
 
     public void FinishAttacking()

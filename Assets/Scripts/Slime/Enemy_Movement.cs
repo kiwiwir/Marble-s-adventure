@@ -33,20 +33,23 @@ public class Enemy_Movement : MonoBehaviour
 
     void Update()
     {
-        CheckForPlayer();
+        if(enemyState != EnemyState.Knockback)
+        {
+            CheckForPlayer();
 
-        if (attackCooldownTimer > 0)
-        {
-            attackCooldownTimer -= Time.deltaTime;
-        }
+            if (attackCooldownTimer > 0)
+            {
+                attackCooldownTimer -= Time.deltaTime;
+            }
 
-        if (enemyState == EnemyState.Chasing)
-        {
-            Chase();
-        }
-        else if (enemyState == EnemyState.Attacking)
-        {
-            rb.linearVelocity = Vector2.zero;
+            if (enemyState == EnemyState.Chasing)
+            {
+                Chase();
+            }
+            else if (enemyState == EnemyState.Attacking)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
         }
 
         if (enemyState == EnemyState.Chasing && rb.linearVelocity.magnitude > 0.1f)
@@ -100,7 +103,7 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         // Exit current animation
         if (enemyState == EnemyState.Idle)
@@ -109,6 +112,8 @@ public class Enemy_Movement : MonoBehaviour
             anim.SetBool("isChasing", false);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", false);
+        else if (enemyState == EnemyState.Knockback)
+            anim.SetBool("isKnockedback", false);
 
         // Update current state
         enemyState = newState;
@@ -120,6 +125,8 @@ public class Enemy_Movement : MonoBehaviour
             anim.SetBool("isChasing", true);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", true);
+        else if (enemyState == EnemyState.Knockback)
+            anim.SetBool("isKnockedback", true);
     }
 
     private void OnDrawGizmosSelected()
@@ -133,5 +140,6 @@ public enum EnemyState
 {
     Idle,
     Chasing,
-    Attacking
+    Attacking,
+    Knockback
 }
