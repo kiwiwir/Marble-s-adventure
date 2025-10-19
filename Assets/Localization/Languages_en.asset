@@ -158,6 +158,14 @@ MonoBehaviour:
     m_Localized: FONTS
     m_Metadata:
       m_Items: []
+  - m_Id: 32622750569918464
+    m_Localized: GAME OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32622993520783360
+    m_Localized: Retry
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

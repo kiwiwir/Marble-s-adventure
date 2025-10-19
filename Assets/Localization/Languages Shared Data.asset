@@ -161,6 +161,18 @@ MonoBehaviour:
     m_Key: FONTS
     m_Metadata:
       m_Items: []
+  - m_Id: 32622421581295616
+    m_Key: PAUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32622750569918464
+    m_Key: GAME OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32622993520783360
+    m_Key: Retry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

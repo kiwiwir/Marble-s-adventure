@@ -4,6 +4,10 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public CanvasGroup gameOverUI; // przypisz panel GameOver w inspectorze
+    public float fadeDuration = 1.5f; // czas fade-in
+    public bool isDead = false;
+
     public void ChangeHealth(int amount)
     {
         StatsManager.Instance.currentHealth += amount;
@@ -20,6 +24,23 @@ public class PlayerHealth : MonoBehaviour
         yield return null;
 
         AudioManager.Play("GameOver");
+        isDead = true;
+
+        // Włącz panel GameOver
+        if (gameOverUI != null)
+        {
+            gameOverUI.gameObject.SetActive(true);
+            gameOverUI.alpha = 0f;
+
+            float elapsed = 0f;
+            while (elapsed < fadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                gameOverUI.alpha = Mathf.Clamp01(elapsed / fadeDuration);
+                yield return null;
+            }
+            gameOverUI.alpha = 1f;
+        }
 
         gameObject.SetActive(false);
     }
