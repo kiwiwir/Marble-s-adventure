@@ -33962,8 +33962,8 @@ CanvasGroup:
   m_GameObject: {fileID: 628330141}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &642671336
 GameObject:
@@ -69883,8 +69883,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1848404990}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1872160137 stripped
 MonoBehaviour:
@@ -70521,8 +70521,8 @@ CanvasGroup:
   m_GameObject: {fileID: 2021199327}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &2074441629
 GameObject:
@@ -70866,6 +70866,7 @@ GameObject:
   - component: {fileID: 2094700366}
   - component: {fileID: 2094700368}
   - component: {fileID: 2094700367}
+  - component: {fileID: 2094700369}
   m_Layer: 5
   m_Name: SettingsPage
   m_TagString: Untagged
@@ -70935,6 +70936,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094700365}
   m_CullTransparentMesh: 1
+--- !u!114 &2094700369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094700365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b3599b578891f468fb7cd4faa631df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OptionsSlidersScript
+  musicSlider: {fileID: 941291937}
+  sfxSlider: {fileID: 984828570}
+  voiceSlider: {fileID: 1147629833}
 --- !u!1001 &2114360421
 PrefabInstance:
   m_ObjectHideFlags: 0

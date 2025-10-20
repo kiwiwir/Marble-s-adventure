@@ -1469,6 +1469,7 @@ GameObject:
   - component: {fileID: 998741128}
   - component: {fileID: 998741127}
   - component: {fileID: 998741130}
+  - component: {fileID: 998741131}
   m_Layer: 5
   m_Name: SettingsCanvas
   m_TagString: Untagged
@@ -1575,6 +1576,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &998741131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998741125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b3599b578891f468fb7cd4faa631df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OptionsSlidersScript
+  musicSlider: {fileID: 955502791}
+  sfxSlider: {fileID: 1767670144}
+  voiceSlider: {fileID: 588063614}
 --- !u!1 &1080239319
 GameObject:
   m_ObjectHideFlags: 0
