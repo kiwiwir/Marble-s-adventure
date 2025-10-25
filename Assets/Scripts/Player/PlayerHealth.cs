@@ -31,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
         {
             gameOverUI.gameObject.SetActive(true);
             gameOverUI.alpha = 0f;
+            gameOverUI.interactable = false;
+            gameOverUI.blocksRaycasts = false;
 
             float elapsed = 0f;
             while (elapsed < fadeDuration)
@@ -40,6 +42,8 @@ public class PlayerHealth : MonoBehaviour
                 yield return null;
             }
             gameOverUI.alpha = 1f;
+            gameOverUI.interactable = true;
+            gameOverUI.blocksRaycasts = true;
         }
 
         gameObject.SetActive(false);

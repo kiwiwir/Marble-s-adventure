@@ -43,17 +43,30 @@ public class RetryScript : MonoBehaviour
     private void RespawnPlayer()
     {
         Debug.Log("RespawnPlayer called");
-        // znajdź gracza
+
         if (player != null)
         {
-            player.transform.position = spawnPoint.position;
             player.SetActive(true);
+
+            // zresetuj HP
             PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
                 StatsManager.Instance.currentHealth = playerFullHealth;
                 playerHealth.isDead = false;
             }
+
+            // zresetuj stan ruchu / koloru
+            PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.ResetState();
+            }
+
+            // przesuń na spawn point
+            player.transform.position = spawnPoint.position;
+
+            Debug.Log("Player respawned at " + spawnPoint.position);
         }
     }
 }

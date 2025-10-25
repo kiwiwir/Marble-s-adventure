@@ -120,4 +120,12 @@ public class PlayerMovement : MonoBehaviour
         // przywróć oryginalny materiał
         spriteRenderer.material = defaultMaterial;
     }
+
+    public void ResetState()
+    {
+        StopAllCoroutines(); // zatrzymuje np. KnockbackCounter
+        rb.linearVelocity = Vector2.zero;
+        isKnockedBack = false;
+        spriteRenderer.material = defaultMaterial;
+    }
 }
