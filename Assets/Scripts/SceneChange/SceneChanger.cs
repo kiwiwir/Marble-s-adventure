@@ -55,8 +55,9 @@ public class SceneChanger : MonoBehaviour
             yield return null;
         }
 
-        player.position = newPlayerPosition;
-        
+        if (player != null)
+            player.position = newPlayerPosition;
+
         SceneManager.LoadScene(sceneToLoad);
     }
 }

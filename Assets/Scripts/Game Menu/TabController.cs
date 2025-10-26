@@ -14,7 +14,8 @@ public class TabController : MonoBehaviour
     public void ActiveTab(int tabNo)
     {
         // Dźwięk przełączenia tabów
-        AudioManager.Play("Menu_In");
+        if (AudioManager.Instance != null && AudioManager.Instance.isActiveAndEnabled)
+            AudioManager.Play("Menu_In");
 
         for (int i = 0; i < pages.Length; i++)
         {
