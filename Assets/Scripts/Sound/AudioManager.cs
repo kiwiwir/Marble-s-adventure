@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -50,24 +51,32 @@ public class AudioManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+    private Dictionary<string, string> sceneMusicMap = new Dictionary<string, string>()
+    {
+        { "MainMenuScene", "MainMenuBackgroundMusic" },
+        { "TrainStationScene", "TrainBackgroundMusic" },
+        { "TunnelScene", "TunnelBackgroundMusic" },
+        //{ "ForestScene", "ForestBackgroundMusic" },
+        //{ "BossFightScene", "BossBattleMusic" }
+    };
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StopAllCoroutines(); // zatrzymaj poprzednią muzykę
+        StopAllCoroutines();
         LoadVolumeSettings();
 
-        if (scene.name == "MainMenuScene")
+        if (sceneMusicMap.TryGetValue(scene.name, out string musicGroup))
         {
-            StartMusicLoop("MainMenuBackgroundMusic");
+            StartMusicLoop(musicGroup);
         }
-        else if (scene.name == "TrainStationScene")
+        else
         {
-            StartMusicLoop("TrainBackgroundMusic");
+            StopMusic();
         }
 
-        // Spróbuj przypisać suwaki, jeśli są obecne w scenie
         TryAssignSlidersFromScene();
     }
+
 
     private void TryAssignSlidersFromScene()
     {

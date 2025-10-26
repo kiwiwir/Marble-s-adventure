@@ -54584,6 +54584,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 622554736158536692, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 622554736158536692, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1027653306326584507, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -54776,6 +54784,10 @@ PrefabInstance:
       propertyPath: sceneChanger
       value: 
       objectReference: {fileID: 773277530}
+    - target: {fileID: 4387171641814140016, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4413985847376393793, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
