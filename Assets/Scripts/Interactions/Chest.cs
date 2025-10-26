@@ -17,6 +17,10 @@ public class Chest : MonoBehaviour, IInteractable
     {
         animator = GetComponent<Animator>();
         ChestID ??= GlobalHelper.GenerateUniqueID(gameObject);
+
+        // sprawdzenie stanu w GameManagerze
+        bool savedState = GameManager.Instance.GetChestState(ChestID);
+        SetOpened(savedState);
     }
 
     public bool CanInteract()
@@ -33,6 +37,7 @@ public class Chest : MonoBehaviour, IInteractable
     private void OpenChest()
     {
         SetOpened(true);
+        GameManager.Instance.SetChestState(ChestID, true); // zapisz stan
         StartCoroutine(DropItemAfterDelay());
     }
 

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,6 +7,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Persistent Objects")]
     public GameObject[] persistentObjects;
+
+    // słownik do przechowywania stanu skrzyń
+    public Dictionary<string, bool> chestStates = new Dictionary<string, bool>();
 
     private void Awake()
     {
@@ -40,5 +44,22 @@ public class GameManager : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    // metoda do ustawienia stanu skrzyni
+    public void SetChestState(string chestID, bool isOpened)
+    {
+        if (chestStates.ContainsKey(chestID))
+            chestStates[chestID] = isOpened;
+        else
+            chestStates.Add(chestID, isOpened);
+    }
+
+    // metoda do pobrania stanu skrzyni
+    public bool GetChestState(string chestID)
+    {
+        if (chestStates.TryGetValue(chestID, out bool state))
+            return state;
+        return false; // domyślnie zamknięta
     }
 }
