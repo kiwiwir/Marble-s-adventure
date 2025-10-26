@@ -2,44 +2,43 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance;
 
-    [Header("Game State")]
-    public bool shouldLoadSave = false;
-    //public SaveData pendingSaveData = null;
-    public string loadedSlotName = "";
+    [Header("Persistent Objects")]
+    public GameObject[] persistentObjects;
 
     private void Awake()
     {
-        // Singleton pattern - persist across scenes
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
-            //DontDestroyOnLoad(gameObject);
+            CleanUpAndDestroy();
+            return;
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            MarkPersistentObjects();
         }
     }
 
-    /*public void SetPendingLoad(SaveData saveData, string slotName)
+    private void MarkPersistentObjects()
     {
-        shouldLoadSave = true;
-        pendingSaveData = saveData;
-        loadedSlotName = slotName;
-        Debug.Log($"Pending load set for slot: {slotName}");
+        foreach (GameObject obj in persistentObjects)
+        {
+            if (obj != null)
+            {
+                DontDestroyOnLoad(obj);
+            }
+        }
     }
-
-    public void ClearPendingLoad()
+    private void CleanUpAndDestroy()
     {
-        shouldLoadSave = false;
-        pendingSaveData = null;
-        loadedSlotName = "";
+        foreach (GameObject obj in persistentObjects)
+        {
+            Destroy(obj);
+        }
+        
+        Destroy(gameObject);
     }
-
-    public bool HasPendingLoad()
-    {
-        return shouldLoadSave && pendingSaveData != null;
-    }*/
 }

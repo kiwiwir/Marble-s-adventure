@@ -10,10 +10,14 @@ public class SceneChanger : MonoBehaviour
 
     private bool sceneLoading = false;
 
+    public Vector2 newPlayerPosition;
+    private Transform player;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !sceneLoading)
         {
+            player = collision.transform;
             StartSceneChange();
         }
     }
@@ -51,6 +55,8 @@ public class SceneChanger : MonoBehaviour
             yield return null;
         }
 
+        player.position = newPlayerPosition;
+        
         SceneManager.LoadScene(sceneToLoad);
     }
 }
