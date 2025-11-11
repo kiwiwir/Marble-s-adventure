@@ -1,28 +1,10 @@
 fileFormatVersion: 2
-guid: 63cdf609ba533c64793d594982021cec
+guid: 205c29cd6b7d808429ce9d8846cce8bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -582475635951617475
-    second: Alchemic_Anim_0
-  - first:
-      213: 3758356911143263120
-    second: Alchemic_Anim_1
-  - first:
-      213: 7847065325034098583
-    second: Alchemic_Anim_2
-  - first:
-      213: 5129883054289969407
-    second: Alchemic_Anim_3
-  - first:
-      213: -5396470568959768143
-    second: Alchemic_Anim_4
-  - first:
-      213: -2974669777721588056
-    second: Alchemic_Anim_5
-  - first:
-      213: 8308915871772779394
-    second: Alchemic_Anim_6
+      213: -1151905075149521417
+    second: Shop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,7 +100,293 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alchemic_Anim_0
+      name: Shop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd3ebcef6c9300f0800000000000000
+      internalID: -1151905075149521417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee252bc3b025b049944d93cb090089f
+      internalID: -754269468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66544f1123c9d0a439e2ed562ac023ad
+      internalID: 465198033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850ef01e244496a4bba68b176072c2df
+      internalID: 632767283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf5f7c0d3171364e84fea647f358826
+      internalID: 2054585097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493be68b18f73364191ec190ec3942c8
+      internalID: 841837790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b05e32e89400f4697498c240c95a44
+      internalID: 1010918076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0146678701bdc9b49b821955ba240958
+      internalID: -1892915954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ef2a97a7692f44a8345efaf9b8452a
+      internalID: -229267494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1205fcc50589d744988e7e50602077b7
+      internalID: 977233430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ff8c028eb6e6844aae7f33c40bd2a5
+      internalID: -45222989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be82d23288e5694e9081f58014c40ab
+      internalID: 1289411225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314234ee20cfd5f46811517e9342b494
+      internalID: -804018638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_13
       rect:
         serializedVersion: 2
         x: 32
@@ -131,16 +399,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3ab8c4ce71aae7f0800000000000000
-      internalID: -582475635951617475
+      spriteID: e21e3db4e90a8224daec99cc7f9e6541
+      internalID: 1182096310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alchemic_Anim_1
+      name: Shop_14
       rect:
         serializedVersion: 2
         x: 48
@@ -153,130 +421,20 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 09b14d3b2bd582430800000000000000
-      internalID: 3758356911143263120
+      spriteID: 2898cb1571caeec4a8c2040c51351f3f
+      internalID: 1941843282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alchemic_Anim_2
+      name: Shop_15
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79f41fb665066ec60800000000000000
-      internalID: 7847065325034098583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_3
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff0ef366571013740800000000000000
-      internalID: 5129883054289969407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b98d48fb92eb15b0800000000000000
-      internalID: -5396470568959768143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_5
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a680def899d7b6d0800000000000000
-      internalID: -2974669777721588056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_6
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2832f9d76f23f4370800000000000000
-      internalID: 8308915871772779394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_7
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 16
+        x: 0
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -287,58 +445,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fefed13a9f3f14bbc6c02c7ea95277
-      internalID: 368969025
+      spriteID: 88894315bdc52fb41b78482071446382
+      internalID: 1842669433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alchemic_Anim_8
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f62a6a6ec67be34aa38ef1e6dc45c44
-      internalID: -542924208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_9
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86affde8f7f6bd149bade32aa25a63c7
-      internalID: 1107874656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_10
+      name: Shop_16
       rect:
         serializedVersion: 2
         x: 32
@@ -353,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdf9f9e8f6c5d054089d2351e4b16012
-      internalID: -2017864971
+      spriteID: 36fce31d182b8034dbbe4eed68874328
+      internalID: -1099242415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alchemic_Anim_11
+      name: Shop_17
       rect:
         serializedVersion: 2
         x: 48
@@ -375,140 +489,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d88ddf5c33e17f34a9b5d1b04cd1d147
-      internalID: -1059139220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_12
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e133457a54c8953428fd95896dc8ee7d
-      internalID: 424403959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_13
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a578ea91ea8a0b46a4c5a443c438018
-      internalID: 773408872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_14
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cc8b1df5ad2d2d498f1e4e970a6e122
-      internalID: -1002524249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_15
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7bbcd0534ffbef4d941c9612cf49aa6
-      internalID: 482898052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_16
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d658476479aba4d419720a7d3aaa599a
-      internalID: 645074568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alchemic_Anim_17
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 913af4e3f4b6b814da044fdb9be1b91d
-      internalID: -2001093158
+      spriteID: 687772f5863c42d46978437e7ab2bd6e
+      internalID: -285874625
       vertices: []
       indices: 
       edges: []
@@ -517,7 +499,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 03f7ef167031f774ebc174bc28684be2
+    spriteID: 72513da6591bc3b4f8c0bcfab43ba05c
     internalID: 0
     vertices: []
     indices: 
@@ -529,24 +511,24 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Alchemic_Anim_0: -582475635951617475
-      Alchemic_Anim_1: 3758356911143263120
-      Alchemic_Anim_10: -2017864971
-      Alchemic_Anim_11: -1059139220
-      Alchemic_Anim_12: 424403959
-      Alchemic_Anim_13: 773408872
-      Alchemic_Anim_14: -1002524249
-      Alchemic_Anim_15: 482898052
-      Alchemic_Anim_16: 645074568
-      Alchemic_Anim_17: -2001093158
-      Alchemic_Anim_2: 7847065325034098583
-      Alchemic_Anim_3: 5129883054289969407
-      Alchemic_Anim_4: -5396470568959768143
-      Alchemic_Anim_5: -2974669777721588056
-      Alchemic_Anim_6: 8308915871772779394
-      Alchemic_Anim_7: 368969025
-      Alchemic_Anim_8: -542924208
-      Alchemic_Anim_9: 1107874656
+      Shop_0: -1151905075149521417
+      Shop_1: -754269468
+      Shop_10: -45222989
+      Shop_11: 1289411225
+      Shop_12: -804018638
+      Shop_13: 1182096310
+      Shop_14: 1941843282
+      Shop_15: 1842669433
+      Shop_16: -1099242415
+      Shop_17: -285874625
+      Shop_2: 465198033
+      Shop_3: 632767283
+      Shop_4: 2054585097
+      Shop_5: 841837790
+      Shop_6: 1010918076
+      Shop_7: -1892915954
+      Shop_8: -229267494
+      Shop_9: 977233430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

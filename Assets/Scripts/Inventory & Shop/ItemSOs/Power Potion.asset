@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd06b918ca44b243ad84118144b0321, type: 3}
+  m_Name: Power Potion
+  m_EditorClassIdentifier: 
+  itemNamePL: Mikstura Mocy
+  itemNameENG: Power Potion
+  itemDescriptionPL: "Fiolka wype\u0142niona ciemnoszkar\u0142atnym p\u0142ynem,
+    w kt\xF3rym wiruj\u0105 drobne iskry jak \u017Car z ogniska. Gdy si\u0119 ni\u0105
+    potrz\u0105\u015Bnie, ciecz zdaje si\u0119 kipie\u0107, jakby pr\xF3bowa\u0142a
+    wyrwa\u0107 si\u0119 z naczynia."
+  itemDescriptionENG: A vial filled with dark crimson liquid, with tiny sparks swirling
+    like embers in a fire. When shaken, the fluid seems to boil, as if straining
+    to break free from the glass.
+  icon: {fileID: -1200005452, guid: 90d8c794785a8f0428bafdc0c9f64121, type: 3}
+  isGold: 0
+  isUsable: 1
+  stackSize: 99
+  currentHealth: 0
+  moveSpeed: 0
+  sprintSpeed: 0
+  damage: 2
+  duration: 60

@@ -166,6 +166,18 @@ MonoBehaviour:
     m_Localized: Retry
     m_Metadata:
       m_Items: []
+  - m_Id: 40922671987355648
+    m_Localized: Potions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40922882033905664
+    m_Localized: Edible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40923002137800704
+    m_Localized: Other
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
