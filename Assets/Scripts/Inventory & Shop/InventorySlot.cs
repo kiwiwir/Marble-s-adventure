@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,6 +16,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public TMP_Text quantityText;
 
     private InventoryManager inventoryManager;
+    private static ShopManager activeShop;
 
     [SerializeField] private ItemInfo itemInfo;
 
@@ -29,19 +31,44 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
         canvas = GetComponentInParent<Canvas>(); // potrzebny do pozycji w UI
     }
 
+    private void OnEnable()
+    {
+        ShopManager.OnShopStateChanged += HandleShopStateChanged;
+    }
+    private void OnDisable()
+    {
+        ShopManager.OnShopStateChanged -= HandleShopStateChanged;
+    }
+
+    private void HandleShopStateChanged(ShopManager shopManager, bool isOpen)
+    {
+        activeShop = isOpen ? shopManager : null;
+    }
+
+
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (quantity > 0)
         {
             if (eventData.button == PointerEventData.InputButton.Left)
             {
-                if (itemSO.currentHealth > 0 && StatsManager.Instance.currentHealth >= StatsManager.Instance.maxHealth)
+                if (activeShop != null)
                 {
-                    AudioManager.Play("Error");
-                    return;
+                    activeShop.SellItem(itemSO);
+                    quantity--;
+                    UpdateUI();
                 }
-                    
-                inventoryManager.UseItem(this);
+                else
+                {
+                    if (itemSO.currentHealth > 0 && StatsManager.Instance.currentHealth >= StatsManager.Instance.maxHealth)
+                    {
+                        AudioManager.Play("Error");
+                        return;
+                    }
+
+                    inventoryManager.UseItem(this);
+                }
             }
         }
     }
@@ -122,6 +149,9 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
     public void UpdateUI()
     {
+        if (quantity <= 0)
+            itemSO = null;
+            
         if (itemSO != null)
         {
             itemImage.sprite = itemSO.icon;
