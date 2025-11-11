@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6501693883279473400}
   - component: {fileID: 220545934464345754}
   - component: {fileID: 8003935601554846245}
+  - component: {fileID: 1730989374688467025}
   m_Layer: 5
   m_Name: ShopSlot
   m_TagString: Untagged
@@ -123,6 +124,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1730989374688467025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103092254600691113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630c434b0dcd6034087772b8dcf45e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopSlot
+  itemSO: {fileID: 0}
+  itemNameText: {fileID: 1950299834125617544}
+  priceText: {fileID: 8174492009199518872}
+  itemImage: {fileID: 6311253340609572983}
 --- !u!1 &1532951227471775858
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +240,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -253,7 +270,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 13.444763, y: 5.7210083, z: 13.444824, w: 0.79211426}
+  m_margin: {x: 13.444763, y: 1.3137207, z: 13.444824, w: 0.79211426}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
