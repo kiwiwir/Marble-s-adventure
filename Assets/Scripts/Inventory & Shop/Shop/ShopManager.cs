@@ -1,23 +1,13 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    public static event Action<ShopManager, bool> OnShopStateChanged;
-    [SerializeField] private List<ShopItems> shopItems;
 
     [SerializeField] private ShopSlot[] shopSlots;
-
     [SerializeField] private InventoryManager inventoryManager;
 
-    private void Start()
-    {
-        PopulateShopItems();
-        OnShopStateChanged?.Invoke(this, true);
-    }
-
-    public void PopulateShopItems()
+    public void PopulateShopItems(List<ShopItems> shopItems)
     {
         for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
         {
@@ -66,7 +56,14 @@ public class ShopManager : MonoBehaviour
         {
             if (slot.itemSO == itemSO)
             {
-                inventoryManager.gold += slot.price -1;
+                inventoryManager.gold += slot.price - 1;
+                inventoryManager.goldText.text = inventoryManager.gold.ToString();
+                return;
+            }
+            else
+            {
+                int sellPrice = itemSO.basePrice -1;
+                inventoryManager.gold += sellPrice;
                 inventoryManager.goldText.text = inventoryManager.gold.ToString();
                 return;
             }

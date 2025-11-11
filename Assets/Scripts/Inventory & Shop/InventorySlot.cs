@@ -33,11 +33,11 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
     private void OnEnable()
     {
-        ShopManager.OnShopStateChanged += HandleShopStateChanged;
+        ShopKeeper.OnShopStateChanged += HandleShopStateChanged;
     }
     private void OnDisable()
     {
-        ShopManager.OnShopStateChanged -= HandleShopStateChanged;
+        ShopKeeper.OnShopStateChanged -= HandleShopStateChanged;
     }
 
     private void HandleShopStateChanged(ShopManager shopManager, bool isOpen)
@@ -66,7 +66,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
                         AudioManager.Play("Error");
                         return;
                     }
-
                     inventoryManager.UseItem(this);
                 }
             }
@@ -151,7 +150,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     {
         if (quantity <= 0)
             itemSO = null;
-            
+
         if (itemSO != null)
         {
             itemImage.sprite = itemSO.icon;

@@ -14,6 +14,7 @@ public class ItemSO : ScriptableObject
     public bool isUsable;
 
     public int stackSize = 99;
+    public int basePrice = 0;
 
     [Header("Stats")]
     public int currentHealth;

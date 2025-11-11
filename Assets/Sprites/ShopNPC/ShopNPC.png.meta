@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 2ea8a823823c4aa4c846bbbfc93bbe5a
+guid: e6bd340804603f144aea6398f61c6156
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 664901923169791938
-    second: ShopNPC_0
+      213: -1897372339263872124
+    second: ShopNPC 1_0
   - first:
-      213: -7585676586514962935
-    second: ShopNPC_1
+      213: 8206792562612469320
+    second: ShopNPC 1_1
   - first:
-      213: 4786800419199415819
-    second: ShopNPC_2
+      213: 5091265133023845596
+    second: ShopNPC 1_2
   - first:
-      213: -7465214084736735602
-    second: ShopNPC_3
+      213: 1031332881852313822
+    second: ShopNPC 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,8 +83,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,20 +112,20 @@ TextureImporter:
       name: ShopNPC_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 27
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2cf620db6c43a3900800000000000000
-      internalID: 664901923169791938
+      spriteID: 65cdd9cef7d83a848abc3b69ede259d2
+      internalID: 1532566687
       vertices: []
       indices: 
       edges: []
@@ -134,20 +134,20 @@ TextureImporter:
       name: ShopNPC_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 27
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 90627cfc5534ab690800000000000000
-      internalID: -7585676586514962935
+      spriteID: a87376013cb1aef4c8d56c7a9b3d9055
+      internalID: 1998174452
       vertices: []
       indices: 
       edges: []
@@ -156,20 +156,20 @@ TextureImporter:
       name: ShopNPC_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 28
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b067215ae912e6240800000000000000
-      internalID: 4786800419199415819
+      spriteID: e279b58b5d9e6584fa87a1ddb24ce6ee
+      internalID: -1289013053
       vertices: []
       indices: 
       edges: []
@@ -178,20 +178,20 @@ TextureImporter:
       name: ShopNPC_3
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 0
-        width: 28
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e862603a75b366890800000000000000
-      internalID: -7465214084736735602
+      spriteID: 5a2a1cc804cd29045a97ddaa2f826f5d
+      internalID: -701908070
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 093d9d6427b5ca14bbee5e412f1da27b
     internalID: 0
     vertices: []
     indices: 
@@ -208,12 +208,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ShopNPC_0: 664901923169791938
-      ShopNPC_1: -7585676586514962935
-      ShopNPC_2: 4786800419199415819
-      ShopNPC_3: -7465214084736735602
+      ShopNPC_0: 1532566687
+      ShopNPC_1: 1998174452
+      ShopNPC_2: -1289013053
+      ShopNPC_3: -701908070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

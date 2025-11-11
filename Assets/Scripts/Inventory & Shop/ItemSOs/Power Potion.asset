@@ -25,6 +25,7 @@ MonoBehaviour:
   isGold: 0
   isUsable: 1
   stackSize: 99
+  basePrice: 7
   currentHealth: 0
   moveSpeed: 0
   sprintSpeed: 0
