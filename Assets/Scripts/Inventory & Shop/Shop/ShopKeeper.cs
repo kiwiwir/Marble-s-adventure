@@ -110,7 +110,6 @@ public class ShopKeeper : MonoBehaviour
     private bool isShopOpen;
     private bool dialoguePlayed;
     private bool dialogueRunning;
-
     void Update()
     {
         // 🧩 Jeśli gracz w zasięgu i naciśnie "Interact"
@@ -161,12 +160,14 @@ public class ShopKeeper : MonoBehaviour
         currentShopKeeper = this;
         isShopOpen = true;
         OnShopStateChanged?.Invoke(shopManager, true);
+
         shopCanvasGroup.alpha = 1;
         shopCanvasGroup.interactable = true;
         shopCanvasGroup.blocksRaycasts = true;
 
         shopkeeperCam.transform.position = transform.position + cameraOffset;
         shopkeeperCam.gameObject.SetActive(true);
+        AudioManager.Play("Menu_In");
 
         OpenPotionsShop();
     }
@@ -177,11 +178,12 @@ public class ShopKeeper : MonoBehaviour
         currentShopKeeper = null;
         isShopOpen = false;
         OnShopStateChanged?.Invoke(shopManager, false);
+
         shopCanvasGroup.alpha = 0;
         shopCanvasGroup.interactable = false;
         shopCanvasGroup.blocksRaycasts = false;
-
         shopkeeperCam.gameObject.SetActive(false);
+        AudioManager.Play("Menu_Out");
     }
 
     public void OpenPotionsShop() => shopManager.PopulateShopItems(shopPotionsItems);

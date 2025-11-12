@@ -10429,7 +10429,7 @@ MonoBehaviour:
   - {fileID: 6745696335939169104}
   inventoryPanel: {fileID: 4614759529795078787}
   useItem: {fileID: 5983894479954241466}
-  gold: 5
+  gold: 0
   goldText: {fileID: 9203796848859059287}
   lootPrefab: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
   player: {fileID: 0}
@@ -14749,6 +14749,14 @@ PrefabInstance:
     - target: {fileID: 652887921831055383, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398760679072270054, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_fontSize
+      value: 60.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398760679072270054, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5871802060372695271, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
       propertyPath: m_Name

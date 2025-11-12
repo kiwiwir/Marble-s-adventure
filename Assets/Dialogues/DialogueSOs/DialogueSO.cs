@@ -19,6 +19,14 @@ public class DialogueLine
     [Tooltip("Name of the expression to display (optional)")]
     public string expressionName;
 
+    [System.Serializable]
+    public class DialogueOption
+    {
+        [TextArea(2, 4)] public string optionTextENG;
+        [TextArea(2, 4)] public string optionTextPL;
+        public DialogueSO nextDialogue;
+    }
+
     public string GetLocalizedText()
     {
         var locale = LocalizationSettings.SelectedLocale;

@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220726797435096823}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 915.014, y: 490.79837, z: -1.1643944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -59,6 +59,9 @@ MonoBehaviour:
   - name: TunnelBackgroundMusic
     audioClips:
     - {fileID: 8300000, guid: 04050cc2453d49a47a787d49a48fcf41, type: 3}
+  - name: WoodBackgroundMusic
+    audioClips:
+    - {fileID: 8300000, guid: 5f3a109a4f5f831408ade04addca7653, type: 3}
   - name: TrainSlowingDown
     audioClips:
     - {fileID: 8300000, guid: 0aa6406a368fd5c439f8ee2200080625, type: 3}
@@ -119,6 +122,9 @@ MonoBehaviour:
   - name: EnemyGetsHit
     audioClips:
     - {fileID: 8300000, guid: a0d5f92bfbd161c41859eb54a8780957, type: 3}
+  - name: SellItem
+    audioClips:
+    - {fileID: 8300000, guid: f61838341c999bc42ae5e16f0a4eb569, type: 3}
 --- !u!114 &5352274256350453843
 MonoBehaviour:
   m_ObjectHideFlags: 0

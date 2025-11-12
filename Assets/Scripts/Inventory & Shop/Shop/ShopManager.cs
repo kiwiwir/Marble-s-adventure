@@ -58,6 +58,7 @@ public class ShopManager : MonoBehaviour
             {
                 inventoryManager.gold += slot.price - 1;
                 inventoryManager.goldText.text = inventoryManager.gold.ToString();
+                AudioManager.Play("SellItem");
                 return;
             }
             else
@@ -65,6 +66,7 @@ public class ShopManager : MonoBehaviour
                 int sellPrice = itemSO.basePrice -1;
                 inventoryManager.gold += sellPrice;
                 inventoryManager.goldText.text = inventoryManager.gold.ToString();
+                AudioManager.Play("SellItem");
                 return;
             }
         }

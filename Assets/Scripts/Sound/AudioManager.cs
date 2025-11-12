@@ -56,8 +56,7 @@ public class AudioManager : MonoBehaviour
         { "MainMenuScene", "MainMenuBackgroundMusic" },
         { "TrainStationScene", "TrainBackgroundMusic" },
         { "TunnelScene", "TunnelBackgroundMusic" },
-        //{ "ForestScene", "ForestBackgroundMusic" },
-        //{ "BossFightScene", "BossBattleMusic" }
+        { "WoodScene", "WoodBackgroundMusic" },
     };
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
