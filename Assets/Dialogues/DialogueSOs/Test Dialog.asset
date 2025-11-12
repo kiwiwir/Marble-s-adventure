@@ -15,7 +15,7 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: cbb0e39c2b673eb44a8e0e49af9a10f8, type: 2}
     textENG: Hello, it's a test dialogue.
-    textPL: "Cze\u015B\u0107, to testowy dialog"
+    textPL: "Cze\u015B\u0107, to testowy dialog."
     expressionName: 
   - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
     textENG: I'm talking to a test NPC to show all the dialogue possibilities.

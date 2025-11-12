@@ -84,6 +84,8 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLine line = currentDialogue.lines[dialogueIndex];
 
+        DialogueHistoryTracker.Instance.RecordNPC(line.speaker);
+
         Sprite chosenPortrait = line.speaker.GetExpressionPortrait(line.expressionName);
         portrait.sprite = chosenPortrait;
 

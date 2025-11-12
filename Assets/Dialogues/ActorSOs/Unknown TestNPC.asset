@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5470e97fa92e1f44a120a31f7cd4806, type: 3}
-  m_Name: TestNPC
+  m_Name: Unknown TestNPC
   m_EditorClassIdentifier: 
-  nameENG: Test NPC
-  namePL: Test NPC
+  nameENG: ???
+  namePL: ???
   portrait: {fileID: 21300000, guid: 827fab7180aeb434d824ed8e4133e477, type: 3}
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 7455774f647cd4343865fb9ddba5418c, type: 3}
