@@ -6,6 +6,7 @@ using UnityEngine.Localization;
 public class DialogueSO : ScriptableObject
 {
     public DialogueLine[] lines;
+    public DialogueOption[] options;
 }
 
 [System.Serializable]
@@ -18,15 +19,6 @@ public class DialogueLine
 
     [Tooltip("Name of the expression to display (optional)")]
     public string expressionName;
-
-    [System.Serializable]
-    public class DialogueOption
-    {
-        [TextArea(2, 4)] public string optionTextENG;
-        [TextArea(2, 4)] public string optionTextPL;
-        public DialogueSO nextDialogue;
-    }
-
     public string GetLocalizedText()
     {
         var locale = LocalizationSettings.SelectedLocale;
@@ -45,6 +37,35 @@ public class DialogueLine
             case "en":
             default:
                 return textENG;
+        }
+    }
+}
+
+[System.Serializable]
+public class DialogueOption
+{
+    [TextArea(2, 4)] public string optionTextENG;
+    [TextArea(2, 4)] public string optionTextPL;
+    public DialogueSO nextDialogue;
+
+    public string GetLocalizedText()
+    {
+        var locale = LocalizationSettings.SelectedLocale;
+        if (locale == null)
+        {
+            Debug.LogWarning("No locale selected, falling back to English.");
+            return optionTextENG;
+        }
+
+        var code = locale.Identifier.Code.ToLower();
+
+        switch (code)
+        {
+            case "pl":
+                return optionTextPL;
+            case "en":
+            default:
+                return optionTextENG;
         }
     }
 }

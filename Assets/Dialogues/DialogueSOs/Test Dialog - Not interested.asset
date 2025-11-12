@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Test Dialog - Not interested
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: cbb0e39c2b673eb44a8e0e49af9a10f8, type: 2}
+    textENG: Aww, that's too bad.
+    textPL: Ojej, to wielka szkoda.
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: See you later.
+    textPL: Do zobaczenia
+    expressionName: sad
+  options: []
