@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Localization.Settings;
-using UnityEngine.Localization;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "DialogueSO", menuName = "Dialogue/DialogueNode")]
 public class DialogueSO : ScriptableObject
@@ -13,6 +13,10 @@ public class DialogueSO : ScriptableObject
     public LocationSO[] requiredLocations;
     public ItemSO[] requiredItems;
 
+    [Header("Control Flags")]
+    public bool removeAfterPlay;
+    public List<DialogueSO> removeTheseOnPlay;
+
 
     public bool IsConditionMet()
     {
@@ -21,7 +25,7 @@ public class DialogueSO : ScriptableObject
         {
             foreach (var npc in requiredNPCs)
             {
-                if (!DialogueHistoryTracker.Instance.HasSpokenWith(npc))
+                if (!GameManager.Instance.DialogueHistoryTracker.HasSpokenWith(npc))
                     return false;
             }
         }
@@ -30,7 +34,7 @@ public class DialogueSO : ScriptableObject
         {
             foreach (var location in requiredLocations)
             {
-                if (!LocationHistoryTracker.Instance.HasVisited(location))
+                if (!GameManager.Instance.LocationHistoryTracker.HasVisited(location))
                     return false;
             }
         }

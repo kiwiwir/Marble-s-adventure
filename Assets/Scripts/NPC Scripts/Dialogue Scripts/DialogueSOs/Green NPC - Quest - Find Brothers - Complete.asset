@@ -10,14 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
-  m_Name: Green NPC - Berry and Pebble
+  m_Name: Green NPC - Quest - Find Brothers - Complete
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   lines:
   - speaker: {fileID: 11400000, guid: cbb0e39c2b673eb44a8e0e49af9a10f8, type: 2}
-    textENG: Hello, I need my epic items.
-    textPL: "Cze\u015B\u0107, potrzebuj\u0119 moich epickich przedmiot\xF3w."
+    textENG: You've found all of my mates! You are truly a hero.
+    textPL: "Znalaz\u0142e\u015B wszystkich moich kumpli! Jeste\u015B prawdziwym
+      bohaterem."
     expressionName: 
   options: []
-  requiredNPCs: []
+  requiredNPCs:
+  - {fileID: 11400000, guid: 7b8ea9049ea3664408f81355e8bc1418, type: 2}
+  - {fileID: 11400000, guid: 46d27c576b67c054ca287c72baf69df7, type: 2}
   requiredLocations: []
   requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay:
+  - {fileID: 11400000, guid: e03d690f731b21d4b950b4484d2537c1, type: 2}
+  - {fileID: 11400000, guid: 1c65f79c6bc78ad418f472c25c5be549, type: 2}

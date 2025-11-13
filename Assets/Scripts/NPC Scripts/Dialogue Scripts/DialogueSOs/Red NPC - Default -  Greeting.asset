@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
-  m_Name: Green NPC - Still needs Blue
+  m_Name: Red NPC - Default -  Greeting
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   lines:
-  - speaker: {fileID: 11400000, guid: cbb0e39c2b673eb44a8e0e49af9a10f8, type: 2}
-    textENG: I see you've found Red. Please fint Blue as well.
-    textPL: "Widz\u0119, \u017Ce znalaz\u0142e\u015B Red. Prosz\u0119, znajd\u017A
-      te\u017C Blue."
+  - speaker: {fileID: 11400000, guid: 7b8ea9049ea3664408f81355e8bc1418, type: 2}
+    textENG: Hey, I'm Red.
+    textPL: Hej, jestem Red.
     expressionName: 
   options: []
-  requiredNPCs:
-  - {fileID: 11400000, guid: 7b8ea9049ea3664408f81355e8bc1418, type: 2}
+  requiredNPCs: []

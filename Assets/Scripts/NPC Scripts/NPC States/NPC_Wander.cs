@@ -63,6 +63,7 @@ public class NPC_Wander : MonoBehaviour
     }
     public void OollisionEnter2D(Collision2D collision)
     {
+        if(!enabled) return;
         StartCoroutine(PauseAndPickNewDestination());
     }
     private Vector2 GetRandomTarget()

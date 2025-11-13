@@ -116,9 +116,9 @@ public class ShopKeeper : MonoBehaviour
         if (playerInRange && Input.GetButtonDown("Interact"))
         {
             // ⏳ Jeśli trwa dialog — przewiń go dalej
-            if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+            if (GameManager.Instance.DialogueManager != null && GameManager.Instance.DialogueManager.isDialogueActive)
             {
-                DialogueManager.Instance.AdvanceDialogue();
+               GameManager.Instance.DialogueManager.AdvanceDialogue();
                 return;
             }
 
@@ -143,10 +143,10 @@ public class ShopKeeper : MonoBehaviour
         dialogueRunning = true;
 
         // uruchom dialog
-        DialogueManager.Instance.StartDialogue(shopkeeperDialogue);
+        GameManager.Instance.DialogueManager.StartDialogue(shopkeeperDialogue);
 
         // czekaj, aż dialog się zakończy
-        yield return new WaitUntil(() => DialogueManager.Instance.isDialogueActive == false);
+        yield return new WaitUntil(() => GameManager.Instance.DialogueManager.isDialogueActive == false);
 
         // po zakończeniu dialogu — otwórz sklep
         dialoguePlayed = true;
@@ -202,7 +202,7 @@ public class ShopKeeper : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Jeśli trwa dialog — ignoruj wyjście z zasięgu
-        if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+        if (GameManager.Instance.DialogueManager != null && GameManager.Instance.DialogueManager.isDialogueActive)
             return;
 
         if (collision.CompareTag("Player"))

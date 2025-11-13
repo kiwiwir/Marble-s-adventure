@@ -2,11 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance;
-
     [Header("UI References")]
     public CanvasGroup canvasGroup;
     public Image portrait;
@@ -27,11 +26,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -84,7 +78,7 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLine line = currentDialogue.lines[dialogueIndex];
 
-        DialogueHistoryTracker.Instance.RecordNPC(line.speaker);
+        GameManager.Instance.DialogueHistoryTracker.RecordNPC(line.speaker);
 
         Sprite chosenPortrait = line.speaker.GetExpressionPortrait(line.expressionName);
         portrait.sprite = chosenPortrait;

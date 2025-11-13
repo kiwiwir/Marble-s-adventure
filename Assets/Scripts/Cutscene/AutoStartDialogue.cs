@@ -21,7 +21,7 @@ public class AutoStartDialogue : MonoBehaviour
         if (!dialogueStarted)
         {
             dialogueStarted = true;
-            DialogueManager.Instance.StartDialogue(dialogueToStart);
+            GameManager.Instance.DialogueManager.StartDialogue(dialogueToStart);
         }
     }
 
@@ -29,14 +29,14 @@ public class AutoStartDialogue : MonoBehaviour
     {
         if (dialogueStarted && Input.GetButtonDown("Interact"))
         {
-            if (DialogueManager.Instance.isDialogueActive)
+            if (GameManager.Instance.DialogueManager.isDialogueActive)
             {
-                DialogueManager.Instance.AdvanceDialogue();
+                GameManager.Instance.DialogueManager.AdvanceDialogue();
             }
         }
 
         // Sprawdzaj czy dialog się zakończył i zmień scenę tylko raz
-        if (dialogueStarted && !DialogueManager.Instance.isDialogueActive && !sceneRequested)
+        if (dialogueStarted && !GameManager.Instance.DialogueManager.isDialogueActive && !sceneRequested)
         {
             sceneRequested = true;
             StartCoroutine(WaitAndChangeScene());

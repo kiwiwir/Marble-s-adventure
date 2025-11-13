@@ -14917,6 +14917,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5871802060372695271, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8070909809214571556}
+    - targetCorrespondingSourceObject: {fileID: 5871802060372695271, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5605454954959961953}
     - targetCorrespondingSourceObject: {fileID: 6506005800424842797, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7482063513168999231}
@@ -15077,6 +15080,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a548b7266650434188e2a5475571dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueHistoryTracker
+--- !u!114 &5605454954959961953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128315807807289056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b49aee01f74d84cacaaaf52a498b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocationHistoryTracker
 --- !u!1001 &3937759716749557331
 PrefabInstance:
   m_ObjectHideFlags: 0
