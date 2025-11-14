@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4401492590882173034}
   - component: {fileID: 5832121718743152874}
   - component: {fileID: 3492250089246328944}
+  - component: {fileID: 7557619707874709726}
   m_Layer: 5
   m_Name: QuestSlot
   m_TagString: Untagged
@@ -141,7 +142,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 150
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -149,6 +150,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7557619707874709726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684346986263577781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667152fc9c92b734089f2f3d1d2d666a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestLogSlot
+  questNameText: {fileID: 5583019739330515669}
+  questLevelText: {fileID: 2298735675875597077}
+  currentQuest: {fileID: 0}
 --- !u!1 &4198771597795239631
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +257,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -377,7 +393,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
