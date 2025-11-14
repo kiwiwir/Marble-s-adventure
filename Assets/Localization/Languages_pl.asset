@@ -180,6 +180,10 @@ MonoBehaviour:
     m_Localized: Inne
     m_Metadata:
       m_Items: []
+  - m_Id: 42016279305973760
+    m_Localized: "Dziennik zada\u0144"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

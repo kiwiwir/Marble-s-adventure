@@ -185,6 +185,10 @@ MonoBehaviour:
     m_Key: Other
     m_Metadata:
       m_Items: []
+  - m_Id: 42016279305973760
+    m_Key: Quest Log
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
