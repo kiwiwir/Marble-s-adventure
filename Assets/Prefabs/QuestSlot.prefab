@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5933752463508314939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -123,7 +123,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4401492590882173034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7557619707874709726}
+        m_TargetAssemblyTypeName: QuestLogSlot, Assembly-CSharp
+        m_MethodName: OnSlotClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3492250089246328944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +177,7 @@ MonoBehaviour:
   questNameText: {fileID: 5583019739330515669}
   questLevelText: {fileID: 2298735675875597077}
   currentQuest: {fileID: 0}
+  questLogUI: {fileID: 0}
 --- !u!1 &4198771597795239631
 GameObject:
   m_ObjectHideFlags: 0

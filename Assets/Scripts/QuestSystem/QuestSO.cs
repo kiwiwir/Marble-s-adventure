@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
@@ -13,6 +14,8 @@ public class QuestSO : ScriptableObject
     [TextArea] public string questDescriptionENG;
 
     public int questLevel;
+
+    public List <QuestObjective> objectives;
 
     public string GetLocalizedName()
     {
@@ -54,4 +57,40 @@ public class QuestSO : ScriptableObject
                 return questDescriptionENG;
         }
     }
+}
+
+[System.Serializable]
+public class QuestObjective
+{
+    public string descriptionPL;
+    public string descriptionENG;
+    public string GetLocalizedQuestObjectiveDescription()
+    {
+        var locale = LocalizationSettings.SelectedLocale;
+        if (locale == null)
+        {
+            Debug.LogWarning("No locale selected, falling back to English.");
+            return descriptionENG;
+        }
+
+        var code = locale.Identifier.Code.ToLower();
+
+        switch (code)
+        {
+            case "pl":
+                return descriptionPL;
+            case "en":
+            default:
+                return descriptionENG;
+        }
+    }
+
+    [SerializeField] private Object target;
+
+    public ItemSO targetItem => target as ItemSO;
+    public ActorSO targetNPC => target as ActorSO;
+    public LocationSO targetLocation => target as LocationSO;
+
+    public int requiredAmount;
+    public int currentAmount;
 }
