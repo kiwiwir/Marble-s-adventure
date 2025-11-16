@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class QuestLogUI : MonoBehaviour
     [SerializeField] private QuestRewardSlot[] rewardSlots;
 
     private QuestSO questSO;
+
+    [SerializeField] private QuestSO noAvailableQuestSO;
+    [SerializeField] private QuestLogSlot[] questSlots;
 
     [SerializeField] private CanvasGroup questCanvas;
     [SerializeField] private CanvasGroup acceptCanvasGroup;
@@ -29,12 +33,41 @@ public class QuestLogUI : MonoBehaviour
 
     public void ShowQuestOffer(QuestSO incomingQuestSO)
     {
-        HandleQuestClicked(incomingQuestSO);
-        SetCanvasState(questCanvas, true);
+        if (questManager.IsQuestAccepted(incomingQuestSO))
+        {
+            questSO = noAvailableQuestSO;
+            SetCanvasState(acceptCanvasGroup, false);
+            SetCanvasState(declineCanvasGroup, true);
+            SetCanvasState(completeCanvasGroup, false);
+        }
+        else
+        {
+            questSO = incomingQuestSO;
+            SetCanvasState(acceptCanvasGroup, true);
+            SetCanvasState(declineCanvasGroup, true);
+            SetCanvasState(completeCanvasGroup, false);
+        }
 
-        SetCanvasState(acceptCanvasGroup, true);
-        SetCanvasState(declineCanvasGroup, true);
+        HandleQuestClicked(questSO);
+        SetCanvasState(questCanvas, true);
+    }
+
+    public void OnAcceptQuestClicked()
+    {
+        questManager.AcceptQuest(questSO);
         SetCanvasState(completeCanvasGroup, false);
+        SetCanvasState(acceptCanvasGroup, false);
+        RefreshQuestList();
+        HandleQuestClicked(noAvailableQuestSO);
+    }
+    public void OnDeclineQuestClicked()
+    {
+        SetCanvasState(questCanvas, false);
+    }
+
+    public void OnCompleteQuestClicked()
+    {
+        RefreshQuestList();
     }
 
     private void SetCanvasState(CanvasGroup group, bool activate)
@@ -42,6 +75,23 @@ public class QuestLogUI : MonoBehaviour
         group.alpha = activate ? 1 : 0;
         group.blocksRaycasts = activate;
         group.interactable = activate;
+    }
+
+    public void RefreshQuestList()
+    {
+        List<QuestSO> activeQuests = questManager.GetActiveQuests();
+
+        for (int i = 0; i < questSlots.Length; i++)
+        {
+            if (i < activeQuests.Count)
+            {
+                questSlots[i].SetQuest(activeQuests[i]);
+            }
+            else
+            {
+                questSlots[i].ClearSlot();
+            }
+        }
     }
 
     public void HandleQuestClicked(QuestSO questSO)

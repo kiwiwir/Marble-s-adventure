@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a97892325879744e9aaa62d03992913, type: 3}
+  m_Name: Quest_NoAvailableQuests
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questNamePL: "Brak dost\u0119pnych zada\u0144"
+  questNameENG: No quest available
+  questDescriptionPL: "Nie ma wi\u0119cej zada\u0144. Sprawd\u017A p\xF3\u017Aniej."
+  questDescriptionENG: There are no more quests. Please check back later.
+  questLevel: 0
+  objectives: []
+  rewards: []
