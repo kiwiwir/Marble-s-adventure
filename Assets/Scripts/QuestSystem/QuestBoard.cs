@@ -1,27 +1,27 @@
 using UnityEngine;
 
-public class QuestBoard : MonoBehaviour, IInteractable
+public class QuestBoard : MonoBehaviour
 {
     [SerializeField] private QuestSO questToOffer;
+    [SerializeField] private QuestSO questToTurnIn;
     private bool playerInRange;
 
-    public void Interact()
-    {
-        QuestEvents.OnQuestOfferRequested?.Invoke(questToOffer);
-        Debug.Log("QuestBoard: Interact()");
-    }
-    public bool CanInteract()
-    {
-        return true; // Always interactable
-    }
-
-    /*private void Update()
+    private void Update()
     {
         if (playerInRange && Input.GetButtonDown("Interact"))
         {
-            QuestEvents.OnQuestOfferRequested?.Invoke(questToOffer);
+            bool canTurnIn = questToTurnIn != null && QuestEvents.IsQuestComplete?.Invoke(questToTurnIn) == true;
+
+            if (canTurnIn)
+            {
+                QuestEvents.OnQuestTurnInRequested?.Invoke(questToTurnIn);
+            }
+            else
+            {
+                QuestEvents.OnQuestOfferRequested?.Invoke(questToOffer);
+            }
         }
-    }*/
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

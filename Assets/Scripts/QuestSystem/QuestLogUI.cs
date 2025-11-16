@@ -25,12 +25,15 @@ public class QuestLogUI : MonoBehaviour
     private void OnEnable()
     {
         QuestEvents.OnQuestOfferRequested += ShowQuestOffer;
+        QuestEvents.OnQuestTurnInRequested += ShowQuestTurnIn;
     }
     private void OnDisable()
     {
         QuestEvents.OnQuestOfferRequested -= ShowQuestOffer;
+        QuestEvents.OnQuestTurnInRequested -= ShowQuestTurnIn;
     }
 
+    #region Show Quest Methods
     public void ShowQuestOffer(QuestSO incomingQuestSO)
     {
         if (questManager.IsQuestAccepted(incomingQuestSO))
@@ -52,6 +55,21 @@ public class QuestLogUI : MonoBehaviour
         SetCanvasState(questCanvas, true);
     }
 
+    public void ShowQuestTurnIn(QuestSO incomingQuestSO)
+    {
+        questSO = incomingQuestSO;
+
+        HandleQuestClicked(questSO);
+        
+        SetCanvasState(completeCanvasGroup, true);
+        SetCanvasState(acceptCanvasGroup, false);
+        SetCanvasState(declineCanvasGroup, false);
+        SetCanvasState(questCanvas, true);
+    }
+
+    #endregion
+
+    #region On Button Clicked Methods
     public void OnAcceptQuestClicked()
     {
         questManager.AcceptQuest(questSO);
@@ -67,8 +85,11 @@ public class QuestLogUI : MonoBehaviour
 
     public void OnCompleteQuestClicked()
     {
+        questManager.CompleteQuest(questSO);
+
         RefreshQuestList();
     }
+    #endregion
 
     private void SetCanvasState(CanvasGroup group, bool activate)
     {

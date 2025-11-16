@@ -8371,6 +8371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestBoard
   questToOffer: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
+  questToTurnIn: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
 --- !u!58 &254774971
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36569,7 +36570,7 @@ Tilemap:
       - {fileID: -4387586717796972140, guid: ab2518098078b6748bd87be763eb4660, type: 3}
       - {fileID: -3889362630507399840, guid: ab2518098078b6748bd87be763eb4660, type: 3}
       - {fileID: -3291476270824942844, guid: ab2518098078b6748bd87be763eb4660, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -23, y: 20, z: 0}
@@ -46062,7 +46063,7 @@ Tilemap:
       - {fileID: 2083204715, guid: 65386672810c88742a787b082929a50f, type: 3}
       - {fileID: -1380560890, guid: 65386672810c88742a787b082929a50f, type: 3}
       - {fileID: 732289403, guid: 65386672810c88742a787b082929a50f, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 8, y: 12, z: 0}
