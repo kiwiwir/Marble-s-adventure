@@ -189,6 +189,22 @@ MonoBehaviour:
     m_Key: Quest Log
     m_Metadata:
       m_Items: []
+  - m_Id: 42753117670928384
+    m_Key: Rewards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42756677255098368
+    m_Key: Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42757137185697792
+    m_Key: Decline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42757506007625728
+    m_Key: Complete
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

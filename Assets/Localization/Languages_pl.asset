@@ -184,6 +184,22 @@ MonoBehaviour:
     m_Localized: "Dziennik zada\u0144"
     m_Metadata:
       m_Items: []
+  - m_Id: 42753117670928384
+    m_Localized: 'Nagrody:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42756677255098368
+    m_Localized: Akceptuj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42757137185697792
+    m_Localized: "Odrzu\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42757506007625728
+    m_Localized: "Uko\u0144cz"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

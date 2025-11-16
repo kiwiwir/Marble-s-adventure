@@ -182,6 +182,22 @@ MonoBehaviour:
     m_Localized: Quest Log
     m_Metadata:
       m_Items: []
+  - m_Id: 42753117670928384
+    m_Localized: 'Rewards:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42756677255098368
+    m_Localized: Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42757137185697792
+    m_Localized: Decline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42757506007625728
+    m_Localized: Complete
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
