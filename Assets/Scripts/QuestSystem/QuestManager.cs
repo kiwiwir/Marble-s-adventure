@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class QuestManager : MonoBehaviour
 {
@@ -32,13 +33,41 @@ public class QuestManager : MonoBehaviour
     {
         int currentAmount = GetCurrentAmount(questSO, objective);
 
-        if(currentAmount >= objective.requiredAmount)
-            return "Completed";
-        else if (objective.targetItem != null)
-            return $"{currentAmount}/{objective.requiredAmount}";
-        else
-            return "In Progress";
+        // Pobierz aktualny język (locale)
+        var locale = LocalizationSettings.SelectedLocale;
+        string code = locale != null ? locale.Identifier.Code.ToLower() : "en";
 
+        // Lokalizowane słowa
+        string completed;
+        string inProgress;
+
+        switch (code)
+        {
+            case "pl":
+                completed = "Ukończone";
+                inProgress = "W trakcie";
+                break;
+
+            case "en":
+            default:
+                completed = "Completed";
+                inProgress = "In Progress";
+                break;
+        }
+
+        // Logika postępu
+        if (currentAmount >= objective.requiredAmount)
+        {
+            return completed;
+        }
+        else if (objective.targetItem != null)
+        {
+            return $"{currentAmount}/{objective.requiredAmount}";
+        }
+        else
+        {
+            return inProgress;
+        }
     }
 
     public int GetCurrentAmount(QuestSO questSO, QuestObjective objective)

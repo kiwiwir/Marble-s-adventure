@@ -21,7 +21,7 @@ public class QuestLogSlot : MonoBehaviour
     public void SetQuest(QuestSO questSO)
     {
         currentQuest = questSO;
-        questNameText.text = currentQuest.GetLocalizedName();
+        questNameText.text = currentQuest.GetLocalizedQuestName();
         questLevelText.text = "Lvl: " + currentQuest.questLevel.ToString();
 
         gameObject.SetActive(true);

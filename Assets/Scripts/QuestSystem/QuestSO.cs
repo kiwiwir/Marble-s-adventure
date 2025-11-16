@@ -17,7 +17,7 @@ public class QuestSO : ScriptableObject
 
     public List <QuestObjective> objectives;
 
-    public string GetLocalizedName()
+    public string GetLocalizedQuestName()
     {
         var locale = LocalizationSettings.SelectedLocale;
         if (locale == null)
@@ -37,7 +37,7 @@ public class QuestSO : ScriptableObject
                 return questNameENG;
         }
     }
-    public string GetLocalizedDescription()
+    public string GetLocalizedQuestDescription()
     {
         var locale = LocalizationSettings.SelectedLocale;
         if (locale == null)
