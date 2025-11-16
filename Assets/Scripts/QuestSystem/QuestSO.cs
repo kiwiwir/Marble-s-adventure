@@ -16,6 +16,7 @@ public class QuestSO : ScriptableObject
     public int questLevel;
 
     public List <QuestObjective> objectives;
+    public List <QuestReward> rewards;
 
     public string GetLocalizedQuestName()
     {
@@ -92,4 +93,11 @@ public class QuestObjective
     public LocationSO targetLocation => target as LocationSO;
 
     public int requiredAmount;
+}
+
+[System.Serializable]
+public class QuestReward
+{
+    public ItemSO itemSO;
+    public int quantity;
 }

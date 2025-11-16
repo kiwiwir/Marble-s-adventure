@@ -18,7 +18,14 @@ MonoBehaviour:
   questDescriptionENG: Take a moment to read this despription.
   questLevel: 67
   objectives:
-  - descriptionPL: "Odwied\u017A Laboratorium."
-    descriptionENG: Visit Lab House.
-    target: {fileID: 11400000, guid: 9cebdd6ce497a2d43a7f78471ac561a1, type: 2}
+  - descriptionPL: "Odwied\u017A Zielone Wzg\xF3rze."
+    descriptionENG: Visit The Green Hill
+    target: {fileID: 11400000, guid: 60a13c765a561b34683192e27d8eb3cf, type: 2}
     requiredAmount: 1
+  rewards:
+  - itemSO: {fileID: 11400000, guid: c34bcb5d2b04b5740947d5a846669e6d, type: 2}
+    quantity: 10
+  - itemSO: {fileID: 11400000, guid: 0e8ccffe49b94834eab507eed9201013, type: 2}
+    quantity: 5
+  - itemSO: {fileID: 11400000, guid: 733dd557d4fff424b97464b1d95b9411, type: 2}
+    quantity: 1

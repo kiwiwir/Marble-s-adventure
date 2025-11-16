@@ -29852,7 +29852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 31.6635, y: 0}
+  m_AnchoredPosition: {x: 31.663574, y: 0}
   m_SizeDelta: {x: -63.3268, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516377600
@@ -31534,6 +31534,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 980781c44ca53184abf8eddc0c1b7628, type: 3}
+--- !u!114 &810109354 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7329296525549637467, guid: 45ed5bc10c4da304288cb5b10d1be8fb, type: 3}
+  m_PrefabInstance: {fileID: 454327630}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5c7d2eb74a2a5419a313fa7df13822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRewardSlot
 --- !u!1 &825288739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7732773271375252730, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
@@ -36193,7 +36204,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -5249637840615531020, guid: af248809fe8a7d44a99cfb9aec504939, type: 3}
       - {fileID: -1338405803, guid: af248809fe8a7d44a99cfb9aec504939, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: 17, z: 0}
@@ -47734,6 +47745,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295928975}
   m_CullTransparentMesh: 1
+--- !u!114 &1313211729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7329296525549637467, guid: 45ed5bc10c4da304288cb5b10d1be8fb, type: 3}
+  m_PrefabInstance: {fileID: 1209296987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5c7d2eb74a2a5419a313fa7df13822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRewardSlot
 --- !u!1 &1400954980
 GameObject:
   m_ObjectHideFlags: 0
@@ -50647,6 +50669,22 @@ MonoBehaviour:
   - {fileID: 6539918904477379352}
   - {fileID: 454850268}
   - {fileID: 593138163}
+  rewardSlots:
+  - {fileID: 633685759240916337}
+  - {fileID: 1313211729}
+  - {fileID: 1974862189}
+  - {fileID: 810109354}
+--- !u!114 &1974862189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7329296525549637467, guid: 45ed5bc10c4da304288cb5b10d1be8fb, type: 3}
+  m_PrefabInstance: {fileID: 1423586312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5c7d2eb74a2a5419a313fa7df13822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRewardSlot
 --- !u!224 &1984480533 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2549580767578117204, guid: 07a59f6009f0f954abd318ab60911790, type: 3}
@@ -51940,6 +51978,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2118707487741033411, guid: 45ed5bc10c4da304288cb5b10d1be8fb, type: 3}
   m_PrefabInstance: {fileID: 633685759240916334}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &633685759240916337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7329296525549637467, guid: 45ed5bc10c4da304288cb5b10d1be8fb, type: 3}
+  m_PrefabInstance: {fileID: 633685759240916334}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5c7d2eb74a2a5419a313fa7df13822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRewardSlot
 --- !u!1001 &785935972096754303
 PrefabInstance:
   m_ObjectHideFlags: 0
