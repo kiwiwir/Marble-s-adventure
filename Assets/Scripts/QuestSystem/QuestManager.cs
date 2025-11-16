@@ -5,6 +5,7 @@ using UnityEngine.Localization.Settings;
 public class QuestManager : MonoBehaviour
 {
     private Dictionary<QuestSO, Dictionary<QuestObjective, int>> questProgress = new();
+    private List<QuestSO> completedQuests = new();
 
     private void OnEnable()
     {
@@ -60,7 +61,16 @@ public class QuestManager : MonoBehaviour
     public void CompleteQuest(QuestSO questSO)
     {
         questProgress.Remove(questSO);
-        //TODO Granting rewards
+        completedQuests.Add(questSO);
+        foreach (var reward in questSO.rewards)
+        {
+            InventoryManager.Instance.AddItem(reward.itemSO, reward.quantity);
+        }
+    }
+
+    public bool GetCompleteQuest(QuestSO questSO)
+    {
+        return completedQuests.Contains(questSO);
     }
     #endregion
 

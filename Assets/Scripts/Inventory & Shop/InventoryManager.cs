@@ -58,10 +58,16 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
+        /*if(itemSO.isEXP)
+        {
+            OnExperienceGained?.Invoke(quantity);
+            return;
+        }*/
+
         // Dźwięk dla zwykłego przedmiotu
         AudioManager.Play("Collect");
 
-        foreach (var slot in itemSlots)
+        foreach (var slot in itemSlots) // It is the SAME item AND  there is ROOM left
         {
             if (slot.itemSO == itemSO && slot.quantity < itemSO.stackSize)
             {
@@ -78,7 +84,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        foreach (var slot in itemSlots)
+        foreach (var slot in itemSlots) // If items remain we will now look at the empty slots
         {
             if (slot.itemSO == null)
             {
