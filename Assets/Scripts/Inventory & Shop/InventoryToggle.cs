@@ -26,8 +26,15 @@ public class InventoryToggle : MonoBehaviour
                 StartCoroutine(FadeCanvasGroup(inventoryCanvasGroup, 1f, 0f, false)); // fade-out
         }
     }
+    public void ToggleInventory()
+    {
+        if (!isVisible)
+            StartCoroutine(FadeCanvasGroup(inventoryCanvasGroup, 0f, 1f, true));  // fade-in
+        else
+            StartCoroutine(FadeCanvasGroup(inventoryCanvasGroup, 1f, 0f, false)); // fade-out
+    }
 
-    private System.Collections.IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, bool opening)
+    public System.Collections.IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, bool opening)
     {
         isFading = true;
 

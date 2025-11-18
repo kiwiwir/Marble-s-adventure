@@ -40,7 +40,7 @@ public class QuestLogUI : MonoBehaviour
         {
             questSO = noAvailableQuestSO;
             SetCanvasState(acceptCanvasGroup, false);
-            SetCanvasState(declineCanvasGroup, true);
+            SetCanvasState(declineCanvasGroup, false);
             SetCanvasState(completeCanvasGroup, false);
         }
         else
@@ -75,6 +75,7 @@ public class QuestLogUI : MonoBehaviour
         questManager.AcceptQuest(questSO);
         SetCanvasState(completeCanvasGroup, false);
         SetCanvasState(acceptCanvasGroup, false);
+        SetCanvasState(declineCanvasGroup, false);
         RefreshQuestList();
         HandleQuestClicked(noAvailableQuestSO);
     }
