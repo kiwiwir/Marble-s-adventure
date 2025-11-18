@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
             if (currentDialogue.options.Length > 0)
                 ShowChoices();
             else
-                EndDialogue(); // automatyczne zakończenie, jeśli brak opcji
+                EndDialogue();
         }
     }
 
@@ -82,8 +82,6 @@ public class DialogueManager : MonoBehaviour
 
         Sprite chosenPortrait = line.speaker.GetExpressionPortrait(line.expressionName);
         portrait.sprite = chosenPortrait;
-
-        //actorName.text = line.speaker.actorName;
         actorName.text = line.speaker.GetLocalizedName();
 
         canvasGroup.alpha = 1;
@@ -142,12 +140,21 @@ public class DialogueManager : MonoBehaviour
             }
         }
         else
-        {
-            choiceButtons[0].GetComponentInChildren<TMP_Text>().text = "X";
-            choiceButtons[0].onClick.AddListener(EndDialogue);
-            choiceButtons[0].gameObject.SetActive(true);
-        }
+        /*{
+            if(currentDialogue.offerQuestOnEnd != null)
+            {
+                EndDialogue();
+                QuestEvents.OnQuestOfferRequested?.Invoke(currentDialogue.offerQuestOnEnd);
+            }
+            else*/
+            {
+                choiceButtons[0].GetComponentInChildren<TMP_Text>().text = "X";
+                choiceButtons[0].onClick.AddListener(EndDialogue);
+                choiceButtons[0].gameObject.SetActive(true);
+            }
+        //}
     }
+
     
     private void ChooseOption(DialogueSO dialogueSO)
     {
@@ -171,6 +178,17 @@ public class DialogueManager : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        // Oddanie questa
+        if (currentDialogue != null && currentDialogue.turnInQuestOnEnd != null && GameManager.Instance.QuestManager.IsQuestComplete(currentDialogue.turnInQuestOnEnd))
+        {
+            QuestEvents.OnQuestTurnInRequested?.Invoke(currentDialogue.turnInQuestOnEnd);
+        }
+        // Wywołanie questa
+        else if (currentDialogue != null && currentDialogue.offerQuestOnEnd != null)
+        {
+            QuestEvents.OnQuestOfferRequested?.Invoke(currentDialogue.offerQuestOnEnd);
+        }
     }
 
     private void ClearChoices()

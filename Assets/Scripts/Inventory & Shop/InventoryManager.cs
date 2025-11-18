@@ -102,6 +102,34 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void RemoveItem(ItemSO itemSO, int quantity)
+    {
+        for(int i = 0; i < itemSlots.Length; i++)
+        {
+            var slot = itemSlots[i];
+
+            //Skip slots that don't match the item
+            if (slot.itemSO != itemSO)
+                continue;
+
+            if (slot.quantity > quantity)
+            {
+                //Remove only what we need
+                slot.quantity -= quantity;
+                slot.UpdateUI();
+                quantity = 0;
+            }
+            else
+            {
+                //Take ALL from this slot
+                quantity -= slot.quantity;
+                slot.itemSO = null;
+                slot.quantity = 0;
+                slot.UpdateUI();
+            }
+        }
+    }
+
     private void DropLoot(ItemSO itemSO, int quantity)
     {
         // losowy kierunek w 2D (okrąg wokół gracza)

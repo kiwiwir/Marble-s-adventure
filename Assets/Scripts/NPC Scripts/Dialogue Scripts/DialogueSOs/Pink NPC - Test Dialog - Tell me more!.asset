@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
-  m_Name: Test Dialog - Tell me more!
+  m_Name: Pink NPC - Test Dialog - Tell me more!
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   lines:
   - speaker: {fileID: 11400000, guid: cbb0e39c2b673eb44a8e0e49af9a10f8, type: 2}
