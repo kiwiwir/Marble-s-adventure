@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: ShadowNPC - Quest - Power
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "Pssst\u2026 you.\r\nCome closer. Don\u2019t be afraid."
+    textPL: "Pssst\u2026 ty.\r\nPodejd\u017A bli\u017Cej. Nie b\xF3j si\u0119."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "Tell me\u2026\r\nHave you spoken to the mouse merchant yet?"
+    textPL: "Powiedz mi\u2026\r\nCzy rozmawia\u0142e\u015B ju\u017C ze sklepikarzem
+      \u2013 mysz\u0105?"
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "sniff\u2026 sniff\u2026\r\nHe carries a potion\u2026 a very special
+      potion."
+    textPL: "sniff\u2026 sniff\u2026\r\nMa mikstur\u0119\u2026 bardzo specjaln\u0105
+      mikstur\u0119."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "A POWER POTION!!!\r\nSo much power in such a tiny bottle\u2026"
+    textPL: "MIKSTUR\u0118 MOCY!!!\r\nTyle mocy w tak ma\u0142ej fiolce\u2026"
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: 'I require it.
+
+      Bring it to me, and do not ask why.'
+    textPL: "Potrzebuj\u0119 jej.\r\nPrzynie\u015B j\u0105 do mnie i nie pytaj dlaczego."
+    expressionName: default
+  options:
+  - optionTextENG: Ask why.
+    optionTextPL: Zapytaj dlaczego.
+    nextDialogue: {fileID: 11400000, guid: 031c72a1ea37f434bb2447737e2430fa, type: 2}
+    offerQuest: {fileID: 0}
+  - optionTextENG: Should I be worried?
+    optionTextPL: "Czy powinnam si\u0119 ba\u0107?"
+    nextDialogue: {fileID: 11400000, guid: 0f0cdf73bc0dc464bb3e5ff5d6618069, type: 2}
+    offerQuest: {fileID: 0}
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

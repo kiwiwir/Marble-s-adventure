@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: CatNPC - Quest - Turn-In
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: 'Oh! Oh! You got it!!
+
+      You actually brought it back!'
+    textPL: "O! O! Masz to!!\r\nNaprawd\u0119 to przynios\u0142a\u015B!"
+    expressionName: surprised
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Yeah\u2026 it was just a pebble.\r\nWell, except for the slimes trying
+      to eat me."
+    textPL: "No\u2026 to tylko kamyk.\r\nNo, poza tym \u017Ce potwory pr\xF3bowa\u0142y
+      mnie zje\u015B\u0107."
+    expressionName: awkward
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: 'Details, details!
+
+      What matters is that MY precious pebble is
+      safe again.'
+    textPL: "Szczeg\xF3\u0142y, szczeg\xF3\u0142y!\r\nLiczy si\u0119 to, \u017Ce
+      M\xD3J cenny kamyczek zn\xF3w jest bezpieczny."
+    expressionName: mimi
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "So... what\u2019s so special about it?"
+    textPL: "Wi\u0119c... co w nim takiego wyj\u0105tkowego?"
+    expressionName: surprised
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: "Hmm...\r\nThat\u2019s a story for another time.\r\nFor now - take this.
+      Consider it a thank-you from \u201CLoid the Void, Collector of Important Things.\u201D"
+    textPL: "Hmm...\r\nTo historia na inny dzie\u0144.\r\nA teraz - prosz\u0119,
+      we\u017A to.\r\nPotraktuj to jako podzi\u0119kowanie od \u201ELoida the Voida,
+      Kolekcjonera Wa\u017Cnych Rzeczy\u201D."
+    expressionName: talking
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "That\u2019s... definitely a title."
+    textPL: "To... na pewno jest ju\u017C jaki\u015B tytu\u0142."
+    expressionName: talking
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: Now off you go! Try not to get slimed again.
+    textPL: "A teraz le\u0107! I postaraj si\u0119 ju\u017C nie zosta\u0107 zjedzon\u0105
+      przez potwory."
+    expressionName: annoyed
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests:
+  - {fileID: 11400000, guid: 2ed13d93169c2134fa5a754d643d5426, type: 2}
+  turnInQuestOnEnd: {fileID: 11400000, guid: 2ed13d93169c2134fa5a754d643d5426, type: 2}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

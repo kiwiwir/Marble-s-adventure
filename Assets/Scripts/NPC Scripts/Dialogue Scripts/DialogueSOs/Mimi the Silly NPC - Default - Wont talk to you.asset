@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Mimi the Silly NPC - Default - Wont talk to you
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: 154a7b118d5f0fb47a2130d640d22e14, type: 2}
+    textENG: "O, check it! I\u2019d tell ya stuff, but nah \u2014 can\u2019t spill
+      beans.\r\nGotta see Mimi the Mystic first. Got it?"
+    textPL: "O, sp\xF3jrz! Powiedzia\u0142bym ci co\u015B, ale nie \u2014 nie mog\u0119
+      zdradzi\u0107 \u017Cadnych sekret\xF3w.\r\nNajpierw musisz zobaczy\u0107 Mimi
+      the Mystic. Rozumiesz?"
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Yeah\u2026 fine, I\u2019ll go find her."
+    textPL: "No dobra\u2026 p\xF3jd\u0119 jej szuka\u0107."
+    expressionName: talking
+  - speaker: {fileID: 11400000, guid: 154a7b118d5f0fb47a2130d640d22e14, type: 2}
+    textENG: Heh, stay sharp, yeah? Forest critters love to eavesdrop, and some snails
+      like jokes.
+    textPL: "Heh, miej oczy szeroko otwarte, jasne? Le\u015Bne stworzenia uwielbiaj\u0105
+      pods\u0142uchiwa\u0107, a niekt\xF3re \u015Blimaki lubi\u0105 \u017Carty."
+    expressionName: 
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

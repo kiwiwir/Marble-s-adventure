@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: ShadowNPC - Quest - OP2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Is this\u2026 dangerous?"
+    textPL: "Czy to\u2026 niebezpieczne?"
+    expressionName: scared
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "For me?\r\nNo.\r\nFor others\u2026\r\n\u2026I don't know."
+    textPL: "Dla mnie?\r\nNie.\r\nDla innych\u2026\r\n...nie wiem"
+    expressionName: default
+  options:
+  - optionTextENG: Alright.
+    optionTextPL: "W porz\u0105dku."
+    nextDialogue: {fileID: 11400000, guid: 1df863883af68be40ad40b7d23374125, type: 2}
+    offerQuest: {fileID: 0}
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

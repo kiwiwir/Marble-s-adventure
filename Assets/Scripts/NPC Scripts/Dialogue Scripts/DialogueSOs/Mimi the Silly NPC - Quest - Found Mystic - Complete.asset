@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Mimi the Silly NPC - Quest - Found Mystic - Complete
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: 10b1e20888889c44f94825a065aa26cb, type: 2}
+    textENG: "Heh, finally! You\u2019ve been seeing visions with Mimi the Mystic,
+      huh?\r\nNow we can spill the good stuff."
+    textPL: "Heh, w ko\u0144cu! Widzia\u0142a\u015B wizje z Mimi the Mystic, co?\r\nTeraz
+      mo\u017Cemy zdradzi\u0107 fajne rzeczy."
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "I\u2019m all ears."
+    textPL: "S\u0142ucham uwa\u017Cnie."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: 10b1e20888889c44f94825a065aa26cb, type: 2}
+    textENG: "Some things are obvious\u2026 others are buried under three pancakes,
+      two hats, and a confused hedgehog. Got it?"
+    textPL: "Niekt\xF3re rzeczy s\u0105 oczywiste\u2026 inne zakopane pod trzema
+      nale\u015Bnikami, dwoma kapeluszami i zdezorientowanym je\u017Cem. Rozumiesz?"
+    expressionName: 
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs:
+  - {fileID: 11400000, guid: b74041c738d8ab140bf1df39eec581ca, type: 2}
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Mimi the Nerdy NPC - Quest - Find Siss - Complete
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: 1964226d4f853d248af65a60e0a53924, type: 2}
+    textENG: Huzzah! The triad is complete.
+    textPL: Hura! Triada jest kompletna.
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: 1964226d4f853d248af65a60e0a53924, type: 2}
+    textENG: 'The knowledge you seek: the train at the station is numbered 046.
+
+      Maybe
+      it means something?'
+    textPL: "Wiedza, kt\xF3rej szukasz: poci\u0105g na stacji ma numer 046.\r\nMo\u017Ce
+      to co\u015B znaczy?"
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "I didn\u2019t expect to do all of that for a train number\u2026"
+    textPL: "Nie spodziewa\u0142em si\u0119, \u017Ce zrobi\u0119 to wszystko dla
+      numeru poci\u0105gu\u2026"
+    expressionName: 
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs:
+  - {fileID: 11400000, guid: b74041c738d8ab140bf1df39eec581ca, type: 2}
+  - {fileID: 11400000, guid: 10b1e20888889c44f94825a065aa26cb, type: 2}
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay:
+  - {fileID: 11400000, guid: e03d690f731b21d4b950b4484d2537c1, type: 2}
+  - {fileID: 11400000, guid: 1c65f79c6bc78ad418f472c25c5be549, type: 2}

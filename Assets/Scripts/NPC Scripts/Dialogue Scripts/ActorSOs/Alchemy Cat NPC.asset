@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5470e97fa92e1f44a120a31f7cd4806, type: 3}
+  m_Name: Alchemy Cat NPC
+  m_EditorClassIdentifier: 
+  nameENG: Wizard Cat
+  namePL: Kot Czarodziej
+  portrait: {fileID: -348848358196136914, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  voiceSound: {fileID: 8300000, guid: 7896ef4fdc318af4a9323337c5f19164, type: 3}
+  typingSpeed: 0.05
+  voiceInterval: 0.75
+  basePitch: 1.25
+  pitchVariation: 0.005
+  expressions:
+  - expressionName: default
+    portrait: {fileID: 1727091542102030621, guid: 8d4b20a149c4f5f4285035a31c17483c, type: 3}
+  - expressionName: talking
+    portrait: {fileID: 8579943028615741872, guid: 8d4b20a149c4f5f4285035a31c17483c, type: 3}

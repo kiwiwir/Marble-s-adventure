@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: MysteriousNPC - Greeting - OP1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Who\u2026 who are you? Show yourself!"
+    textPL: "K\u2026 kim jeste\u015B? Poka\u017C si\u0119!"
+    expressionName: scared
+  - speaker: {fileID: 11400000, guid: a6c770e5826f33c458dd7c341c13d317, type: 2}
+    textENG: You can call me a guide or simply a friend.
+    textPL: "Mo\u017Cesz nazywa\u0107 mnie przewodnikiem lub po prostu przyjacielem."
+    expressionName: default
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

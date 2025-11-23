@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5470e97fa92e1f44a120a31f7cd4806, type: 3}
+  m_Name: Unknown Mimi the Silly NPC
+  m_EditorClassIdentifier: 
+  nameENG: ???
+  namePL: ???
+  portrait: {fileID: -3675767900815701292, guid: 82f386ec9d4db914290cfece6f0a902d, type: 3}
+  voiceSound: {fileID: 8300000, guid: 7455774f647cd4343865fb9ddba5418c, type: 3}
+  typingSpeed: 0.05
+  voiceInterval: 0.05
+  basePitch: 1
+  pitchVariation: 0.005
+  expressions: []

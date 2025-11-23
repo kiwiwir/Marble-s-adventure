@@ -100,19 +100,23 @@ public class DialogueManager : MonoBehaviour
     {
         isTyping = true;
         dialogueText.text = "";
+        float timeSinceLastVoice = 0f;
 
         string localizedText = line.GetLocalizedText();
         foreach (char letter in localizedText)
         {
             dialogueText.text += letter;
 
-            if (line.speaker.voiceSound)
+            timeSinceLastVoice += line.speaker.typingSpeed;
+
+            if (line.speaker.voiceSound && timeSinceLastVoice >= line.speaker.voiceInterval)
             {
                 float basePitch = line.speaker.basePitch;
                 float pitchVariation = line.speaker.pitchVariation;
                 float finalPitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
 
                 AudioManager.PlayVoice(line.speaker.voiceSound, finalPitch);
+                timeSinceLastVoice = 0f;
             }
 
             yield return new WaitForSeconds(line.speaker.typingSpeed);

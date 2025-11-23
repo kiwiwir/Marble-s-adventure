@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: MysteriousNPC - Further Greeting
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: a6c770e5826f33c458dd7c341c13d317, type: 2}
+    textENG: "It\u2019s rare to meet another explorer here.\r\nThe path ahead of
+      you has many stories to tell."
+    textPL: "Rzadko spotyka si\u0119 tu innych odkrywc\xF3w.\r\n\u015Acie\u017Cka
+      przed tob\u0105 ma wiele historii do opowiedzenia."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: a6c770e5826f33c458dd7c341c13d317, type: 2}
+    textENG: See you later.
+    textPL: "Do zobaczenia p\xF3\u017Aniej."
+    expressionName: sus
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

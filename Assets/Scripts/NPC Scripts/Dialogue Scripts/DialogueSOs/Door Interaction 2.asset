@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Door Interaction 2
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Great. The train breaks down, and the station is closed.\r\n..This
+      isn\u2019t even funny anymore."
+    textPL: "No \u015Bwietnie. Poci\u0105g zatrzymany, a dworzec nieczynny.\r\n...To
+      ju\u017C nawet nie jest zabawne."
+    expressionName: annoyed
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Alright... if I can\u2019t get in here, I guess I\u2019ll have to look
+      around the area."
+    textPL: "Dobra\u2026 skoro tu si\u0119 nie dostan\u0119, to chyba musz\u0119
+      rozejrze\u0107 si\u0119 po okolicy."
+    expressionName: default
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

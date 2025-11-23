@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: MysteriousNPC - Greeting - OP2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Maybe I shouldn\u2019t have come... should I turn back?"
+    textPL: "Mo\u017Ce nie powinnam tu wchodzi\u0107\u2026 czy powinnam zawr\xF3ci\u0107?"
+    expressionName: scared
+  - speaker: {fileID: 11400000, guid: a6c770e5826f33c458dd7c341c13d317, type: 2}
+    textENG: "The path chose you the moment you stepped inside.\r\nNo need to rush
+      - there\u2019s plenty to discover."
+    textPL: "\u015Acie\u017Cka wybra\u0142a ci\u0119 w chwili, gdy tu wkroczy\u0142a\u015B.\r\nNie
+      musisz si\u0119 spieszy\u0107 \u2013 jest tu mn\xF3stwo do odkrycia."
+    expressionName: talking
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

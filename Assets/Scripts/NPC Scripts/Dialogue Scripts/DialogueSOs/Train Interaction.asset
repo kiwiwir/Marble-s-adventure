@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Train Interaction
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "\u2026Hello? Is anyone still here?"
+    textPL: "\u2026Halo? Czy kto\u015B tu jeszcze jest?"
+    expressionName: surprised
+  - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
+    textENG: 'Please watch your step. The train is currently undergoing an unscheduled
+      stop.
+
+      All passengers must exit the vehicle.'
+    textPL: "Prosz\u0119 uwa\u017Ca\u0107 na stopnie. Poci\u0105g zatrzyma\u0142
+      si\u0119 z powodu nieplanowanego postoju.\r\nWszyscy pasa\u017Cerowie musz\u0105
+      opu\u015Bci\u0107 pojazd."
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
+    textENG: We kindly ask all passengers to disembark at the next stop.
+    textPL: "Prosimy wszystkich pasa\u017Cer\xF3w o opuszczenie sk\u0142adu na najbli\u017Cszej
+      stacji."
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Yeah, I heard that already\u2026 "
+    textPL: "Tak, ju\u017C to s\u0142ysza\u0142am\u2026"
+    expressionName: awkward
+  options:
+  - optionTextENG: But what actually happened?
+    optionTextPL: "Ale co w\u0142a\u015Bciwie si\u0119 sta\u0142o?"
+    nextDialogue: {fileID: 11400000, guid: 5fe790cacd4fd5d40a9b1090380d4bae, type: 2}
+    offerQuest: {fileID: 0}
+  - optionTextENG: "Fine, I\u2019m leaving."
+    optionTextPL: "Dobrze, wychodz\u0119."
+    nextDialogue: {fileID: 11400000, guid: 29430708583fd9c4d8c5e92c07612fdd, type: 2}
+    offerQuest: {fileID: 0}
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

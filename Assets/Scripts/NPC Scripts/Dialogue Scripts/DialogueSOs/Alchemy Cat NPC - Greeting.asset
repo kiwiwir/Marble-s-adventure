@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Alchemy Cat NPC - Greeting
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: 6ad7f0057edaf854fbe9ad916d5f0a7f, type: 2}
+    textENG: "Ah, welcome, my apprentice!\r\nI see you\u2019ve come to learn a bit
+      of alchemy."
+    textPL: "Ah, witaj, moja uczennico!\r\nWidz\u0119, \u017Ce przysz\u0142a\u015B,
+      by pozna\u0107 troch\u0119 alchemii.\r\n"
+    expressionName: talking
+  - speaker: {fileID: 11400000, guid: 6ad7f0057edaf854fbe9ad916d5f0a7f, type: 2}
+    textENG: "Listen carefully: to craft a potion, you\u2019ll need 2 berries, 1
+      slimedrop, and 1 empty vial.\r\nCombine them carefully in the cauldron, and
+      magic shall take care of the rest."
+    textPL: "S\u0142uchaj uwa\u017Cnie: aby stworzy\u0107 mikstur\u0119, b\u0119dziesz
+      potrzebowa\u0107 2 jag\xF3d, 1 kropli \u015Bluziku i 1 pustej fiolki.\r\nPo\u0142\u0105cz
+      je starannie w kotle, a magia zajmie si\u0119 reszt\u0105."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: Got it.
+    textPL: Rozumiem.
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: 6ad7f0057edaf854fbe9ad916d5f0a7f, type: 2}
+    textENG: Excellent! Return when the potion is ready.
+    textPL: "\u015Awietnie! Wr\xF3\u0107, gdy mikstura b\u0119dzie gotowa."
+    expressionName: talking
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

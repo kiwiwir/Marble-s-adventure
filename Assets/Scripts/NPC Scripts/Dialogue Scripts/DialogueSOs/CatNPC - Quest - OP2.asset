@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: CatNPC - Quest - OP2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: I guess that means monsters, right?
+    textPL: "Mam wra\u017Cenie, \u017Ce to oznacza potwory, prawda?"
+    expressionName: scared
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: 'Exactly. Slimes have been spotted around the area.
+
+      Be careful.
+      But if you get the pebble, it will be worth it.'
+    textPL: "Dok\u0142adnie.\r\nUwa\u017Caj na siebie. Ale je\u015Bli zdob\u0119dziesz
+      kamyk, naprawd\u0119 si\u0119 op\u0142aci."
+    expressionName: default
+  options:
+  - optionTextENG: Alright.
+    optionTextPL: "W porz\u0105dku."
+    nextDialogue: {fileID: 11400000, guid: e32ef8e5aa4146e4f88dd1ebed234ebb, type: 2}
+    offerQuest: {fileID: 0}
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

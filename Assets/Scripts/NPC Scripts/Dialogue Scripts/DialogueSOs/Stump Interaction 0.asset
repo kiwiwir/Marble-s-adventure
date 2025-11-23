@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Stump Interaction 0
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: Oh, fantastic! A log right in the middle of the path.
+    textPL: "Oh, fantastycznie! K\u0142oda na \u015Brodku \u015Bcie\u017Cki."
+    expressionName: annoyed
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Nope, there\u2019s no way I can move this.\r\nLooks like I won\u2019t
+      be getting through here."
+    textPL: "No nie, tego nie przesun\u0119.\r\nWygl\u0105da na to, \u017Ce t\u0119dy
+      nie przejd\u0119."
+    expressionName: sad
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

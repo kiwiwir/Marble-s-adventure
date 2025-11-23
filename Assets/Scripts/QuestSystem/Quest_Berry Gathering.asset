@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a97892325879744e9aaa62d03992913, type: 3}
-  m_Name: Quest_Test
+  m_Name: Quest_Berry Gathering
   m_EditorClassIdentifier: Assembly-CSharp::QuestSO
-  questNamePL: Zadanie testowe
-  questNameENG: Test quest
-  questDescriptionPL: "Po\u015Bwi\u0119\u0107 chwil\u0119 na przeczytanie tego opisu."
-  questDescriptionENG: Take a moment to read this despription.
+  questNamePL: "Zbieranie Jag\xF3dek"
+  questNameENG: Berry Gathering
+  questDescriptionPL: "Lokalny handlarz prosi o pomoc w uzupe\u0142nieniu zapas\xF3w.
+    Ostatnie dostawy nie dotar\u0142y. Potrzebuje 3 \u015Bwie\u017Cych Jag\xF3dek."
+  questDescriptionENG: A local vendor is asking for help restocking supplies. Recent
+    deliveries never arrived. He needs 3 fresh Berries.
   questLevel: 0
   objectives:
-  - descriptionPL: "Zbierz Jagod\u0119."
-    descriptionENG: Collect Berry
+  - descriptionPL: "Zdob\u0105d\u017A 3 Jag\xF3dki."
+    descriptionENG: Collect 3 Berries.
     target: {fileID: 11400000, guid: 670e3c18b146b63499beb7ada54571d4, type: 2}
-    requiredAmount: 1
+    requiredAmount: 3
   rewards:
   - itemSO: {fileID: 11400000, guid: 0e8ccffe49b94834eab507eed9201013, type: 2}
     quantity: 5
-  - itemSO: {fileID: 11400000, guid: 733dd557d4fff424b97464b1d95b9411, type: 2}
-    quantity: 1

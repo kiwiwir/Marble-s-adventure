@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: ShadowNPC - Quest - OP3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Alright. I\u2019ll get the potion from the shopkeeper."
+    textPL: "Dobrze. Zdob\u0119d\u0119 mikstur\u0119 u sklepikarza."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "Good.\r\nDo not delay\u2026"
+    textPL: "Dobrze.\r\nNie zwlekaj\u2026"
+    expressionName: default
+  options: []
+  offerQuestOnEnd: {fileID: 11400000, guid: e92a766a61f36ca4cb79bd29c834e690, type: 2}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

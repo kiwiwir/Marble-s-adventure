@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5470e97fa92e1f44a120a31f7cd4806, type: 3}
+  m_Name: Shadow NPC
+  m_EditorClassIdentifier: 
+  nameENG: Shadow
+  namePL: "Cie\u0144"
+  portrait: {fileID: -7846657481459498720, guid: 785317cdc2b93f441b9e3cbf9e381de7, type: 3}
+  voiceSound: {fileID: 8300000, guid: 7455774f647cd4343865fb9ddba5418c, type: 3}
+  typingSpeed: 0.05
+  voiceInterval: 0.05
+  basePitch: 0.2
+  pitchVariation: 0.005
+  expressions:
+  - expressionName: default
+    portrait: {fileID: -7846657481459498720, guid: 785317cdc2b93f441b9e3cbf9e381de7, type: 3}
+  - expressionName: smiling
+    portrait: {fileID: 7129221753249923685, guid: 785317cdc2b93f441b9e3cbf9e381de7, type: 3}

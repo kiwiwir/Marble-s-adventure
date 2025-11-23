@@ -12,9 +12,11 @@ public class ActorSO : ScriptableObject
 
     public Sprite portrait;
 
-    public float typingSpeed = 0.05f; // Speed at which text is displayed
-    public AudioClip voiceSound; // Sound played when the actor speaks
+
     [Header("Voice Settings")]
+    public AudioClip voiceSound; // Sound played when the actor speaks
+    public float typingSpeed = 0.05f; // Speed at which text is displayed
+    [Range(0.01f, 1f)] public float voiceInterval = 0.05f; // co ile sekund odtwarzać dźwięk przy literkach
     [Range(0.1f, 3f)] public float basePitch = 1.0f;        // Bazowy pitch
     [Range(0f, 1f)] public float pitchVariation = 0.1f;     // Zakres losowej zmiany pitcha
 

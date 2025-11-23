@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: CatNPC - Greeting
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: 25e86af4520f1b24b98bd40aeb3c8bfe, type: 2}
+    textENG: "Well, well\u2026 look who made it out of the tunnel in one piece."
+    textPL: "No prosz\u0119, prosz\u0119\u2026 kto\u015B tu wyszed\u0142 z tunelu
+      w jednym kawa\u0142ku."
+    expressionName: scary
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: Do you spy on me?!
+    textPL: "Czy ty mnie \u015Bledzisz?!"
+    expressionName: angry
+  - speaker: {fileID: 11400000, guid: 25e86af4520f1b24b98bd40aeb3c8bfe, type: 2}
+    textENG: 'Hehe, no... but I like to keep an eye on curious wanderers.
+
+      Well,
+      I suppose introductions are in order.'
+    textPL: "Hehe, nie\u2026 ale lubi\u0119 mie\u0107 oko na ciekawskich w\u0119drowc\xF3w.\r\nNo
+      dobrze, wypada si\u0119 przedstawi\u0107."
+    expressionName: charming
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: I am Loid the Void. Greetings.
+    textPL: "Jestem Loid the Void. Mi\u0142o mi."
+    expressionName: talking
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: I'm Marble.
+    textPL: Jestem Marble.
+    expressionName: awkward
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: "Listen\u2026 come back to me later if you want.\r\nI\u2019ll have a
+      little challenge for you.\r\nThere\u2019s something north of here that caught
+      my interest."
+    textPL: "S\u0142uchaj\u2026 wr\xF3\u0107 do mnie p\xF3\u017Aniej, je\u015Bli
+      chcesz.\r\nB\u0119d\u0119 mia\u0142 dla ciebie ma\u0142e wyzwanie.\r\nNa p\xF3\u0142noc
+      st\u0105d jest co\u015B, co mnie bardzo zainteresowa\u0142o."
+    expressionName: default
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

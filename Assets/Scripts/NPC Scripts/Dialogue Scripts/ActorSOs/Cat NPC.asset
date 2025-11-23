@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5470e97fa92e1f44a120a31f7cd4806, type: 3}
+  m_Name: Cat NPC
+  m_EditorClassIdentifier: 
+  nameENG: Loid The Void
+  namePL: Loid The Void
+  portrait: {fileID: -348848358196136914, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  voiceSound: {fileID: 8300000, guid: 7896ef4fdc318af4a9323337c5f19164, type: 3}
+  typingSpeed: 0.05
+  voiceInterval: 0.6
+  basePitch: 1
+  pitchVariation: 0.005
+  expressions:
+  - expressionName: default
+    portrait: {fileID: -348848358196136914, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  - expressionName: talking
+    portrait: {fileID: -1486250742589973573, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  - expressionName: annoyed
+    portrait: {fileID: 2234067826046744308, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  - expressionName: surprised
+    portrait: {fileID: 632766971972791373, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  - expressionName: scary
+    portrait: {fileID: -3605104720053424815, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  - expressionName: mimi
+    portrait: {fileID: -3183216203253215775, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}
+  - expressionName: charming
+    portrait: {fileID: -6605597107331862852, guid: a78422eae7641b645a94056a3d3a43e2, type: 3}

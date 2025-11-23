@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: CatNPC - Quest - OP3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: "Alright\u2026 I\u2019ll go get it."
+    textPL: "No dobrze\u2026 p\xF3jd\u0119 go poszuka\u0107."
+    expressionName: default
+  - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
+    textENG: "Good. Return to me once you have it.\nDon\u2019t get distracted by
+      those silly slimes!"
+    textPL: "\u015Awietnie. Wr\xF3\u0107 do mnie, kiedy ju\u017C go b\u0119dziesz
+      mie\u0107.\r\nI nie daj si\u0119 rozproszy\u0107 tym g\u0142upim potworom!"
+    expressionName: charming
+  options: []
+  offerQuestOnEnd: {fileID: 11400000, guid: 2ed13d93169c2134fa5a754d643d5426, type: 2}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []
