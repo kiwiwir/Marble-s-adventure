@@ -42,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogueSO;
         dialogueIndex = 0;
         isDialogueActive = true;
+        Time.timeScale = 0f;
         ShowDialogue();
     }
 
@@ -96,7 +97,7 @@ public class DialogueManager : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeText(line));
     }
 
-    IEnumerator TypeText(DialogueLine line)
+    /*IEnumerator TypeText(DialogueLine line)
     {
         isTyping = true;
         dialogueText.text = "";
@@ -125,7 +126,39 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         if (dialogueArrow != null)
             dialogueArrow.enabled = true;
+    }*/
+    IEnumerator TypeText(DialogueLine line)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+        float timeSinceLastVoice = 0f;
+
+        string localizedText = line.GetLocalizedText();
+        foreach (char letter in localizedText)
+        {
+            dialogueText.text += letter;
+
+            timeSinceLastVoice += line.speaker.typingSpeed;
+
+            if (line.speaker.voiceSound && timeSinceLastVoice >= line.speaker.voiceInterval)
+            {
+                float basePitch = line.speaker.basePitch;
+                float pitchVariation = line.speaker.pitchVariation;
+                float finalPitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
+
+                AudioManager.PlayVoice(line.speaker.voiceSound, finalPitch);
+                timeSinceLastVoice = 0f;
+            }
+
+            // <-- Użycie WaitForSecondsRealtime zamiast WaitForSeconds
+            yield return new WaitForSecondsRealtime(line.speaker.typingSpeed);
+        }
+
+        isTyping = false;
+        if (dialogueArrow != null)
+            dialogueArrow.enabled = true;
     }
+
 
     private void ShowChoices()
     {
@@ -182,6 +215,8 @@ public class DialogueManager : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        Time.timeScale = 1f;
 
         // Oddanie questa
         if (currentDialogue != null && currentDialogue.turnInQuestOnEnd != null && GameManager.Instance.QuestManager.IsQuestComplete(currentDialogue.turnInQuestOnEnd))

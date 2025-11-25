@@ -7,6 +7,19 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private InventoryManager inventoryManager;
 
+
+    private InventoryManager GetInventoryManager()
+    {
+        if (inventoryManager == null)
+            inventoryManager = FindObjectOfType<InventoryManager>();
+
+        if (inventoryManager == null)
+            Debug.LogWarning("No InventoryManager found in scene!");
+        
+        return inventoryManager;
+    }
+
+
     public void PopulateShopItems(List<ShopItems> shopItems)
     {
         for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
@@ -24,6 +37,8 @@ public class ShopManager : MonoBehaviour
 
     public void TryBuyItem(ItemSO itemSO, int price)
     {
+        InventoryManager inv = GetInventoryManager();
+        if (inv == null) return;
         if (itemSO != null && inventoryManager.gold >= price)
         {
             if (HasSpaceForItem(itemSO))
@@ -37,6 +52,8 @@ public class ShopManager : MonoBehaviour
 
     private bool HasSpaceForItem(ItemSO itemSO)
     {
+        InventoryManager inv = GetInventoryManager();
+        if (inv == null) return false;
         foreach (var slot in inventoryManager.itemSlots)
         {
             if (slot.itemSO == itemSO && slot.quantity < itemSO.stackSize)
@@ -49,6 +66,9 @@ public class ShopManager : MonoBehaviour
     
     public void SellItem(ItemSO itemSO)
     {
+        InventoryManager inv = GetInventoryManager();
+        if (inv == null) return;
+        
         if (itemSO == null)
             return;
             

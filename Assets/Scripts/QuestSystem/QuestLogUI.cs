@@ -56,6 +56,7 @@ public class QuestLogUI : MonoBehaviour
 
         HandleQuestClicked(questSO);
         SetCanvasState(questCanvas, true);
+        Time.timeScale = 0f;
     }
 
     public void ShowQuestTurnIn(QuestSO incomingQuestSO)
@@ -68,6 +69,7 @@ public class QuestLogUI : MonoBehaviour
         SetCanvasState(acceptCanvasGroup, false);
         SetCanvasState(declineCanvasGroup, false);
         SetCanvasState(questCanvas, true);
+        Time.timeScale = 0f;
     }
 
     #endregion
@@ -87,6 +89,7 @@ public class QuestLogUI : MonoBehaviour
     public void OnDeclineQuestClicked()
     {
         SetCanvasState(questCanvas, false);
+        Time.timeScale = 1f;
     }
 
     public void OnCompleteQuestClicked()
@@ -96,6 +99,7 @@ public class QuestLogUI : MonoBehaviour
         RefreshQuestList();
         HandleQuestClicked(noAvailableQuestSO);
         SetCanvasState(completeCanvasGroup, false);
+        Time.timeScale = 1f;
     }
     #endregion
 
