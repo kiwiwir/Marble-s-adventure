@@ -45,6 +45,19 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void ToggleMenuButton()
+    {
+        if (!isMenuOpen && !isFading)
+        {
+            OpenMenu(0);
+        }
+        else if (!isFading)
+        {
+            CloseMenu();
+        }
+    }
+
+
     private void OpenMenu(int tabIndex)
     {
         // Zamknij pauzę, jeśli aktywna

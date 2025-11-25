@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private CanvasGroup diaryMenu;
     [SerializeField] private CanvasGroup questMenu;
+    [SerializeField] private QuestLogUI questLogUI; // Dodaj referencję
+
 
     public void ToggleMenu(CanvasGroup target)
     {
@@ -14,6 +16,13 @@ public class UIManager : MonoBehaviour
         SetMenuState(questMenu, false);
 
         SetMenuState(target, true);
+
+        // Jeśli otwieramy questMenu, odśwież questy
+        if (target == questMenu && questLogUI != null)
+        {
+            questLogUI.UpdateAllQuestProgress();  // Aktualizuje progres wszystkich questów
+            questLogUI.RefreshQuestList();        // Odświeża sloty w UI
+        }
     }
 
     private void SetMenuState(CanvasGroup group, bool isActive)

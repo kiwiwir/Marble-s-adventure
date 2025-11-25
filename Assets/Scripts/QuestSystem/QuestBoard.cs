@@ -5,11 +5,15 @@ public class QuestBoard : MonoBehaviour
     [SerializeField] private QuestSO questToOffer;
     [SerializeField] private QuestSO questToTurnIn;
     private bool playerInRange;
+    [SerializeField] private QuestLogUI questLogUI;
 
     private void Update()
     {
         if (playerInRange && Input.GetButtonDown("Interact"))
         {
+            questLogUI.UpdateAllQuestProgress();
+            questLogUI.RefreshQuestList();
+
             bool canTurnIn = questToTurnIn != null && QuestEvents.IsQuestComplete?.Invoke(questToTurnIn) == true;
 
             if (canTurnIn)

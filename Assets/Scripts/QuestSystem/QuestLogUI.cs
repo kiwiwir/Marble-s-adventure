@@ -21,6 +21,9 @@ public class QuestLogUI : MonoBehaviour
     [SerializeField] private CanvasGroup declineCanvasGroup;
     [SerializeField] private CanvasGroup completeCanvasGroup;
 
+    public QuestSO CurrentQuest => questSO;
+
+
 
     private void OnEnable()
     {
@@ -170,4 +173,30 @@ public class QuestLogUI : MonoBehaviour
             }
         }
     }
+
+    public void UpdateAllQuestProgress()
+    {
+        var activeQuests = questManager.GetActiveQuests();
+
+        // Zaktualizuj progres wszystkich questów
+        foreach (var quest in activeQuests)
+        {
+            foreach (var objective in quest.objectives)
+            {
+                questManager.UpdateObjectiveProgress(quest, objective);
+            }
+        }
+
+        // Jeśli nie mamy wybranego questu, ustaw pierwszego z listy
+        if (activeQuests.Count > 0)
+        {
+            HandleQuestClicked(activeQuests[0]);
+        }
+        else
+        {
+            // Brak questów — użyj placeholdera lub ukryj UI
+            HandleQuestClicked(noAvailableQuestSO);
+        }
+    }
+
 }

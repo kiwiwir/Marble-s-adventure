@@ -36721,37 +36721,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.2405206, y: 2.5997787}
   m_EdgeRadius: 0
---- !u!1 &1078714955
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1078714956}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1078714956
+--- !u!4 &1078714956 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+  m_PrefabInstance: {fileID: 1244349342522151092}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078714955}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.57, y: 5.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1122564546 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 855303474307723082, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
@@ -42173,6 +42147,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
   m_PrefabInstance: {fileID: 5780818645822567534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1227819078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3115188511350438902, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+  m_PrefabInstance: {fileID: 389348612297286859}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d428fc1cdc3474ea682d6d874a603d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestLogUI
 --- !u!1 &1266015350
 GameObject:
   m_ObjectHideFlags: 0
@@ -53652,6 +53637,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2049573313454110151, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+      propertyPath: questLogUI
+      value: 
+      objectReference: {fileID: 1227819078}
+    - target: {fileID: 2049573313454110151, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+      propertyPath: questToOffer
+      value: 
+      objectReference: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
+    - target: {fileID: 2049573313454110151, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+      propertyPath: questToTurnIn
+      value: 
+      objectReference: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
     - target: {fileID: 2967494074798803851, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
       propertyPath: m_Size.y
       value: 2.5313768
@@ -54487,7 +54484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: "Jag\xF3dka"
+      value: Berry
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55784,6 +55781,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d253a0d8269ccfd478c5b0d6cfce5778, type: 3}
+--- !u!1001 &1244349342522151092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9008264198472434356, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
 --- !u!1 &2125978193923820715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6892127635515165172, guid: d253a0d8269ccfd478c5b0d6cfce5778, type: 3}
@@ -56211,6 +56265,6 @@ SceneRoots:
   - {fileID: 334407087}
   - {fileID: 1562371710}
   - {fileID: 1161183247}
-  - {fileID: 1078714956}
+  - {fileID: 1244349342522151092}
   - {fileID: 649366165}
   - {fileID: 1409411767}

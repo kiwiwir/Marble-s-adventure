@@ -301,5 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b67e611baa4cf46b0f04cb60f9499d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestBoard
-  questToOffer: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
-  questToTurnIn: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
+  questToOffer: {fileID: 11400000, guid: dc285be30bff59d46aa2c4800d05a164, type: 2}
+  questToTurnIn: {fileID: 11400000, guid: dc285be30bff59d46aa2c4800d05a164, type: 2}
+  questLogUI: {fileID: 0}
