@@ -9,7 +9,12 @@ public class ItemSaveData
     public string itemName;
     public int quantity;
 }
-
+[System.Serializable]
+public class ChestStateData
+{
+    public string chestID;
+    public bool isOpened;
+}
 [System.Serializable]
 public class PlayerSaveData
 {
@@ -18,8 +23,9 @@ public class PlayerSaveData
     public float playerPosY;
     public int gold;
     public List<ItemSaveData> inventoryItems = new List<ItemSaveData>();
+    public List<string> removedDialogues = new List<string>();
+    public List<ChestStateData> chestStates = new List<ChestStateData>();
 }
-
 
 
 public class SaveLoadManager : MonoBehaviour
@@ -65,6 +71,20 @@ public class SaveLoadManager : MonoBehaviour
             }
         }
 
+        // removed dialogues
+        data.removedDialogues = new List<string>(GameManager.Instance.removedDialogues);
+
+        // chest states
+        data.chestStates = new List<ChestStateData>();
+        foreach (var kvp in GameManager.Instance.chestStates)
+        {
+            data.chestStates.Add(new ChestStateData
+            {
+                chestID = kvp.Key,
+                isOpened = kvp.Value
+            });
+        }
+
 
 
         string json = JsonUtility.ToJson(data, true);
@@ -85,7 +105,6 @@ public class SaveLoadManager : MonoBehaviour
         string json = File.ReadAllText(GetSavePath());
         PlayerSaveData data = JsonUtility.FromJson<PlayerSaveData>(json);
 
-        // Po załadowaniu sceny ustawiamy pozycję gracza i inventory
         SceneManager.sceneLoaded += (scene, mode) =>
         {
             ApplySaveData(data);
@@ -106,7 +125,7 @@ public class SaveLoadManager : MonoBehaviour
             player.transform.position = new Vector2(data.playerPosX, data.playerPosY);
         }
 
-        // Gold
+        // Gold i inventory
         if (InventoryManager.Instance != null)
         {
             InventoryManager.Instance.gold = data.gold;
@@ -133,6 +152,16 @@ public class SaveLoadManager : MonoBehaviour
                     Debug.LogWarning("Nie znaleziono ItemSO: " + itemData.itemName);
                 }
             }
+        }
+
+        // removed dialogues
+        GameManager.Instance.removedDialogues = new HashSet<string>(data.removedDialogues);
+
+        // chest states
+        GameManager.Instance.chestStates.Clear();
+        foreach (var chestData in data.chestStates)
+        {
+            GameManager.Instance.chestStates[chestData.chestID] = chestData.isOpened;
         }
 
         Debug.Log("Save loaded successfully!");
