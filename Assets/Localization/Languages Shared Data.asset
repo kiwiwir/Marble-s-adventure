@@ -32,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2276505743360
-    m_Key: Quit
+    m_Key: Exit game
     m_Metadata:
       m_Items: []
   - m_Id: 3306362564608

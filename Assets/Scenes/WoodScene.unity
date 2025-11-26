@@ -34754,7 +34754,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -6120562187213381168, guid: a9b8b49c52969d54b8b405af2781ae04, type: 3}
       - {fileID: -1838215038, guid: a9b8b49c52969d54b8b405af2781ae04, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 5, y: 8, z: 0}
@@ -48536,6 +48536,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2607886431075358217, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3109758108479166432}
+    - target: {fileID: 2607886431075358217, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: sceneChanger
       value: 
       objectReference: {fileID: 773277530}
@@ -48691,6 +48695,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4366530993488810454, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3109758108479166432}
     - target: {fileID: 4366530993488810454, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: sceneChanger
       value: 
@@ -49131,6 +49139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 9206904589239290524, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3109758108479166432}
     - target: {fileID: 9206904589239290524, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: sceneChanger
       value: 

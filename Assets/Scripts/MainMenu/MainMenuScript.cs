@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,25 +11,15 @@ public class MainMenuScript : MonoBehaviour
     public GameObject creditsPanel;
     public SceneChanger sceneChanger;
 
-
-    /*[Header("Save System")]
-    public MainMenuSaveController saveController;*/
-
     public void OnStartClick()
     {
-        /*if (GameManager.Instance != null)
-        {
-            GameManager.Instance.ClearPendingLoad();
-        }
-
-        AudioManager.Play("LoadGame");*/
-        //SceneManager.LoadScene("Cutscene01");
         sceneChanger.ChangeSceneWithFade("Cutscene01");
     }
 
     public void OnLoadClick()
     {
         AudioManager.Play("ButtonAffirmative");
+        SaveLoadManager.Instance.LoadGame();
     }
 
     public void OnOptionsClick()

@@ -3912,6 +3912,17 @@ MonoBehaviour:
   fadeAnim: {fileID: 773277531}
   fadeTime: 1
   newPlayerPosition: {x: 0, y: 0}
+--- !u!114 &773277535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2522247636507995935, guid: 0992dcdeec46e6541a86ab17ccdcbb22, type: 3}
+  m_PrefabInstance: {fileID: 239122284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773277528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ca6a970a69ac14abb0bc61f83dc89b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &934214219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 855303474307723082, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
@@ -10124,9 +10135,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2607886431075358217, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2036920088}
+    - target: {fileID: 2607886431075358217, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: sceneChanger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 773277535}
     - target: {fileID: 2625950429092809496, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10400,9 +10415,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4366530993488810454, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2036920088}
+    - target: {fileID: 4366530993488810454, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: sceneChanger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 773277535}
     - target: {fileID: 4409227283747003338, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11080,9 +11099,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9206904589239290524, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2036920088}
+    - target: {fileID: 9206904589239290524, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: sceneChanger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 773277535}
     - target: {fileID: 9217453301506480251, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

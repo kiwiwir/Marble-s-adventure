@@ -1,5 +1,18 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+[System.Serializable]
+public class SaveData
+{
+    public string currentScene;
+    public float playerPosX;
+    public float playerPosY;
+    public int gold;
+    public List<string> removedDialogues = new List<string>();
+    public Dictionary<string, bool> chestStates = new Dictionary<string, bool>();
+}
 
 public class GameManager : MonoBehaviour
 {
@@ -17,7 +30,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, bool> chestStates = new Dictionary<string, bool>();
     // przechowywanie zbiór ID dialogów, które zostały usunięte
     public HashSet<string> removedDialogues = new HashSet<string>();
-
+    public int gold;
 
     private void Awake()
     {

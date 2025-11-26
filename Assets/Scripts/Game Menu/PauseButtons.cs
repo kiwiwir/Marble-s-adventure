@@ -4,12 +4,16 @@ public class PauseButtons : MonoBehaviour
 {
     public SceneChanger sceneChanger;
     public PauseController pauseController; // referencja do SceneChanger
+    public Transform player;
 
     // Save Game
     public void OnSaveClick()
     {
         AudioManager.Play("ButtonAffirmative");
         Debug.Log("Save Game clicked");
+        
+        //GameManager.Instance.SaveGame(player.transform.position);
+        SaveLoadManager.Instance.SaveGame(player.position);
     }
 
     // Main Menu
@@ -20,9 +24,21 @@ public class PauseButtons : MonoBehaviour
         // Zmiana sceny przez SceneChanger z fade
 
         Debug.Log("Main Menu clicked");
-        pauseController.ClosePauseInstant();
-        sceneChanger.ChangeSceneWithFade("MainMenuScene");
+        //pauseController.ClosePauseInstant();
+        //sceneChanger.ChangeSceneWithFade("MainMenuScene");
+        if (pauseController != null)
+            pauseController.ClosePauseInstant();
 
+        // dynamiczne wyszukiwanie SceneChanger w aktywnej scenie
+        SceneChanger sc = FindObjectOfType<SceneChanger>();
+        if (sc != null)
+        {
+            sc.ChangeSceneWithFade("MainMenuScene");
+        }
+        else
+        {
+            Debug.LogWarning("SceneChanger not found in scene! Cannot change scene.");
+        }
     }
 
     // Exit Game

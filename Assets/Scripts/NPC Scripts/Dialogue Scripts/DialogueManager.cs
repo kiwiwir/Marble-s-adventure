@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
         ShowDialogue();
     }
 
-    public void AdvanceDialogue()
+    /*public void AdvanceDialogue()
     {
         if (isTyping)
         {
@@ -73,7 +73,57 @@ public class DialogueManager : MonoBehaviour
             else
                 EndDialogue();
         }
+    }*/
+    public void AdvanceDialogue()
+    {
+        if (currentDialogue == null)
+        {
+            Debug.LogWarning("No currentDialogue set! Cannot advance dialogue.");
+            return;
+        }
+
+        if (currentDialogue.lines == null || currentDialogue.lines.Length == 0)
+        {
+            Debug.LogWarning("currentDialogue has no lines!");
+            EndDialogue();
+            return;
+        }
+
+        if (dialogueIndex >= currentDialogue.lines.Length)
+        {
+            EndDialogue();
+            return;
+        }
+
+        if (isTyping)
+        {
+            // Skip typing and show full line immediately
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+
+            if (currentDialogue.lines[dialogueIndex] != null && dialogueText != null)
+                dialogueText.text = currentDialogue.lines[dialogueIndex].GetLocalizedText();
+
+            isTyping = false;
+            if (dialogueArrow != null)
+                dialogueArrow.enabled = true;
+
+            return;
+        }
+
+        dialogueIndex++;
+
+        if (dialogueIndex < currentDialogue.lines.Length)
+            ShowDialogue();
+        else
+        {
+            if (currentDialogue.options != null && currentDialogue.options.Length > 0)
+                ShowChoices();
+            else
+                EndDialogue();
+        }
     }
+
 
     private void ShowDialogue()
     {
