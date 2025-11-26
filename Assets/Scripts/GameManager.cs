@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, bool> chestStates = new Dictionary<string, bool>();
     // przechowywanie zbiór ID dialogów, które zostały usunięte
     public HashSet<string> removedDialogues = new HashSet<string>();
-    public int gold;
+    //public int gold;
 
     private void Awake()
     {

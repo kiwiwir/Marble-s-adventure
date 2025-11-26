@@ -16,6 +16,19 @@ public class ChestStateData
     public bool isOpened;
 }
 [System.Serializable]
+public class QuestObjectiveSaveData
+{
+    public string objectiveID;
+    public int currentAmount;
+}
+
+[System.Serializable]
+public class QuestSaveData
+{
+    public string questID;
+    public List<QuestObjectiveSaveData> objectives = new List<QuestObjectiveSaveData>();
+}
+[System.Serializable]
 public class PlayerSaveData
 {
     public string currentScene;
@@ -25,6 +38,9 @@ public class PlayerSaveData
     public List<ItemSaveData> inventoryItems = new List<ItemSaveData>();
     public List<string> removedDialogues = new List<string>();
     public List<ChestStateData> chestStates = new List<ChestStateData>();
+    // ---------------- QUESTS ----------------
+    public List<QuestSaveData> activeQuests = new List<QuestSaveData>();
+    public List<string> completedQuests = new List<string>();
 }
 
 
@@ -84,6 +100,28 @@ public class SaveLoadManager : MonoBehaviour
                 isOpened = kvp.Value
             });
         }
+        
+        // quests states
+        data.activeQuests.Clear();
+        foreach (var kvp in GameManager.Instance.QuestManager.GetQuestProgressDictionary())
+        {
+            QuestSO questSO = kvp.Key;
+            QuestSaveData questData = new QuestSaveData();
+            questData.questID = questSO.name;
+
+            foreach (var obj in kvp.Value)
+            {
+                questData.objectives.Add(new QuestObjectiveSaveData
+                {
+                    objectiveID = obj.Key.descriptionPL,
+                    currentAmount = obj.Value
+                });
+            }
+
+            data.activeQuests.Add(questData);
+        }
+
+        data.completedQuests = new List<string>(GameManager.Instance.QuestManager.GetCompletedQuestsNames());
 
 
 
@@ -162,6 +200,35 @@ public class SaveLoadManager : MonoBehaviour
         foreach (var chestData in data.chestStates)
         {
             GameManager.Instance.chestStates[chestData.chestID] = chestData.isOpened;
+        }
+
+        // quests
+        if (GameManager.Instance.QuestManager != null)
+        {
+            GameManager.Instance.QuestManager.ClearAllQuests();
+
+            foreach (var questData in data.activeQuests)
+            {
+                QuestSO questSO = Resources.Load<QuestSO>("QuestSOs/" + questData.questID);
+                if (questSO != null)
+                {
+                    GameManager.Instance.QuestManager.AcceptQuest(questSO);
+
+                    foreach (var objData in questData.objectives)
+                    {
+                        var objective = questSO.objectives.Find(o => o.descriptionPL == objData.objectiveID);
+                        if (objective != null)
+                            GameManager.Instance.QuestManager.SetObjectiveProgress(questSO, objective, objData.currentAmount);
+                    }
+                }
+            }
+
+            foreach (var questID in data.completedQuests)
+            {
+                QuestSO questSO = Resources.Load<QuestSO>("QuestSOs/" + questID);
+                if (questSO != null)
+                    GameManager.Instance.QuestManager.MarkQuestCompleted(questSO);
+            }
         }
 
         Debug.Log("Save loaded successfully!");

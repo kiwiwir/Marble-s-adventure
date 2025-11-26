@@ -55,9 +55,21 @@ public class SceneChanger : MonoBehaviour
             yield return null;
         }
 
-        if (player != null)
+        /*if (player != null)
             player.position = newPlayerPosition;
 
+        SceneManager.LoadScene(sceneToLoad);*/
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(sceneToLoad);
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            playerObj.transform.position = newPlayerPosition;
+        }
     }
 }

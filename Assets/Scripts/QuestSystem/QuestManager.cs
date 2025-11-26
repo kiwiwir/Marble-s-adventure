@@ -151,4 +151,34 @@ public class QuestManager : MonoBehaviour
                 return amount;
         return 0;
     }
+
+    #region save/load system
+    public Dictionary<QuestSO, Dictionary<QuestObjective, int>> GetQuestProgressDictionary() => questProgress;
+
+    public List<string> GetCompletedQuestsNames()
+    {
+        List<string> names = new List<string>();
+        foreach(var q in completedQuests)
+            names.Add(q.name);
+        return names;
+    }
+
+    public void ClearAllQuests()
+    {
+        questProgress.Clear();
+        completedQuests.Clear();
+    }
+
+    public void SetObjectiveProgress(QuestSO questSO, QuestObjective objective, int amount)
+    {
+        if (questProgress.ContainsKey(questSO))
+            questProgress[questSO][objective] = amount;
+    }
+
+    public void MarkQuestCompleted(QuestSO questSO)
+    {
+        if (!completedQuests.Contains(questSO))
+            completedQuests.Add(questSO);
+    }
+    #endregion
 }

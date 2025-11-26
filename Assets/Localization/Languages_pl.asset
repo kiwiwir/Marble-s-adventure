@@ -200,6 +200,10 @@ MonoBehaviour:
     m_Localized: "Uko\u0144cz"
     m_Metadata:
       m_Items: []
+  - m_Id: 46429289713823744
+    m_Localized: Zamknij
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
