@@ -16,6 +16,8 @@ public class NPC_Talk : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+
+        RemoveFinishedDialogues();
     }
 
     private void Start()
@@ -89,6 +91,18 @@ public class NPC_Talk : MonoBehaviour
             if(convo == null)
                 continue;
             if(convo.offerQuestOnEnd == acceptedQuest)
+            {
+                conversations.RemoveAt(i);
+            }
+        }
+    }
+
+    private void RemoveFinishedDialogues()
+    {
+        for (int i = conversations.Count - 1; i >= 0; i--)
+        {
+            var c = conversations[i];
+            if (c != null && GameManager.Instance.removedDialogues.Contains(c.dialogueID))
             {
                 conversations.RemoveAt(i);
             }

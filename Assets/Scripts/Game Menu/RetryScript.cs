@@ -10,6 +10,22 @@ public class RetryScript : MonoBehaviour
     public float fadeDuration = 1f;     // czas fade-out
     public GameObject player;
 
+    private void Start()
+    {
+        FindSpawnPoint();
+    }
+    private void FindSpawnPoint()
+    {
+        if (spawnPoint == null)
+        {
+            var obj = GameObject.Find("SpawnPoint");
+            if (obj != null)
+                spawnPoint = obj.transform;
+            else
+                Debug.LogWarning("SpawnPoint not found!");
+        }
+    }
+
     public void OnRetryClicked()
     {
         if (gameOverUI != null)
@@ -43,6 +59,18 @@ public class RetryScript : MonoBehaviour
     private void RespawnPlayer()
     {
         Debug.Log("RespawnPlayer called");
+        
+        if (spawnPoint == null || spawnPoint.Equals(null))
+        {
+            Debug.Log("SpawnPoint reference was missing — trying to find it again.");
+            FindSpawnPoint();
+        }
+
+        if (spawnPoint == null)
+        {
+            Debug.LogError("SpawnPoint STILL missing — cannot respawn player!");
+            return;
+        }
 
         if (player != null)
         {

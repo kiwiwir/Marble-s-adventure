@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     // słownik do przechowywania stanu skrzyń
     public Dictionary<string, bool> chestStates = new Dictionary<string, bool>();
+    // przechowywanie zbiór ID dialogów, które zostały usunięte
+    public HashSet<string> removedDialogues = new HashSet<string>();
+
 
     private void Awake()
     {

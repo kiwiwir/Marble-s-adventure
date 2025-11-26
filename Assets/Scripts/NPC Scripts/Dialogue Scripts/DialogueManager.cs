@@ -96,37 +96,6 @@ public class DialogueManager : MonoBehaviour
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(line));
     }
-
-    /*IEnumerator TypeText(DialogueLine line)
-    {
-        isTyping = true;
-        dialogueText.text = "";
-        float timeSinceLastVoice = 0f;
-
-        string localizedText = line.GetLocalizedText();
-        foreach (char letter in localizedText)
-        {
-            dialogueText.text += letter;
-
-            timeSinceLastVoice += line.speaker.typingSpeed;
-
-            if (line.speaker.voiceSound && timeSinceLastVoice >= line.speaker.voiceInterval)
-            {
-                float basePitch = line.speaker.basePitch;
-                float pitchVariation = line.speaker.pitchVariation;
-                float finalPitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
-
-                AudioManager.PlayVoice(line.speaker.voiceSound, finalPitch);
-                timeSinceLastVoice = 0f;
-            }
-
-            yield return new WaitForSeconds(line.speaker.typingSpeed);
-        }
-
-        isTyping = false;
-        if (dialogueArrow != null)
-            dialogueArrow.enabled = true;
-    }*/
     IEnumerator TypeText(DialogueLine line)
     {
         isTyping = true;
@@ -208,6 +177,23 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        // --- ZAPISYWANIE STANU USUNIĘTYCH DIALOGÓW ---
+        if (currentDialogue != null)
+        {
+            if (currentDialogue.removeAfterPlay)
+                GameManager.Instance.removedDialogues.Add(currentDialogue.dialogueID);
+
+            if (currentDialogue.removeTheseOnPlay != null)
+            {
+                foreach (var toRemove in currentDialogue.removeTheseOnPlay)
+                {
+                    if (toRemove != null)
+                        GameManager.Instance.removedDialogues.Add(toRemove.dialogueID);
+                }
+            }
+        }
+        // ---------------------------------------------
+        
         dialogueIndex = 0;
         isDialogueActive = false;
         ClearChoices();

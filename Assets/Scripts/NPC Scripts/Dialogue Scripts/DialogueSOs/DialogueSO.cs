@@ -5,6 +5,8 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "DialogueSO", menuName = "Dialogue/DialogueNode")]
 public class DialogueSO : ScriptableObject
 {
+    public string dialogueID;
+
     public DialogueLine[] lines;
     public DialogueOption[] options;
 
@@ -26,6 +28,10 @@ public class DialogueSO : ScriptableObject
     public bool removeAfterPlay;
     public List<DialogueSO> removeTheseOnPlay;
 
+    private void OnValidate() {
+        if (string.IsNullOrEmpty(dialogueID))
+            dialogueID = System.Guid.NewGuid().ToString();
+    }
 
     public bool IsConditionMet()
     {
