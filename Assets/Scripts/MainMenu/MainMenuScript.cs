@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -11,6 +12,9 @@ public class MainMenuScript : MonoBehaviour
     public GameObject creditsPanel;
     public SceneChanger sceneChanger;
 
+    [Header("Persistent Objects To Activate")]
+    public string[] persistentObjectNames;
+
     public void OnStartClick()
     {
         sceneChanger.ChangeSceneWithFade("Cutscene01");
@@ -19,6 +23,43 @@ public class MainMenuScript : MonoBehaviour
     public void OnLoadClick()
     {
         AudioManager.Play("ButtonAffirmative");
+        //SaveLoadManager.Instance.LoadGame();
+        // Najpierw odblokuj wszystkie persistent objects
+        StartCoroutine(ActivatePersistentObjectsAndLoad());
+    }
+    private IEnumerator ActivatePersistentObjectsAndLoad()
+    {
+        // Poczekaj 1 klatkę, żeby wszystko się ustabilizowało
+        yield return null;
+
+        foreach (string objName in persistentObjectNames)
+        {
+            GameObject obj = null;
+
+            if (objName == "Player")
+            {
+                obj = GameManager.Instance?.Player;
+            }
+            else
+            {
+                var allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+                foreach (var go in allObjects)
+                {
+                    if (go.name == objName)
+                    {
+                        obj = go;
+                        break;
+                    }
+                }
+            }
+
+            if (obj != null)
+                obj.SetActive(true);
+            else
+                Debug.LogWarning($"Nie znaleziono persistent object o nazwie lub tagu: {objName}");
+        }
+
+        // Teraz załaduj grę
         SaveLoadManager.Instance.LoadGame();
     }
 

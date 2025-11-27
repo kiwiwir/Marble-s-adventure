@@ -16,6 +16,7 @@ public class SaveData
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject Player;
     public static GameManager Instance;
 
     public DialogueManager DialogueManager;
