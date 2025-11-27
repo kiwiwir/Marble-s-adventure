@@ -30247,8 +30247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
-  chestItem: {fileID: 11400000, guid: 733dd557d4fff424b97464b1d95b9411, type: 2}
-  quantity: 1
+  chestItem: {fileID: 11400000, guid: 0e8ccffe49b94834eab507eed9201013, type: 2}
+  quantity: 5
 --- !u!95 &951586515
 Animator:
   serializedVersion: 7
@@ -33469,8 +33469,6 @@ MonoBehaviour:
   shopManager: {fileID: 882539232}
   shopkeeperDialogue: {fileID: 11400000, guid: 7aa913e34b20da044b96720bbf2250a2, type: 2}
   shopPotionsItems:
-  - itemSO: {fileID: 11400000, guid: 733dd557d4fff424b97464b1d95b9411, type: 2}
-    price: 5
   - itemSO: {fileID: 11400000, guid: f303ac08afdb1e14caa9fbe70da66aa1, type: 2}
     price: 30
   - itemSO: {fileID: 11400000, guid: b713089bd7b439140be49137e7eda24a, type: 2}
@@ -34557,7 +34555,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -5249637840615531020, guid: af248809fe8a7d44a99cfb9aec504939, type: 3}
       - {fileID: -1338405803, guid: af248809fe8a7d44a99cfb9aec504939, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: -5, z: 0}
@@ -49456,6 +49454,22 @@ PrefabInstance:
     - target: {fileID: 5797845035640022687, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960021710327158032, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960021710327158032, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163444716880970080, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.9920025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163444716880970080, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43557
       objectReference: {fileID: 0}
     - target: {fileID: 7732773271375252730, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
       propertyPath: m_Name

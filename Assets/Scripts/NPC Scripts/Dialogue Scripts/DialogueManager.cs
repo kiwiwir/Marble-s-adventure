@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
                 EndDialogue();
         }
     }*/
-    public void AdvanceDialogue()
+    /*public void AdvanceDialogue()
     {
         if (currentDialogue == null)
         {
@@ -122,7 +122,63 @@ public class DialogueManager : MonoBehaviour
             else
                 EndDialogue();
         }
+    }*/
+    public void AdvanceDialogue()
+    {
+        if (currentDialogue == null)
+        {
+            Debug.LogWarning("No currentDialogue set! Cannot advance dialogue.");
+            return;
+        }
+
+        // Jeśli pokazane są opcje, nie pozwól przewijać dialogu
+        if (dialogueChoicePanel.gameObject.activeSelf)
+        {
+            // Można tu też dodać np. dźwięk lub animację informującą gracza
+            return;
+        }
+
+        if (currentDialogue.lines == null || currentDialogue.lines.Length == 0)
+        {
+            Debug.LogWarning("currentDialogue has no lines!");
+            EndDialogue();
+            return;
+        }
+
+        if (dialogueIndex >= currentDialogue.lines.Length)
+        {
+            EndDialogue();
+            return;
+        }
+
+        if (isTyping)
+        {
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+
+            if (currentDialogue.lines[dialogueIndex] != null && dialogueText != null)
+                dialogueText.text = currentDialogue.lines[dialogueIndex].GetLocalizedText();
+
+            isTyping = false;
+            if (dialogueArrow != null)
+                dialogueArrow.enabled = true;
+
+            return;
+        }
+
+        dialogueIndex++;
+
+        if (dialogueIndex < currentDialogue.lines.Length)
+            ShowDialogue();
+        else
+        {
+            if (currentDialogue.options != null && currentDialogue.options.Length > 0)
+                ShowChoices();
+            else
+                EndDialogue();
+        }
     }
+
 
 
     private void ShowDialogue()
