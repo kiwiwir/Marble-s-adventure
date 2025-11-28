@@ -26,4 +26,4 @@ MonoBehaviour:
     requiredAmount: 3
   rewards:
   - itemSO: {fileID: 11400000, guid: 0e8ccffe49b94834eab507eed9201013, type: 2}
-    quantity: 5
+    quantity: 6

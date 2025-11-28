@@ -28,10 +28,12 @@ public class DialogueSO : ScriptableObject
     public bool removeAfterPlay;
     public List<DialogueSO> removeTheseOnPlay;
 
-    private void OnValidate() {
+    private void OnValidate()
+    {
         if (string.IsNullOrEmpty(dialogueID))
-            dialogueID = System.Guid.NewGuid().ToString();
+            dialogueID = name; // Używamy nazwy assetu jako ID
     }
+
 
     public bool IsConditionMet()
     {

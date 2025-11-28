@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
   m_Name: MysteriousNPC - Greeting - OP1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  dialogueID: MysteriousNPC - Greeting - OP1
   lines:
   - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
     textENG: "Who\u2026 who are you? Show yourself!"
@@ -29,4 +30,5 @@ MonoBehaviour:
   requiredLocations: []
   requiredItems: []
   removeAfterPlay: 0
-  removeTheseOnPlay: []
+  removeTheseOnPlay:
+  - {fileID: 11400000, guid: 18a406b2aa21a894f99f5dc03665b200, type: 2}

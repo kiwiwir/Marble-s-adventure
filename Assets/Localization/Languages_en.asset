@@ -202,6 +202,22 @@ MonoBehaviour:
     m_Localized: Quit
     m_Metadata:
       m_Items: []
+  - m_Id: 47104864086454272
+    m_Localized: 'Thank you for playing my game.
+
+      I learned a lot while making
+      it,
+
+      and I hope you had fun too!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47109145053163520
+    m_Localized: 'Now listen to Cat Jam!
+
+      It''s the ideal music for the ending,
+      right?'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

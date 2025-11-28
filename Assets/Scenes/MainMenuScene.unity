@@ -1480,7 +1480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046a6aebf3468484995ffa3266e1099a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadPanel: {fileID: 0}
   optionsPanel: {fileID: 2046378235}
   creditsPanel: {fileID: 183435628}
   sceneChanger: {fileID: 869743809}

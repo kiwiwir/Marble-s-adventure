@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
     [Header("UI Panels")]
-    public GameObject loadPanel;
+    //public GameObject loadPanel;
     public GameObject optionsPanel;
     public GameObject creditsPanel;
     public SceneChanger sceneChanger;
@@ -17,6 +17,8 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnStartClick()
     {
+        AudioManager.Play("ButtonAffirmative");
+        SaveLoadManager.Instance.ResetGameToDefault();
         sceneChanger.ChangeSceneWithFade("Cutscene01");
     }
 
@@ -24,6 +26,18 @@ public class MainMenuScript : MonoBehaviour
     {
         AudioManager.Play("ButtonAffirmative");
         //SaveLoadManager.Instance.LoadGame();
+        // Sprawdź czy istnieje savegame.json
+        string path = Application.persistentDataPath + "/savegame.json";
+
+        if (!File.Exists(path))
+        {
+            Debug.LogWarning("Brak pliku savegame.json — nie można wczytać gry!");
+            AudioManager.Play("ButtonNegative"); 
+
+            return; // NIE uruchamiamy Coroutine
+        }
+
+        // Jeśli save istnieje — normalnie uruchamiamy loading
         // Najpierw odblokuj wszystkie persistent objects
         StartCoroutine(ActivatePersistentObjectsAndLoad());
     }
@@ -61,6 +75,7 @@ public class MainMenuScript : MonoBehaviour
 
         // Teraz załaduj grę
         SaveLoadManager.Instance.LoadGame();
+        SaveLoadManager.Instance.ApplyLoadedSave();
     }
 
     public void OnOptionsClick()
@@ -68,8 +83,6 @@ public class MainMenuScript : MonoBehaviour
         AudioManager.Play("ButtonAffirmative");
         if (optionsPanel != null)
             optionsPanel.SetActive(true);
-        if (loadPanel != null)
-            loadPanel.SetActive(false);
         if (creditsPanel != null)
             creditsPanel.SetActive(false);
     }
@@ -81,8 +94,6 @@ public class MainMenuScript : MonoBehaviour
             creditsPanel.SetActive(true);
         if (optionsPanel != null)
             optionsPanel.SetActive(false);
-        if (loadPanel != null)
-            loadPanel.SetActive(false);
     }
     
     public void OnExitClick()

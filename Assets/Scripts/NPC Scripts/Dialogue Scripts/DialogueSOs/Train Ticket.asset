@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Train Ticket
+  m_EditorClassIdentifier: 
+  dialogueID: Train Ticket
+  lines:
+  - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
+    textENG: 'Where did you get that ticket?!
+
+      I never thought I''d see it
+      again.'
+    textPL: "Sk\u0105d ma Pani ten bilet?!\nNie my\u015Bla\u0142em, \u017Ce kiedykolwiek
+      go zobacz\u0119."
+    expressionName: 
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems:
+  - {fileID: 11400000, guid: a8c28ecd188db644786a9f2caa8678d6, type: 2}
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

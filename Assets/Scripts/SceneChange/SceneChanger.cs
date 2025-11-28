@@ -34,6 +34,12 @@ public class SceneChanger : MonoBehaviour
     {
         sceneLoading = true;
 
+        /*// Zapisujemy stan gry przed zmianą sceny
+        if (SaveLoadManager.Instance != null && player != null)
+        {
+            SaveLoadManager.Instance.SaveGame(player.position);
+        }*/
+
         if (fadeAnim != null)
             fadeAnim.Play("FadeToDark");
 
@@ -71,5 +77,29 @@ public class SceneChanger : MonoBehaviour
         {
             playerObj.transform.position = newPlayerPosition;
         }
+        /*// ============================
+        // USUWANIE DIALOGÓW PO ZMIANIE SCENY
+        // ============================
+        if (GameManager.Instance != null && GameManager.Instance.removedDialogues != null)
+        {
+            var removed = GameManager.Instance.removedDialogues;
+
+            // znajdź wszystkie triggerki dialogów w scenie
+            DialogueTrigger[] triggers = GameObject.FindObjectsOfType<DialogueTrigger>();
+
+            foreach (var t in triggers)
+            {
+                // jeśli ID jest na liście do usunięcia → wyłącz
+                if (removed.Contains(t.dialogueID))
+                {
+                    t.gameObject.SetActive(false);
+                    Debug.Log($"Dialog {t.dialogueID} został wyłączony, bo jest w removedDialogues.");
+                }
+            }
+        }*/
     }
 }
+/*public class DialogueTrigger : MonoBehaviour
+{
+    public string dialogueID;
+}*/

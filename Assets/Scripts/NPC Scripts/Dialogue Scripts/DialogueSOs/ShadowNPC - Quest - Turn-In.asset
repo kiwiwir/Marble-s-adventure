@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
   m_Name: ShadowNPC - Quest - Turn-In
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  dialogueID: ShadowNPC - Quest - Turn-In
   lines:
   - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
     textENG: I got the potion you wanted.
@@ -45,6 +46,10 @@ MonoBehaviour:
     textENG: "That\u2019s\u2026 not ominous at all."
     textPL: "To\u2026 wcale nie jest z\u0142owieszcze."
     expressionName: sad
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: "You\u2019ll understand its purpose when you reach the train\u2026"
+    textPL: "Zrozumiesz, do czego to s\u0142u\u017Cy, kiedy dotrzesz do poci\u0105gu\u2026"
+    expressionName: default
   options: []
   offerQuestOnEnd: {fileID: 0}
   requiredCompletedQuests:
@@ -54,4 +59,5 @@ MonoBehaviour:
   requiredLocations: []
   requiredItems: []
   removeAfterPlay: 0
-  removeTheseOnPlay: []
+  removeTheseOnPlay:
+  - {fileID: 11400000, guid: 71097baed6808854eb41dcf3b00b71af, type: 2}

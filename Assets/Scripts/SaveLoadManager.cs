@@ -131,7 +131,7 @@ public class SaveLoadManager : MonoBehaviour
     }
 
     // ---------------- LOAD ----------------
-    public void LoadGame()
+    /*public void LoadGame()
     {
         string path = GetSavePath();
         if (!File.Exists(path))
@@ -150,7 +150,43 @@ public class SaveLoadManager : MonoBehaviour
         };
 
         SceneManager.LoadScene(data.currentScene);
+    }*/
+    private PlayerSaveData loadedData = null;
+
+    public void LoadGame()
+    {
+        string path = GetSavePath();
+        if (!File.Exists(path))
+        {
+            Debug.LogWarning("No save file found!");
+            return;
+        }
+
+        string json = File.ReadAllText(GetSavePath());
+        loadedData = JsonUtility.FromJson<PlayerSaveData>(json);
+        Debug.Log("Save data loaded into memory.");
     }
+    public void ApplyLoadedSave()
+    {
+        if (loadedData == null)
+        {
+            Debug.LogWarning("No loaded save data to apply!");
+            return;
+        }
+
+        // Załaduj scenę z zapisu
+        SceneManager.sceneLoaded += OnSceneLoadedApplySave;
+        SceneManager.LoadScene(loadedData.currentScene);
+    }
+
+    private void OnSceneLoadedApplySave(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= OnSceneLoadedApplySave;
+        ApplySaveData(loadedData);
+        loadedData = null; // opcjonalnie czyścimy, żeby nie było ponownego zastosowania
+    }
+
+
 
     private void ApplySaveDataHandler(Scene scene, LoadSceneMode mode) { }
 
@@ -233,4 +269,66 @@ public class SaveLoadManager : MonoBehaviour
 
         Debug.Log("Save loaded successfully!");
     }
+
+    public void ResetGameToDefault()
+    {
+        Debug.Log("RESET: Przygotowywanie nowej gry bez wczytywania JSON...");
+
+        // Wyzeruj dane załadowane z pliku
+        loadedData = null;
+
+        // ============================
+        // INVENTORY
+        // ============================
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.gold = 0;
+
+            if (InventoryManager.Instance.goldText != null)
+                InventoryManager.Instance.goldText.text = "0";
+
+            foreach (var slot in InventoryManager.Instance.itemSlots)
+            {
+                slot.itemSO = null;
+                slot.quantity = 0;
+                slot.UpdateUI();
+            }
+        }
+
+        // ============================
+        // REMOVED DIALOGUES
+        // ============================
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.removedDialogues.Clear();
+        }
+
+        // ============================
+        // CHEST STATES
+        // ============================
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.chestStates.Clear();
+        }
+
+        // ============================
+        // QUESTS
+        // ============================
+        if (GameManager.Instance != null && GameManager.Instance.QuestManager != null)
+        {
+            GameManager.Instance.QuestManager.ClearAllQuests();
+        }
+
+        // ============================
+        // RESET SCENY I POZYCJI
+        // ============================
+        // To zostanie nadpisane przez system przy Cutscene01
+        PlayerSaveData resetData = new PlayerSaveData();
+        resetData.currentScene = "Cutscene01";
+        resetData.playerPosX = 0f;
+        resetData.playerPosY = 0f;
+
+        Debug.Log("RESET GOTOWY — nowa gra ruszy od Cutscene01.");
+    }
+
 }

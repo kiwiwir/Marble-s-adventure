@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
   m_Name: CatNPC - Quest - OP3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  dialogueID: CatNPC - Quest - OP3
   lines:
   - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
     textENG: "Alright\u2026 I\u2019ll go get it."
@@ -31,4 +32,7 @@ MonoBehaviour:
   requiredLocations: []
   requiredItems: []
   removeAfterPlay: 0
-  removeTheseOnPlay: []
+  removeTheseOnPlay:
+  - {fileID: 11400000, guid: b774723025533e141945132accfe652c, type: 2}
+  - {fileID: 11400000, guid: 227e5dd79497a7a4a86abd6dcf29f38c, type: 2}
+  - {fileID: 11400000, guid: bdc8985c3bbc1424884bd596c6802a26, type: 2}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
   m_Name: MysteriousNPC - Greeting
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  dialogueID: MysteriousNPC - Greeting
   lines:
   - speaker: {fileID: 11400000, guid: a6c770e5826f33c458dd7c341c13d317, type: 2}
     textENG: ...Ah, finally. I wondered who might wander this far.

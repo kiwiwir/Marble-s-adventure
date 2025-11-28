@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
   m_Name: CatNPC - Quest - Turn-In
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  dialogueID: CatNPC - Quest - Turn-In
   lines:
   - speaker: {fileID: 11400000, guid: a7aa6b929d7ec3a4b872bb20756e679a, type: 2}
     textENG: 'Oh! Oh! You got it!!
@@ -62,4 +63,5 @@ MonoBehaviour:
   requiredLocations: []
   requiredItems: []
   removeAfterPlay: 0
-  removeTheseOnPlay: []
+  removeTheseOnPlay:
+  - {fileID: 11400000, guid: 1f56edb377ed52747bb01eb350d42bb3, type: 2}

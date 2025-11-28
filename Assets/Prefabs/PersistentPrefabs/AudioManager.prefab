@@ -125,6 +125,9 @@ MonoBehaviour:
   - name: SellItem
     audioClips:
     - {fileID: 8300000, guid: f61838341c999bc42ae5e16f0a4eb569, type: 3}
+  - name: TheEndBackgroundMusic
+    audioClips:
+    - {fileID: 8300000, guid: 83e54f1a9b777b541a0431eeaafc48b7, type: 3}
 --- !u!114 &5352274256350453843
 MonoBehaviour:
   m_ObjectHideFlags: 0
