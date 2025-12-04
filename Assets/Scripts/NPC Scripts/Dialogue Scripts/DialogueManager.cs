@@ -42,6 +42,9 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogueSO;
         dialogueIndex = 0;
         isDialogueActive = true;
+
+        DialogueEvents.OnDialogueStarted?.Invoke(currentDialogue);
+
         Time.timeScale = 0f;
         ShowDialogue();
     }
@@ -283,6 +286,8 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        DialogueEvents.OnDialogueEnded?.Invoke(currentDialogue);
+
         // --- ZAPISYWANIE STANU USUNIĘTYCH DIALOGÓW ---
         if (currentDialogue != null)
         {

@@ -1,66 +1,58 @@
+using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
-public class NPC_DialogueSceneTrigger : MonoBehaviour
+public class DialogueSceneLoader : MonoBehaviour
 {
     [Header("Dialogue to trigger scene change")]
-    public DialogueSO triggerDialogue;
-
-    [Header("Scene to load after dialogue ends")]
-    public string sceneToLoad;
+    public DialogueSO targetDialogue;        // ten dialog musi się zakończyć
+    public string sceneToLoad;               // nazwa sceny do załadowania
 
     private bool waitingForDialogueEnd = false;
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetButtonDown("Interact") && !waitingForDialogueEnd)
+        // nasłuchujemy aktywacji dialogu
+        DialogueEvents.OnDialogueStarted += OnDialogueStarted;
+        DialogueEvents.OnDialogueEnded += OnDialogueEnded;
+    }
+
+    private void OnDisable()
+    {
+        DialogueEvents.OnDialogueStarted -= OnDialogueStarted;
+        DialogueEvents.OnDialogueEnded -= OnDialogueEnded;
+    }
+
+    private void OnDialogueStarted(DialogueSO dialogue)
+    {
+        // jeśli rozpoczął się dialog, na który czekamy → aktywujemy flagę
+        if (dialogue == targetDialogue)
         {
-            if (GameManager.Instance.DialogueManager.isDialogueActive)
+            waitingForDialogueEnd = true;
+        }
+    }
+
+    private void OnDialogueEnded(DialogueSO dialogue)
+    {
+        // jeśli zakończony dialog to ten, którego szukamy
+        if (waitingForDialogueEnd && dialogue == targetDialogue)
+        {
+            waitingForDialogueEnd = false;
+
+            // znajdź SceneChanger i przełącz scenę
+            var changer = FindObjectOfType<SceneChanger>();
+            if (changer != null)
             {
-                GameManager.Instance.DialogueManager.AdvanceDialogue();
+                changer.ChangeSceneWithFade(sceneToLoad);
             }
             else
             {
-                StartDialogueCheck();
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
             }
         }
     }
-
-    private void StartDialogueCheck()
-    {
-        if (triggerDialogue != null && triggerDialogue.IsConditionMet())
-        {
-            GameManager.Instance.DialogueManager.StartDialogue(triggerDialogue);
-            waitingForDialogueEnd = true;
-            StartCoroutine(CheckDialogueEnd());
-        }
-    }
-
-    private IEnumerator CheckDialogueEnd()
-    {
-        // Czekaj aż dialog się zakończy
-        while (GameManager.Instance.DialogueManager.isDialogueActive)
-        {
-            yield return null;
-        }
-
-        waitingForDialogueEnd = false;
-
-        // Jeśli chcesz "czystą" scenę, usuń GameManager i jego persistent objects
-        if (GameManager.Instance != null)
-        {
-            Destroy(GameManager.Instance.gameObject);
-        }
-
-        // Załaduj nową scenę w czystym stanie
-        if (!string.IsNullOrEmpty(sceneToLoad))
-        {
-            SceneManager.LoadScene(sceneToLoad);
-        }
-        else
-        {
-            Debug.LogWarning("NPC_DialogueSceneTrigger: sceneToLoad nie jest ustawiona!");
-        }
-    }
+}
+public static class DialogueEvents
+{
+    public static Action<DialogueSO> OnDialogueStarted;
+    public static Action<DialogueSO> OnDialogueEnded;
 }
