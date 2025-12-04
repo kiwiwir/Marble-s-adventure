@@ -156,10 +156,10 @@ public class DialogueManager : MonoBehaviour
 
         if (isTyping)
         {
-            if (typingCoroutine != null)
+            //if (typingCoroutine != null)
                 StopCoroutine(typingCoroutine);
 
-            if (currentDialogue.lines[dialogueIndex] != null && dialogueText != null)
+            //if (currentDialogue.lines[dialogueIndex] != null && dialogueText != null)
                 dialogueText.text = currentDialogue.lines[dialogueIndex].GetLocalizedText();
 
             isTyping = false;
