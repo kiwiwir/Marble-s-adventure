@@ -2986,7 +2986,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6024522246659629522}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ToggleMenuButton
+        m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11557,7 +11557,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &2117055287364930905
 MonoBehaviour:
@@ -11735,7 +11735,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &5148677792882351180
 MonoBehaviour:
@@ -13400,11 +13400,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8648037172161453979}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ToggleMenu
-        m_Mode: 2
+        m_MethodName: Toggle
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2874949863724502726}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15772,6 +15772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943309942315403952}
   - component: {fileID: 8648037172161453979}
+  - component: {fileID: 2311338544581391412}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -15797,8 +15798,8 @@ Transform:
   - {fileID: 837371144211242619}
   - {fileID: 4898913294554101091}
   - {fileID: 8473223239188238854}
-  - {fileID: 8828826691435209914}
   - {fileID: 8408993020092538881}
+  - {fileID: 8828826691435209914}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8648037172161453979
@@ -15813,10 +15814,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b74b19bca50a7549b9fb08d87bf4690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  menuBar: {fileID: 3574209403319291003}
-  diaryMenu: {fileID: 622554736158536692}
   questMenu: {fileID: 2874949863724502726}
+  diaryMenu: {fileID: 622554736158536692}
   questLogUI: {fileID: 3115188511350438902}
+--- !u!114 &2311338544581391412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295070306642935660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f36a2717feaea4ca14bb4b3d0a4e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &8309768653872326692
 GameObject:
   m_ObjectHideFlags: 0
@@ -19953,6 +19965,10 @@ PrefabInstance:
     - target: {fileID: 7266605469330650330, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039531523034048166, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

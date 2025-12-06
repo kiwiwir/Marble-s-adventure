@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class PauseController : MonoBehaviour
+public class PauseController : MonoBehaviour, IMenu
 {
     public CanvasGroup pauseCanvasGroup;
     public MenuController menuController;
     public float fadeSpeed = 3f;
+
     private bool isPaused = false;
     private bool isFading = false;
 
     void Start()
     {
+        GlobalMenuManager.Instance.Register(this);
+
         pauseCanvasGroup.alpha = 0f;
         pauseCanvasGroup.interactable = false;
         pauseCanvasGroup.blocksRaycasts = false;
@@ -19,42 +22,63 @@ public class PauseController : MonoBehaviour
     {
         if (Input.GetButtonDown("TogglePause") && !isFading)
         {
+            // Pauza używa teraz systemu globalnego
             if (!isPaused)
-            {
-                // Jeśli menu jest otwarte, zamknij je
-                if (menuController != null && menuController.IsMenuOpen)
-                {
-                    menuController.CloseMenuInstant();
-                }
-
-                // Odtwarzanie dźwięku otwierania pauzy
-                AudioManager.Play("Menu_In");
-
-                StartCoroutine(FadeCanvasGroup(pauseCanvasGroup, 0f, 1f));
-                isPaused = true;
-                Time.timeScale = 0f;
-            }
+                GlobalMenuManager.Instance.RequestOpen(this);
             else
-            {
-                // Odtwarzanie dźwięku zamykania pauzy
-                AudioManager.Play("Menu_Out");
-
-                StartCoroutine(FadeCanvasGroup(pauseCanvasGroup, 1f, 0f));
-                isPaused = false;
-                Time.timeScale = 1f;
-            }
+                GlobalMenuManager.Instance.RequestClose(this);
         }
     }
 
-    public void ClosePauseInstant()
+
+    // ——————————————————————————
+    //      IMPLEMENTACJA IMenu
+    // ——————————————————————————
+
+    public void Open()
+    {
+        // Zamknij Diary Menu jeśli otwarte
+        if (menuController != null && menuController.IsMenuOpen)
+            menuController.Close();
+
+        // Dźwięk otwarcia
+        AudioManager.Play("Menu_In");
+
+        StartCoroutine(FadeCanvasGroup(pauseCanvasGroup, 0f, 1f));
+        isPaused = true;
+
+        Time.timeScale = 0f;
+    }
+
+    public void Close()
+    {
+        // Dźwięk zamykania
+        AudioManager.Play("Menu_Out");
+
+        StartCoroutine(FadeCanvasGroup(pauseCanvasGroup, 1f, 0f));
+        isPaused = false;
+
+        Time.timeScale = 1f;
+    }
+
+    public void CloseInstant()
     {
         StopAllCoroutines();
+
         pauseCanvasGroup.alpha = 0f;
         pauseCanvasGroup.interactable = false;
         pauseCanvasGroup.blocksRaycasts = false;
+
         isPaused = false;
         Time.timeScale = 1f;
     }
+
+    public bool IsOpen => isPaused;
+
+
+    // ——————————————————————————
+    //      FADE ANIMACJA
+    // ——————————————————————————
 
     private System.Collections.IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end)
     {
@@ -70,7 +94,6 @@ public class PauseController : MonoBehaviour
 
         canvasGroup.alpha = end;
 
-        // Ustaw interakcje w zależności od widoczności
         bool visible = end > 0.9f;
         canvasGroup.interactable = visible;
         canvasGroup.blocksRaycasts = visible;

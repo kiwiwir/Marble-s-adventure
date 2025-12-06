@@ -10,17 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
-  m_Name: Train Ticket
+  m_Name: Train The End
   m_EditorClassIdentifier: 
-  dialogueID: Train Ticket
+  dialogueID: Train The End
   lines:
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
-    textENG: 'Where did you get that ticket?!
-
-      I never thought I''d see it
-      again.'
-    textPL: "Sk\u0105d ma Pani ten bilet?!\nNie my\u015Bla\u0142em, \u017Ce kiedykolwiek
-      go zobacz\u0119."
+    textENG: "\u2026Where did you get that?\r\n\r\nThen I can't stop you."
+    textPL: "\u2026Sk\u0105d ty to masz?\n\nW takim razie nie mog\u0119 ci\u0119
+      zatrzyma\u0107."
     expressionName: 
   options: []
   offerQuestOnEnd: {fileID: 0}

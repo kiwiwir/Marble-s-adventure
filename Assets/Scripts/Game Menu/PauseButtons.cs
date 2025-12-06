@@ -27,7 +27,7 @@ public class PauseButtons : MonoBehaviour
         //pauseController.ClosePauseInstant();
         //sceneChanger.ChangeSceneWithFade("MainMenuScene");
         if (pauseController != null)
-            pauseController.ClosePauseInstant();
+            pauseController.Close();
 
         // dynamiczne wyszukiwanie SceneChanger w aktywnej scenie
         SceneChanger sc = FindObjectOfType<SceneChanger>();

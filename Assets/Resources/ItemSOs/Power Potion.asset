@@ -29,5 +29,5 @@ MonoBehaviour:
   currentHealth: 0
   moveSpeed: 0
   sprintSpeed: 0
-  damage: 2
+  damage: 10
   duration: 60

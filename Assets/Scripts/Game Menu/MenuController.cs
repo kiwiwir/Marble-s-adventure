@@ -1,16 +1,21 @@
 using UnityEngine;
 
-public class MenuController : MonoBehaviour
+public class MenuController : MonoBehaviour, IMenu
 {
     public CanvasGroup menuCanvasGroup;
     public TabController tabController;
     public PauseController pauseController;
+
     private bool isMenuOpen = false;
-    public float fadeSpeed = 3f; // prędkość animacji
     private bool isFading = false;
+
+    public float fadeSpeed = 3f;
 
     void Start()
     {
+        // Rejestracja w globalnym zarządcy menu
+        GlobalMenuManager.Instance.Register(this);
+
         menuCanvasGroup.alpha = 0f;
         menuCanvasGroup.interactable = false;
         menuCanvasGroup.blocksRaycasts = false;
@@ -18,94 +23,106 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
-        // --- Otwieranie / zamykanie menu ---
+        // ToggleMenu (TAB)
         if (Input.GetButtonDown("ToggleMenu") && !isFading)
         {
-            if (!isMenuOpen)
-            {
-                OpenMenu(0); // domyślnie strona 0 (np. statystyki)
-            }
+            /*if (!isMenuOpen)
+                GlobalMenuManager.Instance.RequestOpen(this);
             else
-            {
-                CloseMenu();
-            }
+                GlobalMenuManager.Instance.RequestClose(this);*/
+            Toggle();
         }
 
-        // --- Otwieranie menu od razu z mapą ---
+        // ToggleMap (M)
         if (Input.GetButtonDown("ToggleMap") && !isFading)
         {
             if (!isMenuOpen)
             {
-                OpenMenu(2); // jeśli menu jest zamknięte → otwórz z mapą
+                // Otwieramy całe Marble Menu
+                GlobalMenuManager.Instance.RequestOpen(this);
+
+                // Po prostu przełączamy zakładkę
+                tabController.ActiveTab(2);
             }
             else
             {
-                tabController.ActiveTab(2); // jeśli otwarte → przełącz tylko stronę
+                tabController.ActiveTab(2);
             }
         }
     }
-
-    public void ToggleMenuButton()
+    public void Toggle()
     {
-        if (!isMenuOpen && !isFading)
-        {
-            OpenMenu(0);
-        }
-        else if (!isFading)
-        {
-            CloseMenu();
-        }
+        if (isFading) return;
+
+        if (!isMenuOpen)
+            GlobalMenuManager.Instance.RequestOpen(this);
+        else
+            GlobalMenuManager.Instance.RequestClose(this);
     }
 
 
-    private void OpenMenu(int tabIndex)
+    // ————————————————————————
+    //  IMPLEMENTACJA IMenu
+    // ————————————————————————
+
+    public void Open()
     {
-        // Zamknij pauzę, jeśli aktywna
+        // Jeśli pauza jest otwarta → zamknij natychmiast
         if (pauseController != null && pauseController.IsPaused)
-        {
-            pauseController.ClosePauseInstant();
-        }
+            pauseController.Close();
 
         StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 0f, 1f));
         isMenuOpen = true;
-        tabController.ActiveTab(tabIndex);
+
+        // Domyślnie otwieramy stronę 0 przy wejściu
+        tabController.ActiveTab(0);
 
         Time.timeScale = 0f;
     }
 
-    private void CloseMenu()
+    public void Close()
     {
-        AudioManager.Play("Menu_Out");
         StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 1f, 0f));
+        isMenuOpen = false;
+
+        Time.timeScale = 1f;
+    }
+
+    public void CloseInstant()
+    {
+        StopAllCoroutines();
+
+        menuCanvasGroup.alpha = 0f;
+        menuCanvasGroup.interactable = false;
+        menuCanvasGroup.blocksRaycasts = false;
+
         isMenuOpen = false;
         Time.timeScale = 1f;
     }
 
-    public void CloseMenuInstant()
-    {
-        StopAllCoroutines();
-        menuCanvasGroup.alpha = 0f;
-        menuCanvasGroup.interactable = false;
-        menuCanvasGroup.blocksRaycasts = false;
-        isMenuOpen = false;
-        Time.timeScale = 1f;
-    }
+    public bool IsOpen => isMenuOpen;
+
+
+
+    // ————————————————————————
+    //  ANIMACJE I POMOCNICZE
+    // ————————————————————————
 
     private System.Collections.IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end)
     {
         isFading = true;
 
         float elapsed = 0f;
+
         while (elapsed < 1f)
         {
-            elapsed += Time.unscaledDeltaTime * fadeSpeed; // unscaled, by działało przy wstrzymanym czasie
+            elapsed += Time.unscaledDeltaTime * fadeSpeed;
             canvasGroup.alpha = Mathf.Lerp(start, end, elapsed);
             yield return null;
         }
 
         canvasGroup.alpha = end;
 
-        // Włączanie/wyłączanie interakcji zależnie od widoczności
         bool visible = end > 0.9f;
         canvasGroup.interactable = visible;
         canvasGroup.blocksRaycasts = visible;
