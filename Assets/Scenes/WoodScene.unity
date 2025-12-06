@@ -33679,6 +33679,75 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0649529, y: 2}
   m_Direction: 0
+--- !u!1001 &1070152755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1974463735562079412, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: conversations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974463735562079412, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: 'conversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e39cdf0880f4e3469a632e43ef73e85, type: 2}
+    - target: {fileID: 1974463735562079412, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: 'conversations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 76ade2ad703525f48b4673b33d36ef8e, type: 2}
+    - target: {fileID: 2602653441927204449, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_Name
+      value: Stump_Dialogue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477348696840652742, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ac4dec5bbe8300428d71cbb4711ec0d, type: 3}
 --- !u!1 &1073854290
 GameObject:
   m_ObjectHideFlags: 0
@@ -34064,7 +34133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49649,3 +49718,4 @@ SceneRoots:
   - {fileID: 850457568}
   - {fileID: 1878976044}
   - {fileID: 844102177}
+  - {fileID: 1070152755}

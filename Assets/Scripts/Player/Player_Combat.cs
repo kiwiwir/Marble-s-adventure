@@ -27,10 +27,10 @@ public class Player_Combat : MonoBehaviour
 
     public void Attack()
     {
-        AudioManager.Play("PlayerAttack");
         if (timer <= 0)
         {
             anim.SetBool("isAttacking", true);
+            AudioManager.Play("PlayerAttack");
             timer = cooldown;
         }
     }

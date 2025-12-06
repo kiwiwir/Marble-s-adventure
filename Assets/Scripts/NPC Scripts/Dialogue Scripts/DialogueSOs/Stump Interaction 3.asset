@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3123130db224d45a77cee047322601, type: 3}
+  m_Name: Stump Interaction 3
+  m_EditorClassIdentifier: 
+  dialogueID: Stump Interaction 3
+  lines:
+  - speaker: {fileID: 11400000, guid: b90acb33a755d494cafdd1d36518e58b, type: 2}
+    textENG: Long time no see Mr Unmovable Stump.
+    textPL: "Dawno si\u0119 nie widzieli\u015Bmy Panie Nieruchomy Pie\u0144ku."
+    expressionName: talking
+  options: []
+  offerQuestOnEnd: {fileID: 0}
+  requiredCompletedQuests: []
+  turnInQuestOnEnd: {fileID: 0}
+  requiredNPCs: []
+  requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 1
+  removeTheseOnPlay: []

@@ -221,6 +221,10 @@ MonoBehaviour:
     m_Key: The End Music
     m_Metadata:
       m_Items: []
+  - m_Id: 50133456869453824
+    m_Key: QUESTS
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

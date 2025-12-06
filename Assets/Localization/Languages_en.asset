@@ -218,6 +218,10 @@ MonoBehaviour:
       right?'
     m_Metadata:
       m_Items: []
+  - m_Id: 50133456869453824
+    m_Localized: QUESTS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
