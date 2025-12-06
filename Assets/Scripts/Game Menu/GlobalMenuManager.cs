@@ -21,6 +21,9 @@ public class GlobalMenuManager : MonoBehaviour
 
     public void RequestOpen(IMenu menuToOpen)
     {
+        // --- Blokada jeśli dialog jest aktywny ---
+        if (GameManager.Instance.DialogueManager != null && GameManager.Instance.DialogueManager.isDialogueActive)
+            return;
         // Zamykamy wszystkie inne menu
         foreach (var menu in registeredMenus)
         {
