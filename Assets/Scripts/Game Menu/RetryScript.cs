@@ -76,6 +76,13 @@ public class RetryScript : MonoBehaviour
         {
             player.SetActive(true);
 
+            // ustawienie order on layer na 2
+            SpriteRenderer sr = player.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sortingOrder = 2;
+            }
+
             // zresetuj HP
             PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
             if (playerHealth != null)
