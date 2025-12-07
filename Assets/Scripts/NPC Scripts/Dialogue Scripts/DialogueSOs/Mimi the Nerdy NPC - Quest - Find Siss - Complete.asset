@@ -40,7 +40,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 10b1e20888889c44f94825a065aa26cb, type: 2}
   requiredLocations: []
   requiredItems: []
-  removeAfterPlay: 1
+  removeAfterPlay: 0
   removeTheseOnPlay:
   - {fileID: 11400000, guid: e03d690f731b21d4b950b4484d2537c1, type: 2}
   - {fileID: 11400000, guid: 1c65f79c6bc78ad418f472c25c5be549, type: 2}
