@@ -32,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2276505743360
-    m_Key: Exit game
+    m_Key: Exit Game
     m_Metadata:
       m_Items: []
   - m_Id: 3306362564608
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5900732526592
-    m_Key: PAUSE
+    m_Key: The save was successful.
     m_Metadata:
       m_Items: []
   - m_Id: 5989681131520
@@ -162,7 +162,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32622421581295616
-    m_Key: PAUS
+    m_Key: PAUSE
     m_Metadata:
       m_Items: []
   - m_Id: 32622750569918464
@@ -223,6 +223,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50133456869453824
     m_Key: QUESTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59069002379489280
+    m_Key: New Entry 1
     m_Metadata:
       m_Items: []
   m_Metadata:

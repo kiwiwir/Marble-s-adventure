@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2276505743360
-    m_Localized: Exit game
+    m_Localized: Exit Game
     m_Metadata:
       m_Items: []
   - m_Id: 3913978802176
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5900732526592
-    m_Localized: PAUSE
+    m_Localized: The save was successful.
     m_Metadata:
       m_Items: []
   - m_Id: 5989681131520
@@ -220,6 +220,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50133456869453824
     m_Localized: QUESTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32622421581295616
+    m_Localized: Pause
     m_Metadata:
       m_Items: []
   references:

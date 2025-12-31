@@ -70,7 +70,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5900732526592
-    m_Localized: PAUZA
+    m_Localized: "Zapis przeszed\u0142 pomy\u015Blnie."
     m_Metadata:
       m_Items: []
   - m_Id: 5989681131520
@@ -217,6 +217,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50133456869453824
     m_Localized: ZADANIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32622421581295616
+    m_Localized: Pauza
     m_Metadata:
       m_Items: []
   references:

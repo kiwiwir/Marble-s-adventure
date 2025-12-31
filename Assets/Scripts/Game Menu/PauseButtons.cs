@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using System.Collections;
 
 public class PauseButtons : MonoBehaviour
 {
@@ -6,14 +8,54 @@ public class PauseButtons : MonoBehaviour
     public PauseController pauseController; // referencja do SceneChanger
     public Transform player;
 
+        [Header("Save UI")]
+    public TMP_Text saveText;
+    public CanvasGroup saveTextCanvas;
+    public float fadeDuration = 0.5f;
+    public float visibleTime = 1.5f;
+
+    private Coroutine saveCoroutine;
+
     // Save Game
     public void OnSaveClick()
     {
         AudioManager.Play("ButtonAffirmative");
         Debug.Log("Save Game clicked");
         
-        //GameManager.Instance.SaveGame(player.transform.position);
         SaveLoadManager.Instance.SaveGame(player.position);
+
+        // przerwij poprzednią animację jeśli kliknięto szybko kilka razy
+        if (saveCoroutine != null)
+            StopCoroutine(saveCoroutine);
+        StartCoroutine(ShowSaveText());
+    }
+    private IEnumerator ShowSaveText()
+    {
+        // ZAWSZE zaczynamy od zera
+        saveTextCanvas.alpha = 0f;
+
+        // Fade in
+        yield return Fade(0f, 1f);
+
+        // Widoczny
+        yield return new WaitForSecondsRealtime(visibleTime);
+
+        // Fade out
+        yield return Fade(1f, 0f);
+    }
+
+    private IEnumerator Fade(float from, float to)
+    {
+        float t = 0f;
+
+        while (t < fadeDuration)
+        {
+            t += Time.unscaledDeltaTime;
+            saveTextCanvas.alpha = Mathf.Lerp(from, to, t / fadeDuration);
+            yield return null;
+        }
+
+        saveTextCanvas.alpha = to;
     }
 
     // Main Menu
