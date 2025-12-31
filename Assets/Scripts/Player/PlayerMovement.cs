@@ -31,6 +31,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.DialogueManager.isDialogueActive)
+        {
+            anim.SetBool("isWalking", false);
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         ProccessInputs();
         Animate();
         HandleFootsteps();

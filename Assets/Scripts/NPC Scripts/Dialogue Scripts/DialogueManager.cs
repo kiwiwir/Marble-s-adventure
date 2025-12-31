@@ -45,7 +45,7 @@ public class DialogueManager : MonoBehaviour
 
         DialogueEvents.OnDialogueStarted?.Invoke(currentDialogue);
 
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         ShowDialogue();
     }
 
@@ -313,7 +313,7 @@ public class DialogueManager : MonoBehaviour
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
 
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
 
         // Oddanie questa
         if (currentDialogue != null && currentDialogue.turnInQuestOnEnd != null && GameManager.Instance.QuestManager.IsQuestComplete(currentDialogue.turnInQuestOnEnd))
