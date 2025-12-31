@@ -51,6 +51,10 @@ public class NPC_Talk : MonoBehaviour
             else
             {
                 CheckForNewConversation();
+
+                var player = GameManager.Instance.Player.GetComponent<PlayerMovement>();
+                player.FaceTarget(transform);
+
                 GameManager.Instance.DialogueManager.StartDialogue(currentConversation);
             }
         }

@@ -33,8 +33,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GameManager.Instance.DialogueManager.isDialogueActive)
         {
-            anim.SetBool("isWalking", false);
+            moveInput = Vector2.zero;
             rb.linearVelocity = Vector2.zero;
+
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isSprinting", false);
+
             return;
         }
 
@@ -47,14 +51,23 @@ public class PlayerMovement : MonoBehaviour
             player_Combat.Attack();
         }
     }
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         if (isKnockedBack == false)
         {
             float speed = isSprinting ? StatsManager.Instance.sprintSpeed : StatsManager.Instance.moveSpeed;
             rb.linearVelocity = moveInput * speed;
         }
+    }*/
+    private void FixedUpdate()
+    {
+        if (isKnockedBack || GameManager.Instance.DialogueManager.isDialogueActive)
+            return;
+
+        float speed = isSprinting ? StatsManager.Instance.sprintSpeed : StatsManager.Instance.moveSpeed;
+        rb.linearVelocity = moveInput * speed;
     }
+
 
     void ProccessInputs()
     {
@@ -126,6 +139,20 @@ public class PlayerMovement : MonoBehaviour
 
         // przywróć oryginalny materiał
         spriteRenderer.material = defaultMaterial;
+    }
+
+    public void FaceTarget(Transform target)
+    {
+        Vector2 direction = (target.position - transform.position).normalized;
+
+        // ograniczamy do osi X/Y (bez skosów)
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            lastMoveDirection = new Vector2(Mathf.Sign(direction.x), 0);
+        else
+            lastMoveDirection = new Vector2(0, Mathf.Sign(direction.y));
+
+        anim.SetFloat("LastInputX", lastMoveDirection.x);
+        anim.SetFloat("LastInputY", lastMoveDirection.y);
     }
 
     public void ResetState()
