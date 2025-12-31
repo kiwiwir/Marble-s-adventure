@@ -311,7 +311,7 @@ MonoBehaviour:
   m_fontSizeMin: 44
   m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 8
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1015,6 +1015,8 @@ MonoBehaviour:
   actorName: {fileID: 5398760679072270054}
   dialogueText: {fileID: 3467810533014801747}
   dialogueArrow: {fileID: 780651313319181731}
+  dialogueChoicePanel: {fileID: 0}
+  choiceButtons: []
   isDialogueActive: 0
 --- !u!1 &6506005800424842797
 GameObject:

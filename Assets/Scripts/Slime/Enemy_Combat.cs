@@ -8,18 +8,6 @@ public class Enemy_Combat : MonoBehaviour
     public float knockbackForce;
     public float stunTime;
     public LayerMask playerLayer;
-    /*public void Attack()
-    {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, playerLayer);
-
-        if (hits.Length > 0)
-        {
-            hits[0].GetComponent<PlayerHealth>().ChangeHealth(-damage);
-            hits[0].GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
-
-            AudioManager.Play("EnemyHitsDamage");
-        }
-    }*/
     public void Attack()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, playerLayer);
@@ -37,5 +25,10 @@ public class Enemy_Combat : MonoBehaviour
                 break;
             }
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, weaponRange);
     }
 }

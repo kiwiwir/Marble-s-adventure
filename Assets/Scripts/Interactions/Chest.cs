@@ -7,7 +7,7 @@ public class Chest : MonoBehaviour, IInteractable
     public string ChestID { get; private set; }
 
     [Header("Loot Settings")]
-    public GameObject lootPrefab;   // prefab Loot
+    public GameObject lootPrefab;
     public ItemSO chestItem;        // jaki item ma być w skrzyni
     public int quantity = 1;
 
@@ -17,8 +17,6 @@ public class Chest : MonoBehaviour, IInteractable
     {
         animator = GetComponent<Animator>();
         ChestID ??= GlobalHelper.GenerateUniqueID(gameObject);
-
-        // sprawdzenie stanu w GameManagerze
         bool savedState = GameManager.Instance.GetChestState(ChestID);
         SetOpened(savedState);
     }

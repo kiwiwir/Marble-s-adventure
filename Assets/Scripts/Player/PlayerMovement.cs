@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     Animator anim;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] private Material knockbackMaterial; // przypisz SolidGreenMaterial w Inspectorze
+    [SerializeField] private Material knockbackMaterial;
     private Material defaultMaterial;
 
     public Player_Combat player_Combat;

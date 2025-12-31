@@ -65,18 +65,15 @@ public class Enemy_Movement : MonoBehaviour
     void Chase()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-
         // Parametry do Blend Tree
         anim.SetFloat("MoveX", direction.x);
         anim.SetFloat("MoveY", direction.y);
-
         rb.linearVelocity = direction * speed;
     }
 
     private void CheckForPlayer()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, playerDetectRange, playerLayer);
-
         if (hits.Length > 0)
         {
             player = hits[0].transform;
@@ -126,7 +123,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(detectionPoint.position, playerDetectRange);
     }
 }

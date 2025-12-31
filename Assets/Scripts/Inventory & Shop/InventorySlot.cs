@@ -76,18 +76,16 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (itemSO == null) return;
-
         // zapamiętujemy slot, z którego przeciągamy
         draggedFrom = this;
-
         // tworzymy tymczasową ikonę
         dragIcon = new GameObject("DragIcon");
         dragIcon.transform.SetParent(canvas.transform, false);
-        dragIcon.transform.SetAsLastSibling(); // na wierzchu
+        dragIcon.transform.SetAsLastSibling();
 
         Image img = dragIcon.AddComponent<Image>();
         img.sprite = itemSO.icon;
-        img.raycastTarget = false; // żeby nie blokowało OnDrop
+        img.raycastTarget = false;
 
         RectTransform rt = dragIcon.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(64, 64); // rozmiar ikony
@@ -108,7 +106,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
             Destroy(dragIcon);
             dragIcon = null;
         }
-
         // sprawdź czy upuszczono poza inventoryPanel
         if (itemSO != null)
         {

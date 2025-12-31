@@ -52,19 +52,9 @@ public class InventoryManager : MonoBehaviour
         {
             gold += quantity;
             goldText.text = gold.ToString();
-
-            // Dźwięk dla złota
             AudioManager.Play("Coin");
             return;
         }
-
-        /*if(itemSO.isEXP)
-        {
-            OnExperienceGained?.Invoke(quantity);
-            return;
-        }*/
-
-        // Dźwięk dla zwykłego przedmiotu
         AudioManager.Play("Collect");
 
         foreach (var slot in itemSlots) // It is the SAME item AND  there is ROOM left
@@ -83,7 +73,6 @@ public class InventoryManager : MonoBehaviour
                     return;
             }
         }
-
         foreach (var slot in itemSlots) // If items remain we will now look at the empty slots
         {
             if (slot.itemSO == null)
@@ -95,7 +84,6 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-
         if (quantity > 0)
         {
             DropLoot(itemSO, quantity);
@@ -132,8 +120,7 @@ public class InventoryManager : MonoBehaviour
 
     private void DropLoot(ItemSO itemSO, int quantity)
     {
-        // losowy kierunek w 2D (okrąg wokół gracza)
-        // losujemy punkt w pierścieniu [1, 1.5]
+        // losujemy punkt w pierścieniu wokół gracza
         float radius = Random.Range(1.5f, 1.75f);
         Vector2 randomCircle = Random.insideUnitCircle.normalized * radius;
 
@@ -143,7 +130,6 @@ public class InventoryManager : MonoBehaviour
         Loot loot = lootObj.GetComponent<Loot>();
         loot.Initialize(itemSO, quantity);
 
-        // Bounce effect
         BounceEffect bounce = lootObj.GetComponent<BounceEffect>();
         if (bounce != null)
         {
