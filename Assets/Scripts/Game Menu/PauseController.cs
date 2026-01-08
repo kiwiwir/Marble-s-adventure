@@ -39,7 +39,7 @@ public class PauseController : MonoBehaviour, IMenu
     {
         // Zamknij Diary Menu jeśli otwarte
         if (menuController != null && menuController.IsMenuOpen)
-            GlobalMenuManager.Instance.RequestClose(menuController);
+            menuController.CloseInstant();
 
         // Dźwięk otwarcia
         AudioManager.Play("Menu_In");
@@ -64,6 +64,7 @@ public class PauseController : MonoBehaviour, IMenu
     public void CloseInstant()
     {
         StopAllCoroutines();
+        isFading = false;
 
         pauseCanvasGroup.alpha = 0f;
         pauseCanvasGroup.interactable = false;

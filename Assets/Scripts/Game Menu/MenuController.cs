@@ -63,7 +63,7 @@ public class MenuController : MonoBehaviour, IMenu
     {
         // Jeśli pauza jest otwarta → zamknij natychmiast
         if (pauseController != null && pauseController.IsPaused)
-            GlobalMenuManager.Instance.RequestClose(pauseController);
+            pauseController.CloseInstant();
 
         StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 0f, 1f));
         isMenuOpen = true;
@@ -85,6 +85,7 @@ public class MenuController : MonoBehaviour, IMenu
     public void CloseInstant()
     {
         StopAllCoroutines();
+        isFading = false;
 
         menuCanvasGroup.alpha = 0f;
         menuCanvasGroup.interactable = false;
