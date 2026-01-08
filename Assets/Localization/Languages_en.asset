@@ -226,6 +226,15 @@ MonoBehaviour:
     m_Localized: Pause
     m_Metadata:
       m_Items: []
+  - m_Id: 61962475575242752
+    m_Localized: 'Thank you to my testers, M. and O. <3
+
+
+      I would also like
+      to thank Night Run Studio and Game Code Library on YouTube for their excellent
+      Unity tutorials.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

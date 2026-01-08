@@ -26,29 +26,22 @@ public class BuildingTeleport : MonoBehaviour
     {
         isTeleporting = true;
 
-        // Uruchomienie animacji przyciemnienia (fade-out)
         if (fadeAnim != null)
             fadeAnim.Play("FadeToDark");
-
-        // Czekaj aż ekran się przyciemni
         yield return new WaitForSeconds(fadeTime);
 
-        // Przenieś gracza na nową pozycję
         player.position = teleportPosition;
 
-        // Zmiana confinera kamery
         CinemachineConfiner2D confiner = FindObjectOfType<CinemachineConfiner2D>();
         if (confiner != null && targetConfiner != null)
         {
             confiner.BoundingShape2D = targetConfiner;
-            confiner.InvalidateCache(); // konieczne, żeby odświeżyć ograniczenia
+            confiner.InvalidateCache();
         }
 
-        // Uruchomienie animacji rozjaśnienia (fade-in)
         if (fadeAnim != null)
             fadeAnim.Play("FadeFromDark");
 
-        // Czekaj aż fade się zakończy, zanim znowu pozwolisz na teleport
         yield return new WaitForSeconds(fadeTime);
 
         isTeleporting = false;

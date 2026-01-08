@@ -186,6 +186,12 @@ public class ShopKeeper : MonoBehaviour, IMenu
                 CloseShop();
         }
     }
+    private void OnDestroy()
+    {
+        if (GlobalMenuManager.Instance != null)
+            GlobalMenuManager.Instance.Unregister(this);
+    }
+
 
     private IEnumerator StartDialogueThenShop()
     {

@@ -24,14 +24,15 @@ public class GameManager : MonoBehaviour
     public LocationHistoryTracker LocationHistoryTracker;
     public QuestManager QuestManager;
 
-    [Header("Persistent Objects")]
-    public GameObject[] persistentObjects;
-
     // słownik do przechowywania stanu skrzyń
     public Dictionary<string, bool> chestStates = new Dictionary<string, bool>();
     // przechowywanie zbiór ID dialogów, które zostały usunięte
     public HashSet<string> removedDialogues = new HashSet<string>();
     //public int gold;
+
+    [Header("Persistent Objects")]
+    public GameObject[] persistentObjects;
+
 
     private void Awake()
     {

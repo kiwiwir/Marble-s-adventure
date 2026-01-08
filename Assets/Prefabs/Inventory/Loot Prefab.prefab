@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 6805597127708337594}
   - component: {fileID: 272285486168556321}
   m_Layer: 0
-  m_Name: "Jag\xF3dka"
+  m_Name: Berry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

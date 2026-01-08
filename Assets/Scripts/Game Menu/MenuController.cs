@@ -25,13 +25,7 @@ public class MenuController : MonoBehaviour, IMenu
     {
         // ToggleMenu (TAB)
         if (Input.GetButtonDown("ToggleMenu") && !isFading)
-        {
-            /*if (!isMenuOpen)
-                GlobalMenuManager.Instance.RequestOpen(this);
-            else
-                GlobalMenuManager.Instance.RequestClose(this);*/
             Toggle();
-        }
 
         // ToggleMap (M)
         if (Input.GetButtonDown("ToggleMap") && !isFading)
@@ -69,7 +63,7 @@ public class MenuController : MonoBehaviour, IMenu
     {
         // Jeśli pauza jest otwarta → zamknij natychmiast
         if (pauseController != null && pauseController.IsPaused)
-            pauseController.Close();
+            GlobalMenuManager.Instance.RequestClose(pauseController);
 
         StartCoroutine(FadeCanvasGroup(menuCanvasGroup, 0f, 1f));
         isMenuOpen = true;
@@ -99,15 +93,6 @@ public class MenuController : MonoBehaviour, IMenu
         isMenuOpen = false;
         Time.timeScale = 1f;
     }
-
-    public bool IsOpen => isMenuOpen;
-
-
-
-    // ————————————————————————
-    //  ANIMACJE I POMOCNICZE
-    // ————————————————————————
-
     private System.Collections.IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end)
     {
         isFading = true;
@@ -129,6 +114,6 @@ public class MenuController : MonoBehaviour, IMenu
 
         isFading = false;
     }
-
+    public bool IsOpen => isMenuOpen;
     public bool IsMenuOpen => isMenuOpen;
 }

@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        ProccessInputs();
+        ProcessInputs();
         Animate();
         HandleFootsteps();
 
@@ -67,9 +67,7 @@ public class PlayerMovement : MonoBehaviour
         float speed = isSprinting ? StatsManager.Instance.sprintSpeed : StatsManager.Instance.moveSpeed;
         rb.linearVelocity = moveInput * speed;
     }
-
-
-    void ProccessInputs()
+    void ProcessInputs()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");

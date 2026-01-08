@@ -4,7 +4,6 @@ using UnityEngine;
 public class GlobalMenuManager : MonoBehaviour
 {
     public static GlobalMenuManager Instance;
-
     private List<IMenu> registeredMenus = new List<IMenu>();
 
     private void Awake()
@@ -12,31 +11,37 @@ public class GlobalMenuManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
-
     public void Register(IMenu menu)
     {
         if (!registeredMenus.Contains(menu))
             registeredMenus.Add(menu);
     }
 
+    public void Unregister(IMenu menu)
+    {
+        registeredMenus.Remove(menu);
+    }
+
     public void RequestOpen(IMenu menuToOpen)
     {
-        // --- Blokada jeśli dialog jest aktywny ---
-        if (GameManager.Instance.DialogueManager != null && GameManager.Instance.DialogueManager.isDialogueActive)
+        if (GameManager.Instance.DialogueManager != null &&
+            GameManager.Instance.DialogueManager.isDialogueActive)
             return;
-        // Zamykamy wszystkie inne menu
+
+        registeredMenus.RemoveAll(m => m == null);
+
         foreach (var menu in registeredMenus)
         {
             if (menu != menuToOpen)
                 menu.CloseInstant();
         }
 
-        // Otwieramy to właściwe
         menuToOpen.Open();
     }
 
     public void RequestClose(IMenu menuToClose)
     {
+        registeredMenus.RemoveAll(m => m == null);
         menuToClose.Close();
     }
 }

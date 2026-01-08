@@ -223,6 +223,12 @@ MonoBehaviour:
     m_Localized: Pauza
     m_Metadata:
       m_Items: []
+  - m_Id: 61962475575242752
+    m_Localized: "Dzi\u0119kuj\u0119 moim testerom, M. i O. <3\n\nChcia\u0142abym
+      r\xF3wnie\u017C podzi\u0119kowa\u0107 Night Run Studio oraz Game Code Library
+      na YouTubie za ich wspania\u0142e tutoriale do Unity."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
