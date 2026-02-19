@@ -229,6 +229,10 @@ MonoBehaviour:
       na YouTubie za ich wspania\u0142e tutoriale do Unity."
     m_Metadata:
       m_Items: []
+  - m_Id: 66653709359181824
+    m_Localized: PAUZA
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

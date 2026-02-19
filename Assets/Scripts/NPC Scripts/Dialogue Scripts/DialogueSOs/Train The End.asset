@@ -15,9 +15,19 @@ MonoBehaviour:
   dialogueID: Train The End
   lines:
   - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
-    textENG: "\u2026Where did you get that?\r\n\r\nThen I can't stop you."
-    textPL: "\u2026Sk\u0105d ty to masz?\n\nW takim razie nie mog\u0119 ci\u0119
-      zatrzyma\u0107."
+    textENG: "Engine Heart! \u2026Where did you get that?!"
+    textPL: "Serce Maszyny! \u2026Sk\u0105d ty to masz?!"
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
+    textENG: Oh...
+    textPL: Oh...
+    expressionName: 
+  - speaker: {fileID: 11400000, guid: 21e4c61027200ed4cb69b6c975342017, type: 2}
+    textENG: 'Then I can''t stop you. This is the end.
+
+      Goodbye.'
+    textPL: "W takim razie nie mog\u0119 ci\u0119 zatrzyma\u0107. To ju\u017C jest
+      koniec.\n\u017Begnaj."
     expressionName: 
   options: []
   offerQuestOnEnd: {fileID: 0}

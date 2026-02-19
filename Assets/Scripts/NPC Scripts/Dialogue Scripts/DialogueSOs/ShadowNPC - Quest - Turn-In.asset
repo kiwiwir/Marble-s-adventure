@@ -50,6 +50,10 @@ MonoBehaviour:
     textENG: "You\u2019ll understand its purpose when you reach the train\u2026"
     textPL: "Zrozumiesz, do czego to s\u0142u\u017Cy, kiedy dotrzesz do poci\u0105gu\u2026"
     expressionName: default
+  - speaker: {fileID: 11400000, guid: bb5a1510bd3107843b8b1bf657c397f9, type: 2}
+    textENG: Go now, and show this to conductor in the train.
+    textPL: "Id\u017A ju\u017C i poka\u017C to konduktorowi w poci\u0105gu."
+    expressionName: default
   options: []
   offerQuestOnEnd: {fileID: 0}
   requiredCompletedQuests:
