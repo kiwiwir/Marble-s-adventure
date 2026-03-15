@@ -7437,6 +7437,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
   m_PrefabInstance: {fileID: 1117250344}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &183969680 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6447849545479019136, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+  m_PrefabInstance: {fileID: 5437093224103147239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &187462549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7447,7 +7452,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -7554,7 +7559,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -29050,7 +29055,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -34919,7 +34924,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -47736,7 +47741,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -48539,7 +48544,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -48899,7 +48904,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 7854610525857100991, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Radius
@@ -50798,6 +50803,10 @@ PrefabInstance:
       propertyPath: questLogUI
       value: 
       objectReference: {fileID: 634344314}
+    - target: {fileID: 2049573313454110151, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+      propertyPath: exclamationMark
+      value: 
+      objectReference: {fileID: 183969680}
     - target: {fileID: 6322499166256115104, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4

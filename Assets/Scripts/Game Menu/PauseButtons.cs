@@ -16,6 +16,12 @@ public class PauseButtons : MonoBehaviour
 
     private Coroutine saveCoroutine;
 
+    [Header("Persistent Objects To Deactivate")]
+    public string[] persistentObjectNames;
+
+    [Header("Pause Canvas")]
+    public CanvasGroup pauseCanvas;
+
     // Save Game
     public void OnSaveClick()
     {
@@ -71,6 +77,12 @@ public class PauseButtons : MonoBehaviour
         if (pauseController != null)
             pauseController.Close();
 
+        // WYŁĄCZ persistent objects
+        DeactivatePersistentObjects();
+
+        // WYŁĄCZ canvas pause menu
+        DisablePauseCanvas();
+
         // dynamiczne wyszukiwanie SceneChanger w aktywnej scenie
         SceneChanger sc = FindObjectOfType<SceneChanger>();
         if (sc != null)
@@ -80,6 +92,44 @@ public class PauseButtons : MonoBehaviour
         else
         {
             Debug.LogWarning("SceneChanger not found in scene! Cannot change scene.");
+        }
+    }
+    private void DeactivatePersistentObjects()
+    {
+        foreach (string objName in persistentObjectNames)
+        {
+            GameObject obj = null;
+
+            if (objName == "Player")
+            {
+                obj = GameManager.Instance?.Player;
+            }
+            else
+            {
+                var allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+                foreach (var go in allObjects)
+                {
+                    if (go.name == objName)
+                    {
+                        obj = go;
+                        break;
+                    }
+                }
+            }
+
+            if (obj != null)
+                obj.SetActive(false);
+            else
+                Debug.LogWarning($"Nie znaleziono persistent object: {objName}");
+        }
+    }
+    private void DisablePauseCanvas()
+    {
+        if (pauseCanvas != null)
+        {
+            pauseCanvas.alpha = 0f;
+            pauseCanvas.interactable = false;
+            pauseCanvas.blocksRaycasts = false;
         }
     }
 

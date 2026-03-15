@@ -5576,7 +5576,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27111,7 +27111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35134,6 +35134,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.2405206, y: 2.5997787}
   m_EdgeRadius: 0
+--- !u!212 &1074349347 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6447849545479019136, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+  m_PrefabInstance: {fileID: 1409411767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1078714956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4587935799923780540, guid: 09d7a4c6389974b40ad1d44aa749ccbd, type: 3}
@@ -52130,6 +52135,10 @@ PrefabInstance:
       propertyPath: questToTurnIn
       value: 
       objectReference: {fileID: 11400000, guid: c0268e4541eefd34faa5426c2a7e1360, type: 2}
+    - target: {fileID: 2049573313454110151, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
+      propertyPath: exclamationMark
+      value: 
+      objectReference: {fileID: 1074349347}
     - target: {fileID: 2967494074798803851, guid: 70f73704fd086e74eae938f2058ec05a, type: 3}
       propertyPath: m_Size.y
       value: 2.5313768
@@ -52726,7 +52735,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52804,7 +52813,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Engine Heart
+      value: Serce Maszyny
       objectReference: {fileID: 0}
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_IsActive
@@ -52873,7 +52882,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53116,14 +53125,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1893272320443869121, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893272320443869121, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1943309942315403952, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.30501
@@ -53232,6 +53233,30 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2282719828632701403, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282719828632701403, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282719828632701403, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1051
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282719828632701403, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -170
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282719828632701403, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 324.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282719828632701403, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 2607886431075358217, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: player
       value: 
@@ -53280,6 +53305,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2800421047753932304, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2990002524634689499, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -53326,14 +53355,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3001243820589652071, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3001475661629660479, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3001475661629660479, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3058717326694957993, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
@@ -53660,6 +53681,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6257280638820733125, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 6440922243851631339, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: player
       value: 
@@ -53895,14 +53920,6 @@ PrefabInstance:
     - target: {fileID: 8295070306642935660, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619064857746236373, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619064857746236373, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9206904589239290524, guid: 52fea1e436c01d740b287a4935f519a4, type: 3}
       propertyPath: player
@@ -54237,7 +54254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612490778881044607, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_Name
-      value: Berry
+      value: "Jag\xF3dka"
       objectReference: {fileID: 0}
     - target: {fileID: 8238856884942848143, guid: 46b566f657c5f1941bd0ca1dbad76b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54339,6 +54356,14 @@ PrefabInstance:
     - target: {fileID: 5797845035640022687, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163444716880970080, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.6137047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163444716880970080, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4995999
       objectReference: {fileID: 0}
     - target: {fileID: 7732773271375252730, guid: 7514b12274fb69f4982b04560eb9c83c, type: 3}
       propertyPath: m_Name

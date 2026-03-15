@@ -6,6 +6,22 @@ public class QuestBoard : MonoBehaviour
     [SerializeField] private QuestSO questToTurnIn;
     private bool playerInRange;
     [SerializeField] private QuestLogUI questLogUI;
+    [SerializeField] private SpriteRenderer exclamationMark;
+
+    private void OnEnable()
+    {
+        QuestEvents.OnQuestStateChanged += UpdateQuestIcon;
+    }
+
+    private void OnDisable()
+    {
+        QuestEvents.OnQuestStateChanged -= UpdateQuestIcon;
+    }
+
+    private void Start()
+    {
+        UpdateQuestIcon();
+    }
 
     private void Awake()
     {
@@ -22,6 +38,7 @@ public class QuestBoard : MonoBehaviour
             }
         }
     }
+    
 
     private void Update()
     {
@@ -59,5 +76,35 @@ public class QuestBoard : MonoBehaviour
         {
             playerInRange = false;
         }
+    }
+
+    private void UpdateQuestIcon(QuestSO _)
+    {
+        UpdateQuestIcon();
+    }
+
+    private void UpdateQuestIcon()
+    {
+        if (exclamationMark == null)
+            return;
+
+        bool canTurnIn = questToTurnIn != null &&
+                        (QuestEvents.IsQuestComplete?.Invoke(questToTurnIn) ?? false);
+
+        bool canOffer = questToOffer != null &&
+                        !(QuestEvents.IsQuestActive?.Invoke(questToOffer) ?? false);
+
+        // Jeśli quest został już ukończony i dodany do completed listy
+        bool alreadyCompleted = false;
+        if (questToOffer != null)
+        {
+            alreadyCompleted = FindObjectOfType<QuestManager>()
+                .GetCompleteQuest(questToOffer);
+        }
+
+        if (canTurnIn || (canOffer && !alreadyCompleted))
+            exclamationMark.enabled = true;
+        else
+            exclamationMark.enabled = false;
     }
 }

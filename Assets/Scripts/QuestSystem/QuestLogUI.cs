@@ -85,6 +85,7 @@ public class QuestLogUI : MonoBehaviour
         SetCanvasState(declineCanvasGroup, false);
         RefreshQuestList();
         HandleQuestClicked(noAvailableQuestSO);
+        QuestEvents.OnQuestStateChanged?.Invoke();
     }
     public void OnDeclineQuestClicked()
     {
@@ -100,6 +101,7 @@ public class QuestLogUI : MonoBehaviour
         HandleQuestClicked(noAvailableQuestSO);
         SetCanvasState(completeCanvasGroup, false);
         Time.timeScale = 1f;
+        QuestEvents.OnQuestStateChanged?.Invoke();
     }
     #endregion
 

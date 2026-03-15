@@ -10,10 +10,12 @@ public class QuestManager : MonoBehaviour
     private void OnEnable()
     {
         QuestEvents.IsQuestComplete += IsQuestComplete;
+        QuestEvents.IsQuestActive += IsQuestAccepted;
     }
     private void OnDisable()
     {
         QuestEvents.IsQuestComplete -= IsQuestComplete;
+        QuestEvents.IsQuestActive -= IsQuestAccepted;
     }
 
 

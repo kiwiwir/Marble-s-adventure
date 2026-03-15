@@ -2357,7 +2357,7 @@ RectTransform:
   m_Father: {fileID: 1213294026636854384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4387,7 +4387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.2, y: 0.5999985}
+  m_AnchoredPosition: {x: 2.1999512, y: 0.5999756}
   m_SizeDelta: {x: -29.999998, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &948513211159993600
@@ -4445,7 +4445,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.25
+  m_fontSize: 57.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4522,10 +4522,10 @@ RectTransform:
   - {fileID: 1104775867500173166}
   m_Father: {fileID: 6417225859421637845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 715, y: 80}
+  m_SizeDelta: {x: -69, y: -876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6800371390700977613
 CanvasRenderer:
@@ -5457,7 +5457,7 @@ RectTransform:
   m_Father: {fileID: 4324834053171009565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6877,7 +6877,7 @@ RectTransform:
   m_Father: {fileID: 9148555245499554582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16493,10 +16493,10 @@ RectTransform:
   - {fileID: 3024823317436687688}
   m_Father: {fileID: 36180622188820803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -718, y: 338}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: -1845, y: -1005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9159545376617877216
 CanvasRenderer:
@@ -20013,13 +20013,61 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2688901850514785547, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688901850514785547, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688901850514785547, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688901850514785547, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688901850514785547, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688901850514785547, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 430
+      objectReference: {fileID: 0}
     - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645754277312542385, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 3970226295959880606, guid: c2a18486c7f94cb40b9515be03a69897, type: 3}
       propertyPath: m_Name
@@ -20731,10 +20779,20 @@ MonoBehaviour:
   sceneChanger: {fileID: 0}
   pauseController: {fileID: 6717789942134380043}
   player: {fileID: 0}
-  saveText: {fileID: 6117433516982835856}
-  saveTextCanvas: {fileID: 6459729984939725708}
+  saveText: {fileID: 0}
+  saveTextCanvas: {fileID: 0}
   fadeDuration: 0.5
   visibleTime: 1.5
+  persistentObjectNames:
+  - QuestCanvas
+  - Player UI
+  - Player UI
+  - Marble's Diary UI
+  - Pause UI
+  - Game Over UI
+  - MenuBar
+  - Player
+  pauseCanvas: {fileID: 7158277801295642677}
 --- !u!1001 &4549091643063854505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22801,10 +22859,20 @@ MonoBehaviour:
   sceneChanger: {fileID: 0}
   pauseController: {fileID: 6717789942134380043}
   player: {fileID: 0}
-  saveText: {fileID: 6117433516982835856}
-  saveTextCanvas: {fileID: 6459729984939725708}
+  saveText: {fileID: 0}
+  saveTextCanvas: {fileID: 0}
   fadeDuration: 0.5
   visibleTime: 1.5
+  persistentObjectNames:
+  - QuestCanvas
+  - Player UI
+  - Player UI
+  - Marble's Diary UI
+  - Pause UI
+  - Game Over UI
+  - MenuBar
+  - Player
+  pauseCanvas: {fileID: 7158277801295642677}
 --- !u!1001 &7285851086062314362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23307,10 +23375,20 @@ MonoBehaviour:
   sceneChanger: {fileID: 0}
   pauseController: {fileID: 6717789942134380043}
   player: {fileID: 0}
-  saveText: {fileID: 6117433516982835856}
-  saveTextCanvas: {fileID: 6459729984939725708}
+  saveText: {fileID: 0}
+  saveTextCanvas: {fileID: 0}
   fadeDuration: 0.5
   visibleTime: 1.5
+  persistentObjectNames:
+  - QuestCanvas
+  - Player UI
+  - Player UI
+  - Marble's Diary UI
+  - Pause UI
+  - Game Over UI
+  - MenuBar
+  - Player
+  pauseCanvas: {fileID: 7158277801295642677}
 --- !u!1001 &7931423347735415147
 PrefabInstance:
   m_ObjectHideFlags: 0
